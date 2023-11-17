@@ -1,0 +1,53 @@
+@import "mixins";
+@import "variables";
+
+
+// HTML
+html {
+    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: none;
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+// BODY
+body {
+    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+// GLOBAL
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    font-style: bold;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-primary;
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $color-secondary;
+    }
+}
