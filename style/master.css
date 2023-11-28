@@ -252,47 +252,7 @@ body main .content {
 }
 @media (min-width: 64rem) {
   .inbox {
-    width: 35%;
-  }
-}
-@media (min-width: 90rem) {
-  .inbox {
     width: 30%;
-  }
-}
-.messages {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: calc(100% - 2rem);
-  min-height: 50vh;
-  padding: 0;
-  background-color: white;
-  transition: all 0.25s ease 0s;
-  transform: translateX(100vw);
-}
-
-@media (min-width: 40rem) {
-  .messages {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 60%;
-    min-height: auto;
-    padding: 0 0 0 1rem;
-    transform: translateX(0);
-  }
-}
-@media (min-width: 64rem) {
-  .messages {
-    width: 65%;
-  }
-}
-@media (min-width: 90rem) {
-  .messages {
-    width: 70%;
   }
 }
 .inbox-messages {
@@ -359,11 +319,55 @@ body main .content {
   height: 100%;
 }
 
+.messages {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100% - 2rem);
+  min-height: 50vh;
+  padding: 0;
+  background-color: white;
+  transition: all 0.25s ease 0s;
+  transform: translateX(100vw);
+}
+
+@media (min-width: 40rem) {
+  .messages {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    min-height: auto;
+    padding: 0 0 0 1rem;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 64rem) {
+  .messages {
+    width: 70%;
+  }
+}
+.message-header {
+  display: flex;
+}
+
+.message-content {
+  display: flex;
+}
+
+.message-footer {
+  display: flex;
+}
+
 nav {
   display: flex;
+  z-index: 100;
   width: 100vw;
   padding: 0.5rem;
   border-top: 1px solid var(--color--nav);
+  background: white;
 }
 nav ul {
   display: flex;
@@ -403,12 +407,6 @@ nav ul li a span {
 nav ul li.active a {
   color: var(--color--nav-hover);
 }
-nav ul li:first-child a {
-  color: var(--color--primary);
-}
-nav ul li:first-child a:hover, nav ul li:first-child a:focus {
-  color: var(--color--nav-hover);
-}
 
 @media (min-width: 40rem) {
   nav {
@@ -446,6 +444,7 @@ input[type=tel],
 input[type=url],
 select {
   font-size: var(--p);
+  color: black;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

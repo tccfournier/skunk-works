@@ -80,53 +80,7 @@ body {
 
 @media (min-width: 64rem) {
   .inbox {
-    width: 35%;
-  }
-}
-
-@media (min-width: 90rem) {
-  .inbox {
     width: 30%;
-  }
-}
-
-
-// MESSAGES
-.messages {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: calc(100% - 2rem);
-  min-height: 50vh;
-  padding: 0;
-  background-color: white;
-  @include transition(all);
-  @include transform(translateX(100vw));
-}
-
-@media (min-width: 40rem) {
-  .messages {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 60%;
-    min-height: auto;
-    padding: 0 0 0 1rem;
-    @include transform(translateX(0));
-  }
-}
-
-@media (min-width: 64rem) {
-  .messages {
-    width: 65%;
-  }
-}
-
-@media (min-width: 90rem) {
-  .messages {
-    width: 70%;
   }
 }
 
@@ -205,4 +159,56 @@ body {
       }
     }
   }
+}
+
+
+// MESSAGES
+.messages {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100% - 2rem);
+  min-height: 50vh;
+  padding: 0;
+  background-color: white;
+  @include transition(all);
+  @include transform(translateX(100vw));
+}
+
+@media (min-width: 40rem) {
+  .messages {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    min-height: auto;
+    padding: 0 0 0 1rem;
+    @include transform(translateX(0));
+  }
+}
+
+@media (min-width: 64rem) {
+  .messages {
+    width: 70%;
+  }
+}
+
+
+// MESSAGE HEADER
+.message-header {
+  display: flex;
+}
+
+
+// MESSAGE CONTENT
+.message-content {
+  display: flex;
+}
+
+
+// MESSAGE FOOTER
+.message-footer {
+  display: flex;
 }

@@ -1,9 +1,11 @@
 // NAVIGATION
 nav {
   display: flex;
+  z-index: 100;
   width: 100vw;
   padding: 0.5rem;
   border-top: 1px solid $color-nav;
+  background: white;
 
   ul {
     display: flex;
@@ -48,15 +50,6 @@ nav {
 
     li.active a {
       color: $color-nav-hover;
-    }
-
-    li:first-child a {
-      color: $color-primary;
-
-      &:hover,
-      &:focus {
-        color: $color-nav-hover;
-      }
     }
   }
 }

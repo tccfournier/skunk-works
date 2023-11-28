@@ -13,6 +13,7 @@ input[type="tel"],
 input[type="url"],
 select {
   font-size: $p;
+  color: black;
   @include appearance(none);
 }
 
