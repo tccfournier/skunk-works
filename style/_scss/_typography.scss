@@ -82,7 +82,8 @@ dl {
 }
 
 ul {
-  padding-left: 1.5rem;
+  // padding-left: 1.5rem;
+  padding-left: $spacing-24;
 }
 
 ul.no-bullets {

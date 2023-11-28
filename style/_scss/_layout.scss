@@ -14,7 +14,7 @@ body {
     width: 100vw;
     max-width: 100vw;
     min-width: 100vw;
-    padding: 1rem;
+    padding: $spacing-16;
 
     .content {
       display: flex;
@@ -23,7 +23,7 @@ body {
       width: 100%;
       max-width: 100%;
       min-width: 100%;
-      padding: 1rem;
+      padding: $spacing-16;
     }
   }
 }
@@ -50,165 +50,4 @@ body {
       }
     }
   }
-}
-
-
-// INBOX
-.inbox {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-  @include transition(all);
-
-  .inbox-control {
-    width: 100%;
-    padding: 1rem 0 0;
-
-    fieldset:first-of-type {
-      margin: 0 0 1rem;
-    }
-  }
-}
-
-@media (min-width: 40rem) {
-  .inbox {
-    width: 40%;
-    padding: 0 1rem 0 0;
-  }
-}
-
-@media (min-width: 64rem) {
-  .inbox {
-    width: 30%;
-  }
-}
-
-
-// INBOX MESSAGES LIST
-.inbox-messages {
-  padding: 1rem 0 0;
-  ul {
-    padding: 1rem 0 0;
-    list-style-type: none;
-
-    li {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      border-top: 1px solid $color-input;
-
-      &:last-of-type {
-        border-bottom: 1px solid $color-input;
-      }
-
-      .avatar {
-        display: grid;
-        overflow: hidden;
-        width: 3rem;
-        height: 3rem;
-        border: 1px solid $color-input;
-        border-radius: 100%;
-      }
-
-      .details {
-        width: calc(100% - 4.5rem);
-        padding: 0 0.5rem;
-
-        p {
-          overflow: hidden;
-          padding: 0;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-
-          &:first-of-type {
-            font-weight: 700;
-          }
-
-          &:last-of-type {
-            font-size: $small;
-            line-height: 1.25;
-          }
-        }
-
-        ul.status {
-          display: flex;
-          display: none;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          width: 100%;
-          padding: 0.5rem 0 0;
-          font-size: $xsmall;
-
-          li {
-            padding: 0;
-          }
-        }
-      }
-
-      .actions {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 1.5rem;
-
-        svg {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-  }
-}
-
-
-// MESSAGES
-.messages {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: calc(100% - 2rem);
-  min-height: 50vh;
-  padding: 0;
-  background-color: white;
-  @include transition(all);
-  @include transform(translateX(100vw));
-}
-
-@media (min-width: 40rem) {
-  .messages {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 60%;
-    min-height: auto;
-    padding: 0 0 0 1rem;
-    @include transform(translateX(0));
-  }
-}
-
-@media (min-width: 64rem) {
-  .messages {
-    width: 70%;
-  }
-}
-
-
-// MESSAGE HEADER
-.message-header {
-  display: flex;
-}
-
-
-// MESSAGE CONTENT
-.message-content {
-  display: flex;
-}
-
-
-// MESSAGE FOOTER
-.message-footer {
-  display: flex;
 }
