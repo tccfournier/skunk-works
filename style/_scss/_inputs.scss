@@ -33,7 +33,7 @@ fieldset {
 // LABEL
 label {
   display: none;
-  padding: 0 0 0.5rem;
+  padding: 0 0 $spacing-8;
   font-size: $small;
   font-weight: 700;
 }
@@ -47,7 +47,7 @@ select {
   width: 100%;
   min-height: 3rem;
   margin: 0;
-  padding: 0.5rem;
+  padding: $spacing-8;
   border: 1px solid $color-input;
   border-radius: 0.25rem;
   text-overflow: ellipsis;
@@ -65,7 +65,7 @@ select {
   // z-index: -1;
   width: 2rem;
   height: 2rem;
-  padding: 0.5rem;
+  padding: $spacing-8;
   color: $color-input;
 
   svg {
