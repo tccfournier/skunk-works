@@ -1,0 +1,51 @@
+// APPLICATION LAYOUT
+body {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 100vh;
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 4rem;
+    max-height: 4rem;
+  }
+
+  main {
+    height: calc(100vh - 4rem);
+    padding: $spacing-8;
+
+    .content {
+      height: calc(100vh - 9rem);
+      padding: $spacing-8;
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  body {
+    flex-direction: row;
+
+    nav {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 4rem;
+      height: auto;
+      max-height: none;
+    }
+
+    main {
+      height: 100vh;
+      width: calc(100% - 4rem);
+
+      .content {
+        height: calc(100vh - 5rem);
+      }
+    }
+  }
+}
