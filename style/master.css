@@ -48,19 +48,31 @@ body {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 0;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
 }
 
 a {
   font-weight: 700;
   text-decoration: none;
   color: var(--color--primary);
+  -webkit-transition: color 0.25s ease 0s;
+  -moz-transition: color 0.25s ease 0s;
+  -ms-transition: color 0.25s ease 0s;
+  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 a:hover, a:focus {
@@ -273,7 +285,15 @@ body main .content {
 }
 
 .content--details {
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
+  -webkit-transform: translateX(100vw);
+  -moz-transform: translateX(100vw);
+  -ms-transform: translateX(100vw);
+  -o-transform: translateX(100vw);
   transform: translateX(100vw);
 }
 
@@ -290,6 +310,10 @@ body main .content {
     left: calc(30% + 4rem);
     width: calc(70% - 5rem);
     padding-left: var(--spacing--8);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -356,6 +380,10 @@ body main .content {
   height: 100%;
   color: var(--color--nav);
   cursor: pointer;
+  -webkit-transition: color 0.25s ease 0s;
+  -moz-transition: color 0.25s ease 0s;
+  -ms-transition: color 0.25s ease 0s;
+  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 .content--list ul.list li .actions svg:hover, .content--list ul.list li .actions svg:focus {
@@ -414,6 +442,10 @@ nav ul li a span.icon {
   margin-bottom: var(--spacing--4);
   border-radius: 100%;
   background: var(--color--nav);
+  -webkit-transition: background 0.25s ease 0s;
+  -moz-transition: background 0.25s ease 0s;
+  -ms-transition: background 0.25s ease 0s;
+  -o-transition: background 0.25s ease 0s;
   transition: background 0.25s ease 0s;
 }
 nav ul li a:hover, nav ul li a:focus {
@@ -474,6 +506,10 @@ details {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-transition: max-height 0.25s ease 0s;
+  -moz-transition: max-height 0.25s ease 0s;
+  -ms-transition: max-height 0.25s ease 0s;
+  -o-transition: max-height 0.25s ease 0s;
   transition: max-height 0.25s ease 0s;
 }
 details summary {
