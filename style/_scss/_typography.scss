@@ -2,6 +2,7 @@
 h1,
 h2,
 h3,
+h4,
 p,
 small {
   display: block;
@@ -12,7 +13,8 @@ small {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 700;
   line-height: 1.25;
 }
@@ -27,6 +29,10 @@ h2 {
 
 h3 {
   font-size: $h3;
+}
+
+h4 {
+  font-size: $h4;
 }
 
 p {
@@ -82,7 +88,6 @@ dl {
 }
 
 ul {
-  // padding-left: 1.5rem;
   padding-left: $spacing-24;
 }
 
@@ -96,6 +101,7 @@ ul.no-bullets {
 h1.center,
 h2.center,
 h3.center,
+h4.center,
 p.center,
 small.center {
   text-align: center;
@@ -104,6 +110,7 @@ small.center {
 h1.right,
 h2.right,
 h3.right,
+h4.right,
 p.right,
 small.right {
   text-align: right;
@@ -114,6 +121,7 @@ small.right {
 h1:first-child,
 h2:first-child,
 h3:first-child,
+h4:first-child,
 p:first-child,
 small:first-child,
 .xsmall:first-child,
@@ -127,6 +135,7 @@ dl:first-child {
 // H + P SPACING
 h1+p,
 h2+p,
-h3+p {
+h3+p,
+h4+p {
   padding-top: 0;
 }

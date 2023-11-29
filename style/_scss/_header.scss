@@ -1,5 +1,15 @@
 // HEADER
 header {
   display: flex;
-  padding: $spacing-16;
+  align-items: center;
+  height: 4rem;
+  padding: $spacing-8;
 }
+
+// @media (min-width: 40rem) {
+//   header {
+//     input[type="search"] {
+//       width: calc(30% - 0.5rem);
+//     }
+//   }
+// }
