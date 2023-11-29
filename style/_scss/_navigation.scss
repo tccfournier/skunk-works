@@ -60,6 +60,14 @@ nav {
 
       li {
         padding: $spacing-8;
+
+        a {
+
+          span.icon {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
       }
     }
   }
