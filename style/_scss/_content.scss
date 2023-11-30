@@ -29,8 +29,14 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      padding: $spacing-12 0;
+      padding: $spacing-12 $spacing-8;
       border-bottom: 1px solid $color-input;
+      background-color: transparent;
+      @include transition(background-color);
+
+      &.selected {
+        background-color: $color-background-light;
+      }
 
       .avatar {
         display: grid;
@@ -115,6 +121,10 @@
   @include transition(all);
   @include transform(translateX(-92vw));
   @include transform(translateX(100vw));
+
+  &.show {
+    @include transform(translateX(-92vw));
+  }
 }
 
 @media (min-width: 40rem) {
@@ -141,9 +151,27 @@
   padding: 0 0 $spacing-8;
   background-color: white;
 
+  .back {
+    display: grid;
+    position: absolute;
+    overflow: hidden;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    border-radius: 100%;
+    background-color: $color-nav;
+    cursor: pointer;
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $color-nav-hover;
+    }
+  }
+
   h4 {
     width: auto;
-    padding: 0;
+    padding: 0 0 0 2.5rem;
   }
 
   .controls {
@@ -191,6 +219,14 @@
 @media (min-width: 40rem) {
   .content--details-header {
     width: calc(100% - $spacing-8);
+
+    .back {
+      display: none;
+    }
+
+    h4 {
+      padding: 0;
+    }
   }
 }
 

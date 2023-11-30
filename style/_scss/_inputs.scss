@@ -62,7 +62,7 @@ select {
   position: absolute;
   top: calc(50% - 1rem);
   right: 0.5rem;
-  // z-index: -1;
+  z-index: -1;
   width: 2rem;
   height: 2rem;
   padding: $spacing-8;

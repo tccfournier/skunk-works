@@ -99,7 +99,7 @@
       <input type="search" id="search" name="search" placeholder="Search">
     </header>
     <section class="content">
-      <h2 style="display: none;">Content</h2>
+      <h2>Location Name</h2>
       <section class="content--list">
         <h3 style="display: none;">Content List</h3>
         <form>
@@ -155,7 +155,7 @@
           </fieldset>
         </form>
         <ul class="list">
-          <li>
+          <li class="content-sample">
             <div class="avatar"></div>
             <div class="details">
               <p>Firstname Lastname</p>
@@ -204,7 +204,8 @@
       <section class="content--details">
         <h3 style="display: none;">Content Details</h3>
         <div class="content--details-header">
-          <h4>Content Details Header</h4>
+          <span class="back"></span>
+          <h4>Firstname Lastname</h4>
           <div class="controls">
             <span class="avatar"></span>
             <span class="call"></span>
@@ -221,6 +222,17 @@
   </main>
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script>
+    $("li.content-sample").click(function () {
+      $(".content--details").addClass("show");
+      $("li.content-sample").addClass("selected");
+    });
+
+    $("span.back").click(function () {
+      $(".content--details").removeClass("show");
+      $("li.content-sample").removeClass("selected");
+    });
+  </script> -->
 </body>
 
 </html>

@@ -280,8 +280,13 @@ body main .content {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: var(--spacing--12) 0;
+  padding: var(--spacing--12) var(--spacing--8);
   border-bottom: 1px solid var(--color--input);
+  background-color: transparent;
+  transition: background-color 0.25s ease 0s;
+}
+.content--list ul.list li.selected {
+  background-color: var(--color--background-light);
 }
 .content--list ul.list li .avatar {
   display: grid;
@@ -351,6 +356,9 @@ body main .content {
   transform: translateX(-92vw);
   transform: translateX(100vw);
 }
+.content--details.show {
+  transform: translateX(-92vw);
+}
 
 @media (min-width: 40rem) {
   .content--details {
@@ -373,9 +381,24 @@ body main .content {
   padding: 0 0 var(--spacing--8);
   background-color: white;
 }
+.content--details-header .back {
+  display: grid;
+  position: absolute;
+  overflow: hidden;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  border-radius: 100%;
+  background-color: var(--color--nav);
+  cursor: pointer;
+  transition: background-color 0.25s ease 0s;
+}
+.content--details-header .back:hover, .content--details-header .back:focus {
+  background-color: var(--color--nav-hover);
+}
 .content--details-header h4 {
   width: auto;
-  padding: 0;
+  padding: 0 0 0 2.5rem;
 }
 .content--details-header .controls {
   display: flex;
@@ -417,6 +440,12 @@ body main .content {
 @media (min-width: 40rem) {
   .content--details-header {
     width: calc(100% - var(--spacing--8));
+  }
+  .content--details-header .back {
+    display: none;
+  }
+  .content--details-header h4 {
+    padding: 0;
   }
 }
 .content--details-main {
@@ -603,6 +632,7 @@ select {
   position: absolute;
   top: calc(50% - 1rem);
   right: 0.5rem;
+  z-index: -1;
   width: 2rem;
   height: 2rem;
   padding: var(--spacing--8);
