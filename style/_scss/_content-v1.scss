@@ -1,0 +1,145 @@
+// CONTENT LAYOUTS
+.content--list,
+.content--details {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0.5rem;
+  width: calc(100% - 1rem);
+  background-color: white;
+}
+
+.content--details {
+  @include transition(all);
+  @include transform(translateX(100vw));
+}
+
+@media (min-width: 40rem) {
+  .content--list {
+    position: relative;
+    top: auto;
+    width: 30%;
+    padding-right: $spacing-8;
+  }
+
+  .content--details {
+    position: fixed;
+    top: auto;
+    left: calc(30% + 4rem);
+    width: calc(70% - 5rem);
+    padding-left: $spacing-8;
+    @include transform(translateX(0));
+  }
+}
+
+
+// CONTENT LIST CONTROLS
+.content--list-controls {
+  details {
+    ul li {
+      // padding: $spacing-8 0;
+      border: none;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+}
+
+
+// CONTENT LIST LIST
+.content--list ul.list {
+  padding: $spacing-16 0 0 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-top: 1px solid $color-input;
+
+    .avatar {
+      display: grid;
+      overflow: hidden;
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid $color-input;
+      border-radius: 100%;
+    }
+
+    .details {
+      width: calc(100% - 4.5rem);
+      padding: 0 $spacing-8;
+
+      p {
+        overflow: hidden;
+        padding: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:first-of-type {
+          font-weight: 700;
+        }
+      }
+
+      ul.status {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        font-size: $small;
+
+        li {
+          padding: 0;
+          border: none;
+
+          &:last-of-type {
+            border: none;
+          }
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      padding: 0 0 0 $spacing-4;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        color: $color-nav;
+        cursor: pointer;
+        @include transition(color);
+
+        &:hover,
+        &:focus {
+          color: $color-nav-hover;
+        }
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: 1px solid $color-input;
+    }
+  }
+}
+
+
+// CONTENT DETAILS
+.content--details {
+  height: calc(100vh - 9rem);
+
+  .content--details-footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 40rem) {
+  .content--details {
+    height: calc(100vh - 6rem);
+  }
+}

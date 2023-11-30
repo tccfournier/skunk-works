@@ -1,11 +1,5 @@
 // APPLICATION LAYOUT
 body {
-  display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  width: 100vw;
-  height: 100vh;
 
   nav {
     position: fixed;
@@ -16,6 +10,10 @@ body {
   }
 
   main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100vw;
     height: calc(100vh - 4rem);
     padding: $spacing-8;
 
@@ -28,7 +26,6 @@ body {
 
 @media (min-width: 40rem) {
   body {
-    flex-direction: row;
 
     nav {
       position: relative;
@@ -49,3 +46,5 @@ body {
     }
   }
 }
+
+@import "content";
