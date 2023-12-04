@@ -108,6 +108,31 @@
       }
     }
   }
+
+  .controls {
+    display: grid;
+    position: absolute;
+    bottom: 1rem;
+
+    span.fab {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      text-align: center;
+      color: white;
+      background: $color-nav;
+      cursor: pointer;
+      @include transition(background);
+
+      &:hover,
+      &:focus {
+        background-color: $color-nav-hover;
+      }
+    }
+  }
 }
 
 @media (min-width: 40rem) {

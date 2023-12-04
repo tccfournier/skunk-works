@@ -343,6 +343,27 @@ body main .content {
 .content--list ul.list li .actions svg:hover, .content--list ul.list li .actions svg:focus {
   color: var(--color--nav-hover);
 }
+.content--list .controls {
+  display: grid;
+  position: absolute;
+  bottom: 1rem;
+}
+.content--list .controls span.fab {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: white;
+  background: var(--color--nav);
+  cursor: pointer;
+  transition: background 0.25s ease 0s;
+}
+.content--list .controls span.fab:hover, .content--list .controls span.fab:focus {
+  background-color: var(--color--nav-hover);
+}
 
 @media (min-width: 40rem) {
   .content--list {
