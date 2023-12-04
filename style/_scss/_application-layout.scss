@@ -12,7 +12,6 @@ body {
   main {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     width: 100vw;
     height: calc(100vh - 4rem);
     padding: $spacing-8;

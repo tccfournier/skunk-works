@@ -226,7 +226,6 @@ body nav {
 body main {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   width: 100vw;
   height: calc(100vh - 4rem);
   padding: var(--spacing--8);
@@ -257,7 +256,8 @@ body main .content {
   display: flex;
   flex-direction: row;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   width: 100%;
   max-width: 100%;
   min-width: 100%;
@@ -345,7 +345,7 @@ body main .content {
 }
 .content--list .controls {
   display: grid;
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
 }
 .content--list .controls span.fab {
@@ -540,7 +540,6 @@ nav ul li.views ul {
   nav ul {
     flex-direction: column;
     justify-content: flex-end;
-    white-space: wrap;
   }
   nav ul li {
     padding: var(--spacing--8);
