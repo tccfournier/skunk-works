@@ -20,7 +20,7 @@
     <ul>
       <li>
         <fieldset>
-          <select>
+          <select id="location">
             <option>Brigham and Women's Hospital</option>
             <option>Massachusetts General Hospital</option>
             <option>Beth Israel Deaconess Medical Center</option>
@@ -37,47 +37,50 @@
         </fieldset>
         Location
       </li>
-      <li>
-        <a href="#">
-          <span class="icon"></span>
-          Messages
-        </a>
+      <li class="views">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"></span>
+              Unread
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"></span>
+              Mentions
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"></span>
+              Drafts
+            </a>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="#">
-          <span class="icon"></span>
-          Roles &amp; Teams
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="icon"></span>
-          Analytics
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="icon"></span>
-          Patient Settings
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="icon"></span>
-          Virtual Waiting
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="icon"></span>
-          Patient Directory
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="icon"></span>
-          Broadcast Lists
-        </a>
+        <fieldset>
+          <select id="tools">
+            <option>Analytics</option>
+            <option>Roles and Teams</option>
+            <option>Analytics</option>
+            <option>Settings</option>
+            <option>Patient Settings</option>
+            <option>Virtual Waiting</option>
+            <option>Patient Directory</option>
+            <option>Broadcast Lists</option>
+          </select>
+          <div class="select-icon" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44"
+              height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </div>
+        </fieldset>
+        Tools
       </li>
       <li>
         <a href="#">
@@ -99,9 +102,9 @@
       <input type="search" id="search" name="search" placeholder="Search">
     </header>
     <section class="content">
-      <h2>Location Name</h2>
+      <h2 style="display: none;">Content</h2>
       <section class="content--list">
-        <h3 style="display: none;">Content List</h3>
+        <h3>Brigham and Women's Hospital</h3>
         <form>
           <fieldset>
             <select>
@@ -184,7 +187,7 @@
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.</p>
               <ul class="status">
-                <li class="status">Read</li>
+                <li class="status">8/10 Read</li>
                 <li class="time">11:48am</li>
               </ul>
             </div>
@@ -200,6 +203,9 @@
             </div>
           </li>
         </ul>
+        <div class="controls">
+          <span class="fab"></span>
+        </div>
       </section>
       <section class="content--details">
         <h3 style="display: none;">Content Details</h3>
@@ -222,17 +228,7 @@
   </main>
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- <script>
-    $("li.content-sample").click(function () {
-      $(".content--details").addClass("show");
-      $("li.content-sample").addClass("selected");
-    });
-
-    $("span.back").click(function () {
-      $(".content--details").removeClass("show");
-      $("li.content-sample").removeClass("selected");
-    });
-  </script> -->
+  <script src="assets/scripts/site.js"></script>
 </body>
 
 </html>

@@ -272,6 +272,9 @@ body main .content {
   width: 100%;
   min-width: 100%;
 }
+.content--list form fieldset:first-of-type {
+  display: none;
+}
 .content--list ul.list {
   padding: var(--spacing--4) 0 0;
   list-style-type: none;
@@ -346,6 +349,9 @@ body main .content {
     width: 30%;
     min-width: 30%;
     padding-right: var(--spacing--8);
+  }
+  .content--list form fieldset:first-of-type {
+    display: inherit;
   }
 }
 .content--details {
@@ -461,6 +467,7 @@ body main .content {
 
 nav {
   z-index: 100;
+  padding: 0 var(--spacing--4);
   background-color: white;
 }
 nav ul {
@@ -503,11 +510,15 @@ nav ul li a:hover, nav ul li a:focus {
 nav ul li a:hover span.icon, nav ul li a:focus span.icon {
   background: var(--color--nav-hover);
 }
+nav ul li.views ul {
+  border-right: 1px solid var(--color--input);
+  border-left: 1px solid var(--color--input);
+}
 
 @media (min-width: 40rem) {
   nav ul {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     white-space: wrap;
   }
   nav ul li {
@@ -516,6 +527,16 @@ nav ul li a:hover span.icon, nav ul li a:focus span.icon {
   nav ul li a span.icon {
     width: 2.5rem;
     height: 2.5rem;
+  }
+  nav ul li:first-of-type {
+    position: absolute;
+    top: 0;
+  }
+  nav ul li.views {
+    display: none;
+  }
+  nav ul li.views ul {
+    display: none;
   }
 }
 nav ul li {
@@ -537,7 +558,7 @@ nav ul li fieldset select {
     padding-top: var(--spacing--8);
   }
   nav ul li fieldset select {
-    min-height: 2.5rem;
+    min-height: 3rem;
   }
 }
 details {
