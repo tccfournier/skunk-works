@@ -227,11 +227,11 @@ body main {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 3rem);
   padding: var(--spacing--8);
 }
 body main .content {
-  height: calc(100vh - 9rem);
+  height: calc(100vh - 8rem);
   padding: var(--spacing--8);
 }
 
@@ -246,10 +246,10 @@ body main .content {
   }
   body main {
     height: 100vh;
-    width: calc(100% - 4rem);
+    width: calc(100% - 3rem);
   }
   body main .content {
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 4rem);
   }
 }
 .content {
@@ -578,7 +578,7 @@ nav ul li fieldset select {
     padding-top: var(--spacing--8);
   }
   nav ul li fieldset select {
-    min-height: 3rem;
+    min-height: 2rem;
   }
 }
 details {
@@ -658,7 +658,7 @@ select {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 3rem;
+  min-height: 2rem;
   margin: 0;
   padding: var(--spacing--8);
   border: 1px solid var(--color--input);
@@ -696,6 +696,6 @@ select option {
 header {
   display: flex;
   align-items: center;
-  height: 4rem;
+  height: 3rem;
   padding: var(--spacing--8);
 }
