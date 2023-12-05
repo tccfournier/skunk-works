@@ -138,8 +138,8 @@
 
 @media (min-width: 40rem) {
   .content--list {
-    width: 30%;
-    min-width: 30%;
+    width: 35%;
+    min-width: 35%;
     padding-right: $spacing-8;
 
     form {
@@ -167,8 +167,8 @@
 
 @media (min-width: 40rem) {
   .content--details {
-    width: 70%;
-    min-width: 70%;
+    width: 65%;
+    min-width: 65%;
     padding-left: $spacing-8;
     @include transform(translateX(0));
   }

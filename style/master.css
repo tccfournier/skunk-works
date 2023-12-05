@@ -367,8 +367,8 @@ body main .content {
 
 @media (min-width: 40rem) {
   .content--list {
-    width: 30%;
-    min-width: 30%;
+    width: 35%;
+    min-width: 35%;
     padding-right: var(--spacing--8);
   }
   .content--list form fieldset:first-of-type {
@@ -389,8 +389,8 @@ body main .content {
 
 @media (min-width: 40rem) {
   .content--details {
-    width: 70%;
-    min-width: 70%;
+    width: 65%;
+    min-width: 65%;
     padding-left: var(--spacing--8);
     transform: translateX(0);
   }
