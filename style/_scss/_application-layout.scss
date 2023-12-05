@@ -36,8 +36,8 @@ body {
     }
 
     main {
+      width: calc(100% - 4rem);
       height: 100vh;
-      width: calc(100% - 3rem);
 
       .content {
         height: calc(100vh - 4rem);
