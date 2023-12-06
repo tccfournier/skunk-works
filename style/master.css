@@ -335,6 +335,7 @@ body main .content {
 }
 .content--list ul.list li .actions svg {
   width: 100%;
+  max-width: 1.125rem;
   height: 100%;
   color: var(--color--nav);
   cursor: pointer;
@@ -663,6 +664,7 @@ select {
   padding: var(--spacing--8);
   border: 1px solid var(--color--input);
   border-radius: 0.25rem;
+  line-height: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   background-color: transparent;
