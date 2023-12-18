@@ -1,0 +1,28 @@
+// ASIDE+SECTION TRIGGER AND CLOSE
+article.show-detail {
+
+  aside,
+  section {
+    @include transform(translateX(-96vw));
+  }
+}
+
+@media (min-width: 48rem) {
+  article.show-detail {
+
+    aside,
+    section {
+      @include transform(translateX(0));
+    }
+  }
+}
+
+
+// INBOX FORMS
+aside.inbox {
+  form {
+    fieldset + fieldset {
+      margin-top: $spacing-8;
+    }
+  }
+}
