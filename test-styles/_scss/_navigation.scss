@@ -29,11 +29,9 @@ nav {
 
     li,
     li a {
-      color: $color-nav;
 
       &:hover,
       &:focus {
-        color: $color-primary;
       }
     }
   }
@@ -60,10 +58,8 @@ nav ul li fieldset {
 
   select {
     width: 2rem;
-    border-color: $color-nav;
     border-radius: 100%;
     color: transparent;
-    background-color: $color-nav;
   }
 }
 
@@ -79,14 +75,13 @@ nav ul li.profile a {
     height: 2rem;
     margin-bottom: $spacing-4;
     overflow: hidden;
-    border: 1px solid $color-nav;
+    border: 1px solid;
     border-radius: 100%;
     color: white;
     font-size: $small;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-    background-color: $color-nav;
 
     img {
       position: absolute;
@@ -105,14 +100,13 @@ nav ul li.help a {
     margin-bottom: $spacing-4;
     padding: $spacing-4;
     overflow: hidden;
-    border: 1px solid $color-nav;
+    border: 1px solid;
     border-radius: 100%;
     color: white;
     font-size: $small;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-    background-color: $color-nav;
 
     svg {
       width: 100%;

@@ -6,20 +6,23 @@
   --p: 1rem;
   --small: 0.75rem;
   --xsmall: 0.625rem;
-  --spacing--4: 0.25rem;
-  --spacing--8: 0.5rem;
-  --spacing--12: 0.75rem;
-  --spacing--16: 1rem;
-  --spacing--20: 1.25rem;
-  --spacing--24: 1.5rem;
-  --spacing--32: 2rem;
-  --color--primary: black;
-  --color--secondary: white;
-  --color--background-dark: #282828;
-  --color--background-light: white;
-  --color--nav: #7c7c7c;
-  --color--nav-hover: #181818;
-  --color--input: #cdcdcd;
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-20: 1.25rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --color-primary: #18618e;
+  --color--bg-dark: #282828;
+  --color--bg-dark-content: #404040;
+  --color--bg-light: #e6e6e6;
+  --color--bg-light-content: white;
+  --color--status-disabled: #888b8d;
+  --color--status-invalid: #c63531;
+  --color--status-valid: #007a4d;
+  --color--text-light: white;
+  --color--text-dark: black;
 }
 
 html {
@@ -31,7 +34,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: black;
-  background-color: var(--color--background-light);
+  background-color: var(--color--bg-light);
   scroll-behavior: smooth;
   -webkit-text-size-adjust: none;
   -moz-osx-font-smoothing: auto;
@@ -79,13 +82,9 @@ img {
 a {
   font-weight: 700;
   text-decoration: none;
-  color: var(--color--primary);
+  color: var(--color-primary);
   transition: color 0.25s ease 0s;
 }
-a:hover, a:focus {
-  color: var(--color--secondary);
-}
-
 h1,
 h2,
 h3,
@@ -174,7 +173,7 @@ dl dd {
 }
 
 ul {
-  padding-left: var(--spacing--24);
+  padding-left: var(--spacing-24);
 }
 
 ul.no-bullets {
@@ -227,9 +226,9 @@ button,
   width: auto;
   max-width: 100%;
   overflow: hidden;
-  margin: var(--spacing--8) 0 0;
-  padding: var(--spacing--8) var(--spacing--16);
-  border: 1px solid var(--color--primary);
+  margin: var(--spacing-8) 0 0;
+  padding: var(--spacing-8) var(--spacing-16);
+  border: 1px solid var(--color-primary);
   border-radius: 2rem;
   font-size: var(--small);
   font-weight: 700;
@@ -237,15 +236,15 @@ button,
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--color--secondary);
-  background-color: var(--color--primary);
+  color: var(--color--text-light);
+  background-color: var(--color-primary);
   transition: all 0.25s ease 0s;
 }
 button:hover, button:focus,
 .button:hover,
 .button:focus {
-  color: var(--color--primary);
-  background-color: var(--color--secondary);
+  color: var(--color-primary);
+  background-color: var(--color--text-light);
 }
 
 body {
@@ -259,19 +258,19 @@ body {
 nav {
   width: 100%;
   height: 4rem;
-  padding: var(--spacing--8);
+  padding: var(--spacing-8);
 }
 
 main {
   position: relative;
   min-height: calc(100dvh - 4rem);
-  padding: var(--spacing--8);
+  padding: var(--spacing-8);
 }
 
 header,
 article {
   width: 100%;
-  padding: var(--spacing--8);
+  padding: var(--spacing-8);
   border-radius: 0.5rem;
 }
 
@@ -303,7 +302,7 @@ article {
   justify-content: space-between;
   width: 200%;
   height: calc(100% - 5rem);
-  margin: var(--spacing--16) 0;
+  margin: var(--spacing-16) 0;
   overflow-x: hidden;
 }
 article aside,
@@ -315,7 +314,7 @@ article section {
   transform: translateX(0);
 }
 article aside {
-  margin-right: var(--spacing--8);
+  margin-right: var(--spacing-8);
 }
 
 @media (min-width: 48rem) {
@@ -324,7 +323,7 @@ article aside {
     flex-wrap: wrap;
     width: 100%;
     height: calc(100% - 4.5rem);
-    margin: var(--spacing--8) 0 0;
+    margin: var(--spacing-8) 0 0;
   }
   article h2 {
     line-height: 2rem;
@@ -339,7 +338,7 @@ article aside {
   }
   article aside {
     flex-grow: 1;
-    margin-right: var(--spacing--16);
+    margin-right: var(--spacing-16);
   }
   article section {
     flex-grow: 3;
@@ -357,7 +356,7 @@ article.show-detail section {
   }
 }
 aside.inbox form fieldset + fieldset {
-  margin-top: var(--spacing--8);
+  margin-top: var(--spacing-8);
 }
 
 nav {
@@ -379,23 +378,13 @@ nav ul {
 nav ul li {
   display: flex;
   flex-direction: column;
-  padding: 0 var(--spacing--8);
+  padding: 0 var(--spacing-8);
   transition: color 0.25s ease 0s;
 }
 nav ul li a {
   display: flex;
   flex-direction: column;
 }
-nav ul li,
-nav ul li a {
-  color: var(--color--nav);
-}
-nav ul li:hover, nav ul li:focus,
-nav ul li a:hover,
-nav ul li a:focus {
-  color: var(--color--primary);
-}
-
 @media (min-width: 48rem) {
   nav ul {
     flex-direction: column;
@@ -403,18 +392,16 @@ nav ul li a:focus {
     justify-content: flex-start;
   }
   nav ul li {
-    padding: var(--spacing--8) 0;
+    padding: var(--spacing-8) 0;
   }
 }
 nav ul li fieldset {
-  padding-bottom: var(--spacing--4);
+  padding-bottom: var(--spacing-4);
 }
 nav ul li fieldset select {
   width: 2rem;
-  border-color: var(--color--nav);
   border-radius: 100%;
   color: transparent;
-  background-color: var(--color--nav);
 }
 
 nav ul li.profile a span {
@@ -424,16 +411,15 @@ nav ul li.profile a span {
   position: relative;
   width: 2rem;
   height: 2rem;
-  margin-bottom: var(--spacing--4);
+  margin-bottom: var(--spacing-4);
   overflow: hidden;
-  border: 1px solid var(--color--nav);
+  border: 1px solid;
   border-radius: 100%;
   color: white;
   font-size: var(--small);
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  background-color: var(--color--nav);
 }
 nav ul li.profile a span img {
   position: absolute;
@@ -446,17 +432,16 @@ nav ul li.help a span {
   position: relative;
   width: 2rem;
   height: 2rem;
-  margin-bottom: var(--spacing--4);
-  padding: var(--spacing--4);
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-4);
   overflow: hidden;
-  border: 1px solid var(--color--nav);
+  border: 1px solid;
   border-radius: 100%;
   color: white;
   font-size: var(--small);
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  background-color: var(--color--nav);
 }
 nav ul li.help a span svg {
   width: 100%;
@@ -508,7 +493,7 @@ fieldset {
 }
 
 label {
-  padding: 0 0 var(--spacing--4);
+  padding: 0 0 var(--spacing-4);
   font-size: var(--small);
   font-weight: 700;
   line-height: 1;
@@ -527,8 +512,8 @@ select {
   max-height: 2rem;
   min-height: 2rem;
   margin: 0;
-  padding: var(--spacing--8);
-  border: 1px solid var(--color--input);
+  padding: var(--spacing-8);
+  border: 1px solid;
   border-radius: 0.25rem;
   line-height: 1;
   text-overflow: ellipsis;
@@ -544,13 +529,11 @@ select {
   z-index: -1;
   width: 2rem;
   height: 2rem;
-  padding: var(--spacing--8);
-  color: var(--color--input);
+  padding: var(--spacing-8);
 }
 .select-icon svg {
   width: 100%;
   height: 100%;
-  fill: var(--color--input);
 }
 
 select option {
@@ -572,14 +555,13 @@ label.checkbox {
 }
 label.checkbox span {
   display: grid;
+  display: none;
   width: 1rem;
   height: 1rem;
-  color: var(--color--input);
 }
 label.checkbox span svg {
   width: 100%;
   height: 100%;
-  fill: var(--color--input);
 }
 label.checkbox input[type=checkbox] {
   position: relative;
@@ -590,9 +572,9 @@ label.checkbox input[type=checkbox] {
   height: 1rem;
   max-height: 1rem;
   min-height: 1rem;
-  margin: 0 var(--spacing--8);
+  margin: 0 var(--spacing-8);
   padding: 0;
-  border: 1px solid var(--color--input);
+  border: 1px solid;
   border-radius: 2rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -606,49 +588,23 @@ label.checkbox input[type=checkbox]:after {
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 100%;
-  background: var(--color--input);
   content: "";
   transition: all 0.25s ease 0s;
 }
 label.checkbox input[type=checkbox]:checked:after {
-  margin-left: var(--spacing--16);
+  margin-left: var(--spacing-16);
 }
 
 html.dark {
   color: white;
-  background-color: var(--color--background-dark);
+  background-color: var(--color--bg-dark);
 }
 html.dark body nav {
-  background-color: var(--color--background-dark);
+  background-color: var(--color--bg-dark);
 }
-html.dark a {
-  color: var(--color--secondary);
-}
-html.dark a:hover, html.dark a:focus {
-  color: var(--color--primary);
-}
-
-html.dark nav ul li,
-html.dark nav ul li a {
-  color: var(--color--nav);
-}
-html.dark nav ul li:hover, html.dark nav ul li:focus,
-html.dark nav ul li a:hover,
-html.dark nav ul li a:focus {
-  color: var(--color--secondary);
-}
-
 html.dark button {
-  border-color: var(--color--secondary);
-  color: var(--color--primary);
-  background-color: var(--color--secondary);
+  color: var(--color-primary);
 }
 html.dark button:hover, html.dark button:focus {
-  color: var(--color--secondary);
   background-color: transparent;
-}
-
-html.dark input,
-html.dark select {
-  color: white;
 }

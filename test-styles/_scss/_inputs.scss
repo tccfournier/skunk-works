@@ -54,7 +54,7 @@ select {
   min-height: 2rem;
   margin: 0;
   padding: $spacing-8;
-  border: 1px solid $color-input;
+  border: 1px solid;
   border-radius: 0.25rem;
   line-height: 1;
   text-overflow: ellipsis;
@@ -73,12 +73,10 @@ select {
   width: 2rem;
   height: 2rem;
   padding: $spacing-8;
-  color: $color-input;
 
   svg {
     width: 100%;
     height: 100%;
-    fill: $color-input;
   }
 }
 

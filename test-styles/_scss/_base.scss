@@ -12,7 +12,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: black;
-  background-color: $color-background-light;
+  background-color: $color--bg-light;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: none;
   -moz-osx-font-smoothing: auto;
@@ -68,11 +68,10 @@ img {
 a {
   font-weight: 700;
   text-decoration: none;
-  color: $color-primary;
+  color: $color--primary;
   @include transition(color);
 
   &:hover,
   &:focus {
-    color: $color-secondary;
   }
 }
