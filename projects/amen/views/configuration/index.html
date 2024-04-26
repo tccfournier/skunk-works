@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
+  <title>AMEN Configuration Skunk Works | TigerConnect</title>
+  <base href="../../../../">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/master.min.css">
+  <style>
+    body {
+      opacity: 0;
+      -webkit-transition: opacity 1s ease-in;
+      -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+      -o-transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in;
+    }
+
+    body.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="projects/amen/views/dashboard/index.html">Dashboard</a></li>
+        <li><a href="projects/amen/views/integration/index.html">Integration</a></li>
+        <li>Configuration</li>
+        <li><a href="projects/amen/views/categorization/index.html">Categorization</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Configuration</h1>
+      <section id="start" class="visuallyhidden">
+        <h2>Create New Integration</h2>
+        <div class="row cards">
+          <div class="card">
+            <h3>Integrations</h3>
+            <p>You have no integrations. Configure your first integration to start receiving new messages.</p>
+            <p><a href="projects/amen/views/integration/index.html">Add new integration</a></p>
+          </div>
+      </section>
+      <section id="integrated">
+        <h2>Current Integrations</h2>
+        <div class="row cards">
+          <div class="card">
+            <h3>Integration Details</h3>
+            <ul class="no-bullets">
+              <li><b>ID:&nbsp;</b></li>
+              <li><b>Name:&nbsp;</b></li>
+              <li><b>Status:&nbsp;</b></li>
+              <li><b>Version:&nbsp;</b></li>
+              <li><b>OS:&nbsp;</b></li>
+              <li><b>Behavior:&nbsp;</b></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Definitions</h3>
+            <ul class="options">
+              <li>Dev Task Definition<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
+              <li>Prod Task Definition<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
+              <li>All Task Definitions<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
+            </ul>
+            <h3>Configurations</h3>
+            <ul class="options">
+              <li>clinical-configuration.json<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
+              <li>clinical-adt.groovy<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
+              <li>clinical-orm-o01.groovy<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
+              <li>clinical-oru-o01.groovy<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tasks</h3>
+            <form>
+              <fieldset class="checkbox checklist">
+                <legend>Mark As Done</legend>
+                <input type="checkbox" id="integration-send-vm-guide" name="integration-send-vm-guide" value="Send VM guide">
+                <label for="integration-send-vm-guide">Send VM guide</label>
+                <input type="checkbox" id="integration-create-dashboard" name="integration-create-dashboard" value="Create dashboard for behaviors">
+                <label for="integration-create-dashboard">Create dashboard for behaviors</label>
+                <input type="checkbox" id="integration-configure-timezone" name="integration-configure-timezone" value="Configure org matches and timezone">
+                <label for="integration-configure-timezone">Configure org matches and timezone</label>
+              </fieldset>
+            </form>
+            <ul class="options">
+              <li>Create Infrastructure<span class="action"><a href="" class="button tertiary">Create</a></span></li>
+              <li>Request creation of prod infrastructure<span class="action"><a href="" class="button tertiary">Create Ticket</a></span></li>
+              <li>Request curl commands<span class="action"><a href="" class="button tertiary">Create Ticket</a></span></li>
+              <li>Request DevOps configuration merge<span class="action"><a href="" class="button tertiary">Create Ticket</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <form class="color-mode">
+      <fieldset class="toggle">
+        <label for="switch-theme">
+          <span class="light-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-sun">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+          </span>
+          <input type="checkbox" id="switch-theme" class="toggle" name="switch-theme" title="switch-theme">
+          <span class="dark-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+            </svg>
+          </span>
+        </label>
+      </fieldset>
+    </form>
+  </footer>
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="projects/amen/assets/scripts/site.js"></script>
+  <script src="assets/scripts/headroom.js"></script>
+  <script>
+    // CHANGE CSS WHEN PAGE LOADS
+    $(document).ready(function () {
+      $("body").addClass("visible");
+      $("body").removeClass("hidden");
+    });
+    // HEADROOM
+    var myElement = document.querySelector("header");
+    var headroom = new Headroom(myElement);
+    headroom.init();
+  </script>
+</body>
+
+</html>
