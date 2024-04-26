@@ -9,10 +9,8 @@ html {
   min-width: 100%;
   margin: 0 auto;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  // font-family: "Inter", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: $color--text-dark;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: none;
   -moz-osx-font-smoothing: auto;
@@ -26,25 +24,21 @@ html {
 }
 
 
-// HTML DARK MODE
-html.dark {
-  color: $color--text-light;
-}
-
-
 // BODY
 body {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: $color--bg-light;
 }
 
-
-// BODY DARK MODE
-html.dark {
+@media (min-width: 40rem) {
   body {
-    background-color: $color--bg-dark;
+    flex-direction: row;
   }
 }
 
@@ -68,35 +62,14 @@ img {
   shape-margin: 0.75rem;
 }
 
-svg {
-  stroke-width: 1.5;
-}
-
 a {
   font-weight: 700;
   text-decoration: none;
-  color: $color--action-light;
+  color: $color-primary;
   @include transition(color);
 
   &:hover,
   &:focus {
-    color: $color--action-light-hover;
-  }
-}
-
-.visuallyhidden {
-  display: none;
-}
-
-
-// LINKS DARK MODE
-html.dark {
-  a {
-    color: $color--action-dark;
-
-    &:hover,
-    &:focus {
-      color: $color--action-dark-hover;
-    }
+    color: $color-secondary;
   }
 }

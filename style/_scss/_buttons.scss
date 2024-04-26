@@ -1,1 +1,191 @@
-// FAB
+// BUTTONS
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
+  overflow: hidden;
+  margin: $spacing-8 $spacing-8 $spacing-8 0;
+  padding: $spacing-8 $spacing-16;
+  border: 1px solid $color--action-light;
+  border-radius: $border-radius-sm;
+  font-size: $small;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $color--text-light;
+  background-color: $color--action-light;
+  @include transition(all);
+
+  &:hover,
+  &:focus {
+    border-color: $color--action-light-hover;
+    background-color: $color--action-light-hover;
+  }
+}
+
+button.secondary,
+.button.secondary {
+  color: $color--action-light;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: $color--action-light-hover;
+    color: $color--action-light-hover;
+  }
+}
+
+button.tertiary,
+.button.tertiary {
+  padding: 0 $spacing-4;
+  border: none;
+  color: $color--action-light;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $color--action-light-hover;
+  }
+}
+
+
+// BUTTONS DARK MODE
+html.dark {
+
+  button,
+  .button {
+    border-color: $color--action-dark;
+    background-color: $color--action-dark;
+
+    &:hover,
+    &:focus {
+      border-color: $color--action-dark-hover;
+      background-color: $color--action-dark-hover;
+    }
+  }
+
+  button.secondary,
+  .button.secondary {
+    color: $color--action-dark;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      border-color: $color--action-dark-hover;
+      color: $color--action-dark-hover;
+    }
+  }
+
+  button.tertiary,
+  .button.tertiary {
+    padding: 0 $spacing-4;
+    border: none;
+    border-radius: 0;
+    color: $color--action-dark;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $color--action-dark-hover;
+    }
+  }
+}
+
+
+// ICON BUTTONS
+button.icon,
+.button.icon {
+  padding: $spacing-4;
+  border: 0;
+  border-radius: 100%;
+  color: $color--bg-dark;
+  background-color: rgba(43, 43, 43, 0);
+
+  &:hover,
+  &:focus {
+    background-color: rgba(43, 43, 43, 0.25);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 1.5;
+  }
+
+  &.sm {
+    width: 1rem;
+    max-width: 1rem;
+    height: 1rem;
+    max-height: 1rem;
+  }
+
+  &.md {
+    width: 1.5rem;
+    max-width: 1.5rem;
+    height: 1.5rem;
+    max-height: 1.5rem;
+  }
+
+  &.lg {
+    width: 2rem;
+    max-width: 2rem;
+    height: 2rem;
+    max-height: 2rem;
+  }
+
+  &.xl {
+    width: 3rem;
+    max-width: 3rem;
+    height: 3rem;
+    max-height: 3rem;
+  }
+}
+
+
+// ICON BUTTONS DARK MODE
+html.dark {
+
+  button.icon,
+  .button.icon {
+    color: $color--bg-light;
+    background-color: rgba(230, 230, 230, 0);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(230,230,230,0.25);
+    }
+  }
+}
+
+
+// BUTTON GROUPS
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $spacing-16 0 0;
+
+  button,
+  .button {
+    margin-bottom: 0;
+  }
+}
+
+.button-group.center {
+  justify-content: center;
+}
+
+.button-group.right {
+  justify-content: flex-end;
+
+  button:last-of-type,
+  .button:last-of-type {
+    margin-right: 0;
+  }
+}

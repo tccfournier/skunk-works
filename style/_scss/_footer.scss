@@ -1,4 +1,40 @@
 // FOOTER
 footer {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin: 0;
+  padding: $spacing-16;
+}
+
+
+// FOOTER NAV
+footer {
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: $p;
+
+      li {
+        padding: 0 0 $spacing-4;
+        line-height: 1.25;
+        text-transform: none;
+
+        &:first-of-type {
+          font-size: $xsmall;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  
+  form {
+    padding: $spacing-16 0 0;
+  }
 }

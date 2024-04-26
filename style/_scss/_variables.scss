@@ -14,12 +14,25 @@
   --spacing--20: 1.25rem;
   --spacing--24: 1.5rem;
   --spacing--32: 2rem;
-  --color--primary: #af241e;
-  --color--secondary: #2d6199;
-  --color--background-light: #f8f8f8;
-  --color--nav: #7c7c7c;
-  --color--nav-hover: #181818;
-  --color--input: #cdcdcd;
+  --color--action-dark: #a2bfd1;
+  --color--action-dark-hover: #18618e;
+  --color--action-light: #18618e;
+  --color--action-light-hover: #a2bfd1;
+  --color--bg-dark: #2b2b2b;
+  --color--bg-dark-content: #404040;
+  --color--bg-light: #e6e6e6;
+  --color--bg-light-content: #ffffff;
+  --color--border: #c5c5c5;
+  --color--status-disabled: #888b8d;
+  --color--status-invalid: #c63531;
+  --color--status-valid: #007a4d;
+  --color--text-dark: #000000;
+  --color--text-light: #ffffff;
+  --border-radius-xs: 0.125rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 100%;
 }
 
 
@@ -44,9 +57,25 @@ $spacing-32: var(--spacing--32);
 
 
 // COLOR VARIABLES
-$color-primary: var(--color--primary);
-$color-secondary: var(--color-secondary);
-$color-background-light: var(--color--background-light);
-$color-nav: var(--color--nav);
-$color-nav-hover: var(--color--nav-hover);
-$color-input: var(--color--input);
+$color--action-dark: var(--color--action-dark);
+$color--action-dark-hover: var(--color--action-dark-hover);
+$color--action-light: var(--color--action-light);
+$color--action-light-hover: var(--color--action-light-hover);
+$color--bg-dark: var(--color--bg-dark);
+$color--bg-dark-content: var(--color--bg-dark-content);
+$color--bg-light: var(--color--bg-light);
+$color--bg-light-content: var(--color--bg-light-content);
+$color--border: var(--color--border);
+$color--status-disabled: var(--color--status-disabled);
+$color--status-invalid: var(--color--status-invalid);
+$color--status-valid: var(--color--status-valid);
+$color--text-dark: var(--color--text-dark);
+$color--text-light: var(--color--text-light);
+
+
+// BORDER-RADIUS VARIABLES
+$border-radius-xs: var(--border-radius-xs);
+$border-radius-sm: var(--border-radius-sm);
+$border-radius-md: var(--border-radius-md);
+$border-radius-lg: var(--border-radius-lg);
+$border-radius-xl: var(--border-radius-xl);

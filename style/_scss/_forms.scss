@@ -1,0 +1,20 @@
+// FORMS
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: calc(100% + $spacing-16);
+  margin-left: calc($spacing-8 * -1);
+
+  .button-group {
+    width: calc(100% - $spacing-16);
+    margin-left: $spacing-8;
+  }
+}
+
+@media (min-width: 40.5rem) {
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
+  <title>AMEN Skunk Works Inputs | TigerConnect</title>
+  <base href="../">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/master.min.css">
+  <style>
+    body {
+      opacity: 0;
+      -webkit-transition: opacity 1s ease-in;
+      -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+      -o-transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in;
+    }
+
+    body.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Index</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Inputs</h1>
+      <section>
+        <h2>Types And Variants</h2>
+        <form>
+          <fieldset>
+            <label for="input-sample-text">Text input label</label>
+            <input type="text" id="input-sample-text" name="input-sample-text" placeholder="Placeholder">
+          </fieldset>
+          <fieldset>
+            <label for="input-sample-select">Select label</label>
+            <select id="input-sample-select" name="input-sample-select">
+              <option label="First option sample">First option sample</option>
+              <option label="Second option sample">Section option sample</option>
+              <option label="Third option sample">Third option sample</option>
+              <option label="Fourth option sample">Fourth option sample</option>
+            </select>
+            <span class="select-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </span>
+          </fieldset>
+          <fieldset class="checkbox">
+            <legend class="visuallyhidden">Checkbox samples</legend>
+            <input type="checkbox" id="input-sample-checkbox-a" name="input-sample-checkbox-a"
+              value="Checkbox A label">
+            <label for="input-sample-checkbox-a">Checkbox A label</label>
+            <input type="checkbox" id="input-sample-checkbox-b" name="input-sample-checkbox-b"
+              value="Checkbox B label">
+            <label for="input-sample-checkbox-b">Checkbox B label</label>
+          </fieldset>
+          <fieldset class="radio">
+            <legend class="visuallyhidden">Radio samples</legend>
+            <input type="radio" id="input-sample-radio-a" class="radio" name="input-sample-radio" value="Radio A label">
+            <label for="input-sample-radio-a">Radio A label</label>
+            <input type="radio" id="input-sample-radio-b" class="radio" name="input-sample-radio" value="Radio B label">
+            <label for="input-sample-radio-b">Radio B label</label>
+          </fieldset>
+          <fieldset class="toggle">
+            <label for="input-sample-toggle-a">Toggle A label
+              <input type="checkbox" id="input-sample-toggle-a" class="toggle" name="input-sample-toggle-a"
+                title="input-sample-toggle-a" value="Toggle A label">
+            </label>
+            <label for="input-sample-toggle-b">Toggle B label
+              <input type="checkbox" id="input-sample-toggle-b" class="toggle" name="input-sample-toggle-b"
+                title="input-sample-toggle-b" value="Toggle B label">
+            </label>
+          </fieldset>
+          <fieldset class="range">
+            <input type="range" id="input-sample-range" name="input-sample-range" min="0" max="100" step="1" value="0">
+            <label for="input-sample-range">Range label</label>
+          </fieldset>
+          <fieldset class="small">
+            <label for="input-sample-small-a">Small A label</label>
+            <input type="text" id="input-sample-small-a" name="input-sample-small-a" placeholder="Placeholder">
+          </fieldset>
+          <fieldset class="small">
+            <label for="input-sample-small-b">Small B label</label>
+            <input type="text" id="input-sample-small-b" name="input-sample-small-b" placeholder="Placeholder">
+          </fieldset>
+          <fieldset class="checkbox row">
+            <legend>Checkbox row sample</legend>
+            <input type="checkbox" id="input-sample-checkbox-row-a" name="input-sample-checkbox-row-a"
+              value="Checkbox A">
+            <label for="input-sample-checkbox-row-a">Checkbox A</label>
+            <input type="checkbox" id="input-sample-checkbox-row-b" name="input-sample-checkbox-row-b"
+              value="Checkbox B">
+            <label for="input-sample-checkbox-row-b">Checkbox B</label>
+            <input type="checkbox" id="input-sample-checkbox-row-c" name="input-sample-checkbox-row-c"
+              value="Checkbox C">
+            <label for="input-sample-checkbox-row-c">Checkbox C</label>
+          </fieldset>
+          <fieldset class="radio row">
+            <legend>Radio row sample</legend>
+            <input type="radio" id="input-sample-radio-row-a" class="radio" name="input-sample-radio-row" value="Radio A">
+            <label for="input-sample-radio-row-a">Radio A</label>
+            <input type="radio" id="input-sample-radio-row-b" class="radio" name="input-sample-radio-row" value="Radio B">
+            <label for="input-sample-radio-row-b">Radio B</label>
+            <input type="radio" id="input-sample-radio-row-c" class="radio" name="input-sample-radio-row" value="Radio C">
+            <label for="input-sample-radio-row-c">Radio C</label>
+          </fieldset>
+        </form>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <form class="color-mode">
+      <fieldset class="toggle">
+        <label for="switch-theme">
+          <span class="light-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-sun">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+          </span>
+          <input type="checkbox" id="switch-theme" class="toggle" name="switch-theme" title="switch-theme">
+          <span class="dark-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+            </svg>
+          </span>
+        </label>
+      </fieldset>
+    </form>
+  </footer>
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="assets/scripts/site.js"></script>
+  <script src="assets/scripts/headroom.js"></script>
+  <script>
+    // CHANGE CSS WHEN PAGE LOADS
+    $(document).ready(function () {
+      $("body").addClass("visible");
+      $("body").removeClass("hidden");
+    });
+    // HEADROOM
+    var myElement = document.querySelector("header");
+    var headroom = new Headroom(myElement);
+    headroom.init();
+  </script>
+</body>
+
+</html>

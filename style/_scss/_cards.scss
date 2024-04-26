@@ -1,0 +1,165 @@
+// CARDS
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: $spacing-16 $spacing-8 0;
+  padding: $spacing-16;
+  border: 1px solid;
+  border-color: $color--border;
+  border-radius: $border-radius-md;
+}
+
+@media (min-width: 40.5rem) {
+  .card {
+    width: calc((100% / 2) - $spacing-16);
+  }
+}
+
+@media (min-width: 80rem) {
+  .card {
+    width: calc((100% / 3) - $spacing-16);
+  }
+}
+
+@media (min-width: 90rem) {
+  .card {
+    width: calc((100% / 4) - $spacing-16);
+  }
+}
+
+
+// CARDS DARK MODE
+html.dark {
+  .card {
+    // border-color: $color--bg-light;
+  }
+}
+
+
+// CARD ROWS
+.row.cards {
+  width: calc(100% + $spacing-16);
+  margin-left: calc($spacing-8 * -1);
+}
+
+
+// CARD FORMS
+.card {
+  form {
+    flex-direction: column;
+    padding: $spacing-8 0 0;
+
+    &:first-child {
+      padding: 0;
+    }
+
+    fieldset {
+      width: calc(100% - $spacing-16);
+    }
+  }
+}
+
+
+// CARD OPTIONS
+.card {
+  ul.options {
+    padding: $spacing-16 0 0;
+    list-style-type: none;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      padding: $spacing-8 0;
+
+      &:after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color--border;
+        content: "";
+      }
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      span.action {
+        padding: 0 0 0 $spacing-4;
+      }
+
+      button,
+      .button {
+        margin: 0;
+        font-size: $xsmall;
+      }
+    }
+  }
+}
+
+
+// CARD CHECKLISTS
+.card {
+  form {
+    fieldset.checklist {
+      flex-direction: column;
+      align-items: flex-start;
+
+      legend {
+        font-size: $xsmall;
+        text-align: right;
+        text-transform: uppercase;
+      }
+
+      input[type=checkbox]+label {
+        width: 100%;
+        margin: $spacing-8 0;
+        padding: 0 $spacing-32 0 0;
+
+        &:before {
+          right: 0;
+          left: auto;
+        }
+
+        &:after {
+          right: 0.0625rem;
+          left: auto;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    fieldset:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// CARD LISTS
+.card {
+
+  ul,
+  ol {
+    li {
+      padding: $spacing-8 0 0;
+    }
+  }
+}

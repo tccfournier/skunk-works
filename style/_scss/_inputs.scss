@@ -1,4 +1,5 @@
 // RESETS
+input,
 input[type="password"],
 input[type="checkbox"],
 input[type="number"],
@@ -12,62 +13,152 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 select {
+  overflow: hidden;
+  color: $color--text-dark;
   font-size: $p;
-  color: black;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: transparent;
   @include appearance(none);
+  @include transition(all, 0.25s, ease);
+}
+
+
+// INPUTS DARK MODE
+html.dark {
+
+  input[type="password"],
+  input[type="checkbox"],
+  input[type="number"],
+  input[type="select"],
+  input[type="search"],
+  input[type="radio"],
+  input[type="email"],
+  input[type="date"],
+  input[type="file"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  select {
+    color: $color--text-light;
+  }
 }
 
 
 // FIELDSETS
 fieldset {
-  display: flex;
-  flex-direction: column-reverse;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
-  width: 100%;
-  margin: 0;
-  padding: $spacing-4 0;
+  width: calc(100% - $spacing-16);
+  margin: $spacing-8;
+  padding: 0;
   border: none;
+
+  &.small {
+    width: calc((100% / 2) - $spacing-16);
+  }
+}
+
+@media (min-width: 40.5rem) {
+  fieldset {
+    width: calc((100% / 2) - $spacing-16);
+
+    &.small {
+      width: calc((100% / 4) - $spacing-16);
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  fieldset {
+    width: calc((100% / 3) - $spacing-16);
+
+    &.small {
+      width: calc((100% / 6) - $spacing-16);
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  fieldset {
+    width: calc((100% / 4) - $spacing-16);
+
+    &.small {
+      width: calc((100% / 8) - $spacing-16);
+    }
+  }
 }
 
 
-// LABEL
-label {
-  display: none;
+// LABELS AND LEGENDS
+label,
+legend {
   padding: 0 0 $spacing-8;
   font-size: $small;
   font-weight: 700;
+  line-height: 1;
+}
+
+legend {
+  width: 100%;
 }
 
 
-// INPUT, SELECT
-input,
-select {
-  position: relative;
-  overflow: hidden;
+// TEXT-BASED INPUTS
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="url"] {
   width: 100%;
-  min-height: 2rem;
+  min-height: 3rem;
   margin: 0;
   padding: $spacing-8;
-  border: 1px solid $color-input;
-  border-radius: 0.25rem;
-  line-height: 1;
+  border: 1px solid $color--border;
+  border-radius: $border-radius-sm;
+}
+
+input:placeholder {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: transparent;
+  @include transition(all, 0.25s, ease);
 }
 
 
 // SELECT
+select {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 3rem;
+  margin: 0;
+  padding: $spacing-8;
+  border: 1px solid $color--border;
+  border-radius: $border-radius-sm;
+
+  option {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include appearance(none);
+  }
+}
+
 .select-icon {
   display: grid;
   position: absolute;
-  top: calc(50% - 1rem);
-  right: 0.5rem;
-  z-index: -1;
+  top: 1.75rem;
+  right: $spacing-8;
+  z-index: 0;
   width: 2rem;
   height: 2rem;
-  padding: $spacing-8;
-  color: $color-input;
+  padding: $spacing-4;
+  color: $color--border;
 
   svg {
     width: 100%;
@@ -75,9 +166,387 @@ select {
   }
 }
 
-select option {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  @include appearance(none);
+
+// CHECKBOXES
+input[type="checkbox"] {
+  opacity: 0;
+  height: 0;
+  min-height: 0;
+
+  &+label {
+    position: relative;
+    width: auto;
+    margin: 0 0 $spacing-8 0;
+    padding: 0 0 0 $spacing-24;
+    font-size: $p;
+    font-weight: 400;
+    line-height: 1.125;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &:before {
+      display: inline-flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $spacing-16;
+      height: $spacing-16;
+      border: solid 1px $color--border;
+      border-radius: $border-radius-xs;
+      background-color: transparent;
+      content: "";
+      @include transition(all, 0.25s, ease);
+    }
+
+    &:after {
+      display: inline-flex;
+      position: absolute;
+      top: 0.0625rem;
+      left: 0.0625rem;
+      width: $spacing-16;
+      height: $spacing-16;
+      background-image: url(../assets/icons/ui/check.svg);
+      background-size: contain;
+      content: none;
+      @include transition(all, 0.25s, ease);
+    }
+  }
+}
+
+input[type="checkbox"]:checked {
+  &+label {
+    &:before {
+      border-color: $color--bg-dark;
+      background-color: $color--bg-dark;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+}
+
+
+// CHECKBOX DARK MODE
+html.dark {
+  input[type="checkbox"] {
+    &+label {
+      &:after {
+        background-image: url(../assets/icons/ui/check-dark.svg);
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked {
+    &+label {
+      &:before {
+        border-color: $color--bg-light;
+        background-color: $color--bg-light;
+      }
+    }
+  }
+}
+
+
+// RADIO BUTTONS
+fieldset.radio {
+  input[type="radio"] {
+    opacity: 0;
+    height: 0;
+    min-height: 0;
+  }
+
+  input[type="radio"]+label {
+    position: relative;
+    width: auto;
+    margin: 0 0 $spacing-8 0;
+    padding: 0 0 0 $spacing-24;
+    font-size: $p;
+    font-weight: 400;
+    line-height: 1.125;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &:before {
+      display: inline-flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $spacing-16;
+      height: $spacing-16;
+      border: solid 1px $color--border;
+      border-radius: 100%;
+      background-color: transparent;
+      content: "";
+      @include transition(all, 0.25s, ease);
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0.25rem;
+      left: 0.25rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 100%;
+      background-color: $color--bg-dark;
+      opacity: 0;
+      content: "";
+      @include transition(opacity, 0.25s, ease);
+    }
+  }
+
+  input[type="radio"]:checked+label {
+    &:before {
+      border-color: $color--bg-dark;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+
+// RADIO BUTTON DARK MODE
+html.dark {
+  fieldset.radio {
+    input[type="radio"]:checked+label {
+      &:before {
+        border-color: $color--bg-light;
+      }
+
+      &:after {
+        background-color: $color--bg-light;
+      }
+    }
+  }
+}
+
+
+// TOGGLES
+fieldset.toggle {
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    margin: 0 0 $spacing-8;
+    padding: 0 3rem 0 0;
+    font-size: $p;
+    font-weight: 400;
+    line-height: 1.125;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    input,
+    input[type="checkbox"] {
+      display: inline-flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 1;
+      width: 2.5rem;
+      min-width: 2.5rem;
+      height: 1.25rem;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      border: 1px solid $color--border;
+      border-radius: $border-radius-lg;
+      @include appearance(none);
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: 0.125rem;
+        left: 0.125rem;
+        width: 0.875rem;
+        height: 0.875rem;
+        border-radius: 100%;
+        background-color: $color--border;
+        content: "";
+        @include transition(all, 0.25s, ease);
+      }
+    }
+
+    input[type="checkbox"]:checked {
+      border-color: $color--bg-dark;
+
+      &:after {
+        margin-left: 1.25rem;
+        background-color: $color--bg-dark;
+      }
+    }
+  }
+
+  label.reverse {
+    padding: 0 0 0 3rem;
+
+    input,
+    input[type="checkbox"] {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+
+// TOGGLE DARK MODE
+html.dark {
+  fieldset.toggle {
+    label {
+      input[type="checkbox"]:checked {
+        border-color: $color--bg-light;
+
+        &:after {
+          margin-left: 1.25rem;
+          background-color: $color--bg-light;
+        }
+      }
+    }
+  }
+}
+
+
+// RANGE
+fieldset.range {
+  flex-direction: column-reverse;
+
+  input[type="range"] {
+    width: 100%;
+    height: 1.5rem;
+    accent-color: $color--border;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: $spacing-4;
+    border-radius: $border-radius-sm;
+    background-color: $color--border;
+  }
+
+  input[type="range"]::-moz-range-track {
+    height: $spacing-4;
+    border-radius: $border-radius-sm;
+    background-color: $color--border;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid $color--border;
+    border-radius: 100%;
+    background-color: $color--bg-light-content;
+    margin-top: -0.375rem;
+    @include appearance(none);
+    @include transition(all, 0.25s, ease);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid $color--border;
+    border-radius: 100%;
+    background-color: $color--bg-light-content;
+    @include appearance(none);
+    @include transition(all, 0.25s, ease);
+  }
+}
+
+
+// RANGE DARK MODE
+html.dark {
+  fieldset.range {
+    input[type="range"] {
+      // accent-color: $color--bg-light;
+    }
+  }
+}
+
+
+// FIELDSET ROWS
+fieldset.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: auto;
+
+  input+label,
+  input[type=radio]+label {
+    margin: 0 $spacing-16 $spacing-8 0;
+  }
+}
+
+fieldset.column-12,
+fieldset.column-11,
+fieldset.column-10,
+fieldset.column-9,
+fieldset.column-8,
+fieldset.column-7 {
+  display: block;
+  width: calc(100% - $spacing-16);
+}
+
+
+fieldset.column-6,
+fieldset.column-5,
+fieldset.column-4,
+fieldset.column-3,
+fieldset.column-2,
+fieldset.column-1 {
+  display: inline-block;
+  width: calc((100% / 2) - $spacing-16);
+}
+
+@media (min-width: 40.5rem) {
+  fieldset.column-11 {
+    width: calc(((100% / 12) * 11) - $spacing-16);
+  }
+
+  fieldset.column-10 {
+    width: calc(((100% / 12) * 10) - $spacing-16);
+  }
+
+  fieldset.column-9 {
+    width: calc(((100% / 12) * 9) - $spacing-16);
+  }
+
+  fieldset.column-8 {
+    width: calc(((100% / 12) * 8) - $spacing-16);
+  }
+
+  fieldset.column-7 {
+    width: calc(((100% / 12) * 7) - $spacing-16);
+  }
+
+  fieldset.column-6 {
+    width: calc(((100% / 12) * 6) - $spacing-16);
+  }
+
+  fieldset.column-5 {
+    width: calc(((100% / 12) * 5) - $spacing-16);
+  }
+
+  fieldset.column-4 {
+    width: calc(((100% / 12) * 4) - $spacing-16);
+  }
+
+  fieldset.column-3 {
+    width: calc(((100% / 12) * 3) - $spacing-16);
+  }
+
+  fieldset.column-2 {
+    width: calc(((100% / 12) * 2) - $spacing-16);
+  }
+
+  fieldset.column-1 {
+    width: calc((100% / 12) - $spacing-16);
+  }
 }

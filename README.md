@@ -1,8 +1,8 @@
-# Messenger Skunk Works
+# UX Skunk Works
+> Skunk Works is an official pseudonym for Lockheed Martin's Advanced Development Programs (ADP), formerly called Lockheed Advanced Development Projects. It is responsible for a number of aircraft designs, highly classified research and development programs, and exotic aircraft platforms.
+> [Skunk Works&reg; Lockheed Martin](https://www.lockheedmartin.com/en-us/who-we-are/business-areas/aeronautics/skunkworks.html)
 
-## Concepts
+## Mission
+This Skunk Works project is intended enable enhanced prototyping to test user experience components and features across various applications and platforms. 
 
-- [Concept A](https://tccfournier.github.io/skunk-works/views/concepts/concept-a.html)
-- [Concept B](https://tccfournier.github.io/skunk-works/views/concepts/concept-b.html)
-- [Concept C](https://tccfournier.github.io/skunk-works/views/concepts/concept-c.html)
-- [Concept D](https://tccfournier.github.io/skunk-works/views/concepts/concept-d.html)
+[Index](https://tccfournier.github.io/skunk-works/index.html)

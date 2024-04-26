@@ -1,0 +1,45 @@
+// MAIN
+main {
+  width: calc(100% - $spacing-32);
+  min-height: calc(100vh - 4rem);
+  margin: 0 auto;
+  padding: $spacing-16;
+  border-radius: $border-radius-md;
+  background-color: $color--bg-light-content;
+  background-image: url(../assets/images/columns-w-margin.png);
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-image: none;
+}
+
+
+// MAIN DARK MODE
+html.dark {
+  main {
+    background-color: $color--bg-dark-content;
+  }
+}
+
+
+// ARTICLE + SECTION
+article {
+  background-image: url(../assets/images/columns-no-margin-mobile.png);
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-image: none;
+
+  section {
+    padding: $spacing-16 0 0;
+
+    &:first-of-type {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 40.5rem) {
+  article {
+    background-image: url(../assets/images/columns-no-margin.png);
+    background-image: none;
+  }
+}

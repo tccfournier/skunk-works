@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
-  <title>UX Skunk Works | TigerConnect</title>
-  <!-- <base href="../"> -->
+  <title>AMEN Skunk Works Layouts | TigerConnect</title>
+  <base href="../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -18,60 +18,92 @@
   <style>
     body {
       opacity: 0;
-      -webkit-transition: opacity 1.5s ease-in;
-      -moz-transition: opacity 1.5s ease-in;
-      -ms-transition: opacity 1.5s ease-in;
-      -o-transition: opacity 1.5s ease-in;
-      transition: opacity 1.5s ease-in;
+      -webkit-transition: opacity 1s ease-in;
+      -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+      -o-transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in;
     }
 
     body.visible {
       opacity: 1;
     }
 
-    article {
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (min-width: 40.5rem) {
-      article {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      article section {
-        width: calc(100% / 2);
-      }
-    }
-
-    ul.contents {
-      padding: 0;
-      list-style-type: none;
-    }
-
-    ul.contents li {
-      padding: var(--spacing--8) 0 0;
+    .column-12,
+    .column-11,
+    .column-10,
+    .column-9,
+    .column-8,
+    .column-7,
+    .column-6,
+    .column-5,
+    .column-4,
+    .column-3,
+    .column-2,
+    .column-1 {
+      overflow: hidden;
+      margin: var(--spacing--8) 0;
+      padding: var(--spacing--8);
+      border-right: 1px solid currentColor;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: rgba(232, 23, 138, 0.25);
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>UX Skunk Works</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Index</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <article>
-      <h2 class="visuallyhidden">Contents</h2>
+      <h1>Layouts</h1>
       <section>
-        <h2>Components</h2>
-        <ul class="contents">
-          <li><a href="components/buttons.html">Buttons</a></li>
-          <li><a href="components/cards.html">Cards</a></li>
-          <li><a href="components/inputs.html">Inputs</a></li>
-          <li><a href="components/layouts.html">Layouts</a></li>
-        </ul>
+        <h2>Columns</h2>
+        <div class="row" style="flex-direction: column;">
+          <span class="column-12" style="border: none;">column-12</span>
+          <span class="column-11" style="border: none;">column-11</span>
+          <span class="column-10" style="border: none;">column-10</span>
+          <span class="column-9" style="border: none;">column-9</span>
+          <span class="column-8" style="border: none;">column-8</span>
+          <span class="column-7" style="border: none;">column-7</span>
+          <span class="column-6" style="border: none;">column-6</span>
+          <span class="column-5" style="border: none;">column-5</span>
+          <span class="column-4" style="border: none;">column-4</span>
+          <span class="column-3" style="border: none;">column-3</span>
+          <span class="column-2" style="border: none;">column-2</span>
+          <span class="column-1" style="border: none;">column-1</span>
+        </div>
+      </section>
+      <section>
+        <h2>Sample Row Patterns</h2>
+        <h3>Two-Column Row</h3>
+        <div class="row">
+          <span class="column-6">column-6</span>
+          <span class="column-6" style="border: none;">column-6</span>
+        </div>
+        <h3>Three-Column Row</h3>
+        <div class="row">
+          <span class="column-4">column-4</span>
+          <span class="column-4">column-4</span>
+          <span class="column-4" style="border: none;">column-4</span>
+        </div>
+        <h3>Two-Column Row (with variation)</h3>
+        <div class="row">
+          <span class="column-8">column-8</span>
+          <span class="column-4" style="border: none;">column-4</span>
+        </div>
+        <h3>Three-Column Row (with variation)</h3>
+        <div class="row">
+          <span class="column-6">column-6</span>
+          <span class="column-3">column-3</span>
+          <span class="column-3" style="border: none;">column-3</span>
+        </div>
       </section>
     </article>
   </main>
