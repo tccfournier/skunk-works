@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1" />
+  <title>Messenger Skunk Works | TigerConnect</title>
+  <base href="../../">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/master.min.css">
+  <style>
+    .content--list ul.list li {
+      border-bottom: none;
+    }
+
+    ul.list+ul.list {
+      margin-top: var(--spacing--16);
+      padding-top: var(--spacing--16);
+      border-top: 2px solid var(--color--input);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <fieldset>
+          <select id="location">
+            <option>Brigham and Women's Hospital</option>
+            <option>Massachusetts General Hospital</option>
+            <option>Beth Israel Deaconess Medical Center</option>
+            <option>UMass Memorial Medical Center</option>
+          </select>
+          <div class="select-icon" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44"
+              height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </div>
+        </fieldset>
+        Location
+      </li>
+      <li class="views">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"></span>
+              Unread
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"></span>
+              Mentions
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"></span>
+              Drafts
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <fieldset>
+          <select id="tools">
+            <option>Messages</option>
+            <option>Analytics</option>
+            <option>Roles and Teams</option>
+            <option>Analytics</option>
+            <option>Settings</option>
+            <option>Patient Settings</option>
+            <option>Virtual Waiting</option>
+            <option>Patient Directory</option>
+            <option>Broadcast Lists</option>
+          </select>
+          <div class="select-icon" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44"
+              height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </div>
+        </fieldset>
+        Tools
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"></span>
+          Profile
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"></span>
+          Help
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <header>
+      <label for="search">Search</label>
+      <input type="search" id="search" name="search" placeholder="Search">
+    </header>
+    <section class="content">
+      <h2 style="display: none;">Content</h2>
+      <section class="content--list">
+        <h3>Brigham and Women's Hospital</h3>
+        <form>
+          <fieldset>
+            <select>
+              <option>Views</option>
+              <option>Unread</option>
+              <option>Mentions</option>
+              <option>Drafts</option>
+              <option>Later</option>
+            </select>
+            <div class="select-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
+            </div>
+          </fieldset>
+          <fieldset>
+            <select>
+              <option>Filter Messages</option>
+              <option>Direct Messages</option>
+              <option>Group Messages</option>
+              <option>Broadcast</option>
+              <option>Forums</option>
+            </select>
+            <div class="select-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
+            </div>
+          </fieldset>
+          <fieldset>
+            <select>
+              <option>Sort Messages</option>
+              <option>High Priority</option>
+              <option>Medium Priority</option>
+              <option>Low Priority</option>
+            </select>
+            <div class="select-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 9l6 6l6 -6"></path>
+              </svg>
+            </div>
+          </fieldset>
+        </form>
+        <ul class="list">
+          <li class="content-sample group">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Group Name</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+              <ul class="status">
+                <li class="status">8/10 Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample group">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Group Name</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+              <ul class="status">
+                <li class="status">8/10 Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample group">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Group Name</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+              <ul class="status">
+                <li class="status">8/10 Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample group">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Group Name</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+              <ul class="status">
+                <li class="status">8/10 Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample group">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Group Name</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+              <ul class="status">
+                <li class="status">8/10 Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+        </ul>
+        <ul class="list">
+          <li class="content-sample direct">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Firstname Lastname</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+              <ul class="status">
+                <li class="status">Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample direct">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Firstname Lastname</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+              <ul class="status">
+                <li class="status">Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample direct">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Firstname Lastname</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+              <ul class="status">
+                <li class="status">Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample direct">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Firstname Lastname</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+              <ul class="status">
+                <li class="status">Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+          <li class="content-sample direct">
+            <div class="avatar"></div>
+            <div class="details">
+              <p>Firstname Lastname</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+              <ul class="status">
+                <li class="status">Read</li>
+                <li class="time">11:48am</li>
+              </ul>
+            </div>
+            <div class="actions">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              </svg>
+            </div>
+          </li>
+        </ul>
+        <div class="controls">
+          <span class="fab">+</span>
+        </div>
+      </section>
+      <section class="content--details">
+        <h3 style="display: none;">Content Details</h3>
+        <div class="content--details-header">
+          <span class="back"></span>
+          <h4>Firstname Lastname</h4>
+          <div class="controls">
+            <span class="avatar"></span>
+            <span class="call"></span>
+          </div>
+        </div>
+        <div class="content--details-main">
+          <h4>Content Details Main</h4>
+        </div>
+        <div class="content--details-footer">
+          <h4>Content Details Footer</h4>
+        </div>
+      </section>
+    </section>
+  </main>
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="assets/scripts/site.js"></script>
+</body>
+
+</html>

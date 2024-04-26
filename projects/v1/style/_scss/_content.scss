@@ -1,0 +1,285 @@
+// CONTENT
+.content {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+@media (min-width: 40rem) {
+  .content {
+    flex-direction: row;
+  }
+}
+
+
+// CONTENT LIST
+.content--list {
+  width: 100%;
+  min-width: 100%;
+
+  form {
+    fieldset:first-of-type {
+      display: none;
+    }
+  }
+
+  ul.list {
+    padding: $spacing-4 0 0;
+    list-style-type: none;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: $spacing-12 $spacing-8;
+      border-bottom: 1px solid $color-input;
+      background-color: transparent;
+      @include transition(background-color);
+
+      &.selected {
+        background-color: $color-background-light;
+      }
+
+      .avatar {
+        display: grid;
+        overflow: hidden;
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid $color-input;
+        border-radius: 100%;
+      }
+
+      .details {
+        width: calc(100% - 4.5rem);
+        padding: 0 $spacing-8;
+
+        p {
+          overflow: hidden;
+          padding: 0;
+          line-height: 1.25;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &:first-of-type {
+            font-weight: 700;
+          }
+        }
+
+        ul.status {
+          display: flex;
+          justify-content: space-between;
+          padding: $spacing-4 0 0;
+          font-size: $small;
+
+          li {
+            padding: 0;
+            border: none;
+
+            &:last-of-type {
+              border: none;
+            }
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        padding: 0 0 0 $spacing-4;
+
+        svg {
+          width: 100%;
+          max-width: 1.125rem;
+          height: 100%;
+          color: $color-nav;
+          cursor: pointer;
+          @include transition(color);
+
+          &:hover,
+          &:focus {
+            color: $color-nav-hover;
+          }
+        }
+      }
+    }
+  }
+
+  .controls {
+    display: grid;
+    position: fixed;
+    bottom: 1rem;
+
+    span.fab {
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      text-align: center;
+      color: white;
+      background: $color-nav;
+      cursor: pointer;
+      @include transition(background);
+
+      &:hover,
+      &:focus {
+        background-color: $color-nav-hover;
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  .content--list {
+    width: 35%;
+    min-width: 35%;
+    padding-right: $spacing-8;
+
+    form {
+      fieldset:first-of-type {
+        display: inherit;
+      }
+    }
+  }
+}
+
+
+// CONTENT DETAILS
+.content--details {
+  width: 100%;
+  min-width: 100%;
+  background-color: white;
+  @include transition(all);
+  @include transform(translateX(-92vw));
+  @include transform(translateX(100vw));
+
+  &.show {
+    @include transform(translateX(-92vw));
+  }
+}
+
+@media (min-width: 40rem) {
+  .content--details {
+    width: 65%;
+    min-width: 65%;
+    padding-left: $spacing-8;
+    @include transform(translateX(0));
+  }
+}
+
+
+// CONTENT DETAILS HEADER
+.content--details-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 0 0 $spacing-8;
+  background-color: white;
+
+  .back {
+    display: grid;
+    position: absolute;
+    overflow: hidden;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    border-radius: 100%;
+    background-color: $color-nav;
+    cursor: pointer;
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $color-nav-hover;
+    }
+  }
+
+  h4 {
+    width: auto;
+    padding: 0 0 0 2.5rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .avatar {
+      display: grid;
+      overflow: hidden;
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid;
+      border-color: $color-nav;
+      border-radius: 100%;
+      cursor: pointer;
+      @include transition(border-color);
+
+      &:hover,
+      &:focus {
+        border-color: $color-nav-hover;
+      }
+    }
+
+    .call,
+    .settings {
+      display: grid;
+      overflow: hidden;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 $spacing-4;
+      border-radius: 100%;
+      background-color: $color-nav;
+      cursor: pointer;
+      @include transition(background-color);
+
+      &:hover,
+      &:focus {
+        background-color: $color-nav-hover;
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  .content--details-header {
+    width: calc(100% - $spacing-8);
+
+    .back {
+      display: none;
+    }
+
+    h4 {
+      padding: 0;
+    }
+  }
+}
+
+
+// CONTENT DETAILS MAIN
+.content--details-main {
+  padding-top: 3.5rem;
+}
+
+
+// CONTENT DETAILS FOOTER
+.content--details-footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background-color: white;
+}
