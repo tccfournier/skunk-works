@@ -157,4 +157,8 @@ h2+p,
 h3+p,
 h4+p {
   padding-top: 0;
+
+  &:last-of-type {
+    padding: 0;
+  }
 }

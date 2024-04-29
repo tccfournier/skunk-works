@@ -39,10 +39,6 @@ html {
   -webkit-text-size-adjust: none;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  -webkit-transition: background-color 0.25s ease 0s;
-  -moz-transition: background-color 0.25s ease 0s;
-  -ms-transition: background-color 0.25s ease 0s;
-  -o-transition: background-color 0.25s ease 0s;
   transition: background-color 0.25s ease 0s;
 }
 
@@ -68,8 +64,6 @@ body {
   }
 }
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -89,10 +83,6 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: var(--color-primary);
-  -webkit-transition: color 0.25s ease 0s;
-  -moz-transition: color 0.25s ease 0s;
-  -ms-transition: color 0.25s ease 0s;
-  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 h1,
@@ -248,10 +238,6 @@ button,
   white-space: nowrap;
   color: var(--color--text-light);
   background-color: var(--color-primary);
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 button:hover, button:focus,
@@ -324,15 +310,7 @@ article section {
   width: calc(50% - 0.5rem);
   min-height: calc(100% - 2rem);
   padding: 0;
-  -webkit-transition: transform 0.5s ease 0s;
-  -moz-transition: transform 0.5s ease 0s;
-  -ms-transition: transform 0.5s ease 0s;
-  -o-transition: transform 0.5s ease 0s;
   transition: transform 0.5s ease 0s;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
   transform: translateX(0);
 }
 article aside {
@@ -368,20 +346,12 @@ article aside {
 }
 article.show-detail aside,
 article.show-detail section {
-  -webkit-transform: translateX(-96vw);
-  -moz-transform: translateX(-96vw);
-  -ms-transform: translateX(-96vw);
-  -o-transform: translateX(-96vw);
   transform: translateX(-96vw);
 }
 
 @media (min-width: 48rem) {
   article.show-detail aside,
   article.show-detail section {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -409,10 +379,6 @@ nav ul li {
   display: flex;
   flex-direction: column;
   padding: 0 var(--spacing-8);
-  -webkit-transition: color 0.25s ease 0s;
-  -moz-transition: color 0.25s ease 0s;
-  -ms-transition: color 0.25s ease 0s;
-  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 nav ul li a {
@@ -623,10 +589,6 @@ label.checkbox input[type=checkbox]:after {
   height: 0.625rem;
   border-radius: 100%;
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 label.checkbox input[type=checkbox]:checked:after {
