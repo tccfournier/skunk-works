@@ -40,7 +40,7 @@ html {
   min-width: 100%;
   margin: 0 auto;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   color: var(--color--text-dark);
   scroll-behavior: smooth;
@@ -486,6 +486,10 @@ input[type=checkbox]:checked + label:after {
   content: "";
 }
 
+input[type=checkbox]:focus + label:before {
+  outline: 1px solid currentColor;
+}
+
 html.dark input[type=checkbox] + label:after {
   background-image: url(../assets/icons/ui/check-dark.svg);
 }
@@ -542,6 +546,10 @@ fieldset.radio input[type=radio]:checked + label:before {
 }
 fieldset.radio input[type=radio]:checked + label:after {
   opacity: 1;
+}
+
+input[type=radio]:focus + label:before {
+  outline: 1px solid currentColor;
 }
 
 html.dark fieldset.radio input[type=radio]:checked + label:before {
