@@ -57,6 +57,8 @@ body {
   }
 }
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -76,6 +78,10 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: var(--color--primary);
+  -webkit-transition: color 0.25s ease 0s;
+  -moz-transition: color 0.25s ease 0s;
+  -ms-transition: color 0.25s ease 0s;
+  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 a:hover, a:focus {
@@ -286,6 +292,10 @@ body main .content {
   padding: var(--spacing--12) var(--spacing--8);
   border-bottom: 1px solid var(--color--input);
   background-color: transparent;
+  -webkit-transition: background-color 0.25s ease 0s;
+  -moz-transition: background-color 0.25s ease 0s;
+  -ms-transition: background-color 0.25s ease 0s;
+  -o-transition: background-color 0.25s ease 0s;
   transition: background-color 0.25s ease 0s;
 }
 .content--list ul.list li.selected {
@@ -339,6 +349,10 @@ body main .content {
   height: 100%;
   color: var(--color--nav);
   cursor: pointer;
+  -webkit-transition: color 0.25s ease 0s;
+  -moz-transition: color 0.25s ease 0s;
+  -ms-transition: color 0.25s ease 0s;
+  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 .content--list ul.list li .actions svg:hover, .content--list ul.list li .actions svg:focus {
@@ -360,6 +374,10 @@ body main .content {
   color: white;
   background: var(--color--nav);
   cursor: pointer;
+  -webkit-transition: background 0.25s ease 0s;
+  -moz-transition: background 0.25s ease 0s;
+  -ms-transition: background 0.25s ease 0s;
+  -o-transition: background 0.25s ease 0s;
   transition: background 0.25s ease 0s;
 }
 .content--list .controls span.fab:hover, .content--list .controls span.fab:focus {
@@ -380,11 +398,27 @@ body main .content {
   width: 100%;
   min-width: 100%;
   background-color: white;
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
+  -webkit-transform: translateX(-92vw);
+  -moz-transform: translateX(-92vw);
+  -ms-transform: translateX(-92vw);
+  -o-transform: translateX(-92vw);
   transform: translateX(-92vw);
+  -webkit-transform: translateX(100vw);
+  -moz-transform: translateX(100vw);
+  -ms-transform: translateX(100vw);
+  -o-transform: translateX(100vw);
   transform: translateX(100vw);
 }
 .content--details.show {
+  -webkit-transform: translateX(-92vw);
+  -moz-transform: translateX(-92vw);
+  -ms-transform: translateX(-92vw);
+  -o-transform: translateX(-92vw);
   transform: translateX(-92vw);
 }
 
@@ -393,6 +427,10 @@ body main .content {
     width: 65%;
     min-width: 65%;
     padding-left: var(--spacing--8);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -419,6 +457,10 @@ body main .content {
   border-radius: 100%;
   background-color: var(--color--nav);
   cursor: pointer;
+  -webkit-transition: background-color 0.25s ease 0s;
+  -moz-transition: background-color 0.25s ease 0s;
+  -ms-transition: background-color 0.25s ease 0s;
+  -o-transition: background-color 0.25s ease 0s;
   transition: background-color 0.25s ease 0s;
 }
 .content--details-header .back:hover, .content--details-header .back:focus {
@@ -442,6 +484,10 @@ body main .content {
   border-color: var(--color--nav);
   border-radius: 100%;
   cursor: pointer;
+  -webkit-transition: border-color 0.25s ease 0s;
+  -moz-transition: border-color 0.25s ease 0s;
+  -ms-transition: border-color 0.25s ease 0s;
+  -o-transition: border-color 0.25s ease 0s;
   transition: border-color 0.25s ease 0s;
 }
 .content--details-header .controls .avatar:hover, .content--details-header .controls .avatar:focus {
@@ -457,6 +503,10 @@ body main .content {
   border-radius: 100%;
   background-color: var(--color--nav);
   cursor: pointer;
+  -webkit-transition: background-color 0.25s ease 0s;
+  -moz-transition: background-color 0.25s ease 0s;
+  -ms-transition: background-color 0.25s ease 0s;
+  -o-transition: background-color 0.25s ease 0s;
   transition: background-color 0.25s ease 0s;
 }
 .content--details-header .controls .call:hover, .content--details-header .controls .call:focus,
@@ -524,6 +574,10 @@ nav ul li a span.icon {
   margin-bottom: var(--spacing--4);
   border-radius: 100%;
   background: var(--color--nav);
+  -webkit-transition: background 0.25s ease 0s;
+  -moz-transition: background 0.25s ease 0s;
+  -ms-transition: background 0.25s ease 0s;
+  -o-transition: background 0.25s ease 0s;
   transition: background 0.25s ease 0s;
 }
 nav ul li a:hover, nav ul li a:focus {
@@ -600,6 +654,10 @@ details {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-transition: max-height 0.25s ease 0s;
+  -moz-transition: max-height 0.25s ease 0s;
+  -ms-transition: max-height 0.25s ease 0s;
+  -o-transition: max-height 0.25s ease 0s;
   transition: max-height 0.25s ease 0s;
 }
 details summary {

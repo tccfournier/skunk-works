@@ -62,7 +62,7 @@ fieldset {
   }
 }
 
-@media (min-width: 40.5rem) {
+@media (min-width: 40rem) {
   fieldset {
     width: calc((100% / 2) - $spacing-16);
 
@@ -505,7 +505,7 @@ fieldset.column-1 {
   width: calc((100% / 2) - $spacing-16);
 }
 
-@media (min-width: 40.5rem) {
+@media (min-width: 40rem) {
   fieldset.column-11 {
     width: calc(((100% / 12) * 11) - $spacing-16);
   }
