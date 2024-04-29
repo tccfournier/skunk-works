@@ -228,6 +228,14 @@ input[type="checkbox"]:checked {
   }
 }
 
+input[type="checkbox"]:focus {
+  &+label {
+    &:before {
+      outline: 1px solid currentColor;
+    }
+  }
+}
+
 
 // CHECKBOX DARK MODE
 html.dark {
@@ -307,6 +315,14 @@ fieldset.radio {
 
     &:after {
       opacity: 1;
+    }
+  }
+}
+
+input[type="radio"]:focus {
+  &+label {
+    &:before {
+      outline: 1px solid currentColor;
     }
   }
 }

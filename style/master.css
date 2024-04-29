@@ -486,6 +486,10 @@ input[type=checkbox]:checked + label:after {
   content: "";
 }
 
+input[type=checkbox]:focus + label:before {
+  outline: 1px solid currentColor;
+}
+
 html.dark input[type=checkbox] + label:after {
   background-image: url(../assets/icons/ui/check-dark.svg);
 }
@@ -542,6 +546,10 @@ fieldset.radio input[type=radio]:checked + label:before {
 }
 fieldset.radio input[type=radio]:checked + label:after {
   opacity: 1;
+}
+
+input[type=radio]:focus + label:before {
+  outline: 1px solid currentColor;
 }
 
 html.dark fieldset.radio input[type=radio]:checked + label:before {
