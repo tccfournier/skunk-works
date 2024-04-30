@@ -60,11 +60,13 @@ html.dark {
   button,
   .button {
     border-color: $color--action-dark;
+    color: $color--text-light;
     background-color: $color--action-dark;
 
     &:hover,
     &:focus {
       border-color: $color--action-dark-hover;
+      color: $color--text-light;
       background-color: $color--action-dark-hover;
     }
   }
@@ -72,11 +74,13 @@ html.dark {
   button.secondary,
   .button.secondary {
     color: $color--action-dark;
+    color: $color--text-light;
     background-color: transparent;
 
     &:hover,
     &:focus {
       border-color: $color--action-dark-hover;
+      color: $color--text-light;
       color: $color--action-dark-hover;
     }
   }

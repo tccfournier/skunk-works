@@ -4,6 +4,7 @@ form.color-mode {
   margin: 0;
 
   fieldset {
+    min-width: revert;
     margin: 0;
 
     label {

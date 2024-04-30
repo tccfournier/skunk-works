@@ -29,6 +29,70 @@
 }
 
 
+// CARDS WITH COLUMN SIZES
+.card.column-12,
+.card.column-11,
+.card.column-10,
+.card.column-9,
+.card.column-8,
+.card.column-7,
+.card.column-6,
+.card.column-5,
+.card.column-4,
+.card.column-3,
+.card.column-2,
+.card.column-1 {
+  width: 100%;
+}
+
+@media (min-width: 40rem) {
+
+  .card.column-11 {
+    width: calc(((100% / 12) * 11) - $spacing-16);
+  }
+
+  .card.column-10 {
+    width: calc(((100% / 12) * 10) - $spacing-16);
+  }
+
+  .card.column-9 {
+    width: calc(((100% / 12) * 9) - $spacing-16);
+  }
+
+  .card.column-8 {
+    width: calc(((100% / 12) * 8) - $spacing-16);
+  }
+
+  .card.column-7 {
+    width: calc(((100% / 12) * 7) - $spacing-16);
+  }
+
+  .card.column-6 {
+    width: calc(((100% / 12) * 6) - $spacing-16);
+  }
+
+  .card.column-5 {
+    width: calc(((100% / 12) * 5) - $spacing-16);
+  }
+
+  .card.column-4 {
+    width: calc(((100% / 12) * 4) - $spacing-16);
+  }
+
+  .card.column-3 {
+    width: calc(((100% / 12) * 3) - $spacing-16);
+  }
+
+  .card.column-2 {
+    width: calc(((100% / 12) * 2) - $spacing-16);
+  }
+
+  .card.column-1 {
+    width: calc((100% / 12) - $spacing-16);
+  }
+}
+
+
 // CARDS DARK MODE
 html.dark {
   .card {
@@ -47,15 +111,13 @@ html.dark {
 // CARD FORMS
 .card {
   form {
-    flex-direction: column;
-    padding: $spacing-8 0 0;
-
-    &:first-child {
-      padding: 0;
-    }
 
     fieldset {
       width: calc(100% - $spacing-16);
+    }
+
+    fieldset.small {
+      width: calc((100% / 2) - $spacing-16);
     }
   }
 }
@@ -100,7 +162,49 @@ html.dark {
       }
 
       span.action {
+        display: flex;
+        align-items: center;
         padding: 0 0 0 $spacing-4;
+      }
+
+      span.status {
+        display: flex;
+        width: 1rem;
+        height: 1rem;
+        margin: 0 $spacing-4 0 0;
+        padding: calc($spacing-4 / 2);
+        border-radius: 100%;
+        color: $color--text-light;
+
+        svg {
+          width: 100%;
+          max-width: 0;
+          height: 100%;
+          max-height: 0;
+          opacity: 0;
+          stroke-width: 2.5;
+          @include transition(all, 0.25s, ease)
+        }
+      }
+
+      span.status.invalid {
+        background-color: $color--status-invalid;
+
+        svg.invalid {
+          max-width: none;
+          max-height: none;
+          opacity: 1;
+        }
+      }
+
+      span.status.valid {
+        background-color: $color--status-valid;
+
+        svg.valid {
+          max-width: none;
+          max-height: none;
+          opacity: 1;
+        }
       }
 
       button,
@@ -148,7 +252,7 @@ html.dark {
     }
 
     fieldset:last-of-type {
-      margin-bottom: 0;
+      // margin-bottom: 0;
     }
   }
 }

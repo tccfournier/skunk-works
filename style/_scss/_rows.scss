@@ -4,6 +4,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+
+  &+.row {
+    padding: $spacing-16 0 0;
+  }
 }
 
 .row.center {

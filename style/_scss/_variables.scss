@@ -25,6 +25,7 @@
   --color--border: #c5c5c5;
   --color--status-disabled: #888b8d;
   --color--status-invalid: #c63531;
+  --color--status-readonly: #000000;
   --color--status-valid: #007a4d;
   --color--text-dark: #000000;
   --color--text-light: #ffffff;
@@ -68,6 +69,7 @@ $color--bg-light-content: var(--color--bg-light-content);
 $color--border: var(--color--border);
 $color--status-disabled: var(--color--status-disabled);
 $color--status-invalid: var(--color--status-invalid);
+$color--status-readonly: var(--color--status-readonly);
 $color--status-valid: var(--color--status-valid);
 $color--text-dark: var(--color--text-dark);
 $color--text-light: var(--color--text-light);

@@ -1,0 +1,55 @@
+// TABLES
+table {
+  width: 100%;
+  margin: $spacing-8 0 0;
+  padding: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: left;
+
+  thead {
+    // display: none;
+  }
+
+  tr,
+  th,
+  td {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    display: inline-block;
+  }
+
+  td:before {
+    display: inline-block;
+    display: none;
+    overflow: hidden;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    content: attr(data-label);
+  }
+}
+
+@media (min-width: 40rem) {
+  table {
+    thead {
+      display: inherit;
+    }
+
+    td:before {
+      display: none;
+    }
+  }
+}
+
+
+// TABLE CAPTION
+table caption {
+  display: none;
+}
