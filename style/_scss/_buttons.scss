@@ -54,17 +54,55 @@ button.tertiary,
 }
 
 
+// DISABLED BUTTONS
+button.primary:disabled,
+.button.primary:disabled {
+  border-color: $color--status-disabled;
+  background-color: $color--status-disabled;
+
+  &:hover,
+  &:focus {
+    border-color: $color--status-disabled;
+    background-color: $color--status-disabled;
+  }
+}
+
+button.secondary:disabled,
+.button.secondary:disabled {
+  border-color: $color--status-disabled;
+  color: $color--status-disabled;
+
+  &:hover,
+  &:focus {
+    border-color: $color--status-disabled;
+    color: $color--status-disabled;
+  }
+}
+
+button.tertiary:disabled,
+.button.tertiary:disabled {
+  color: $color--status-disabled;
+
+  &:hover,
+  &:focus {
+    color: $color--status-disabled;
+  }
+}
+
+
 // BUTTONS DARK MODE
 html.dark {
 
   button,
   .button {
     border-color: $color--action-dark;
+    color: $color--text-light;
     background-color: $color--action-dark;
 
     &:hover,
     &:focus {
       border-color: $color--action-dark-hover;
+      color: $color--text-light;
       background-color: $color--action-dark-hover;
     }
   }
@@ -72,11 +110,13 @@ html.dark {
   button.secondary,
   .button.secondary {
     color: $color--action-dark;
+    color: $color--text-light;
     background-color: transparent;
 
     &:hover,
     &:focus {
       border-color: $color--action-dark-hover;
+      color: $color--text-light;
       color: $color--action-dark-hover;
     }
   }
@@ -92,6 +132,40 @@ html.dark {
     &:hover,
     &:focus {
       color: $color--action-dark-hover;
+    }
+  }
+
+  button.primary:disabled,
+  .button.primary:disabled {
+    border-color: $color--status-disabled;
+    background-color: $color--status-disabled;
+
+    &:hover,
+    &:focus {
+      border-color: $color--status-disabled;
+      background-color: $color--status-disabled;
+    }
+  }
+
+  button.secondary:disabled,
+  .button.secondary:disabled {
+    border-color: $color--status-disabled;
+    color: $color--status-disabled;
+
+    &:hover,
+    &:focus {
+      border-color: $color--status-disabled;
+      color: $color--status-disabled;
+    }
+  }
+
+  button.tertiary:disabled,
+  .button.tertiary:disabled {
+    color: $color--status-disabled;
+
+    &:hover,
+    &:focus {
+      color: $color--status-disabled;
     }
   }
 }
@@ -157,7 +231,7 @@ html.dark {
 
     &:hover,
     &:focus {
-      background-color: rgba(230,230,230,0.25);
+      background-color: rgba(230, 230, 230, 0.25);
     }
   }
 }

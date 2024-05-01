@@ -53,12 +53,19 @@ fieldset {
   justify-content: center;
   position: relative;
   width: calc(100% - $spacing-16);
+  min-width: 15rem;
   margin: $spacing-8;
   padding: 0;
   border: none;
 
   &.small {
     width: calc((100% / 2) - $spacing-16);
+    min-width: 7.5rem;
+  }
+
+  &.checkbox {
+    width: auto;
+    min-width: auto;
   }
 }
 
@@ -96,10 +103,13 @@ fieldset {
 // LABELS AND LEGENDS
 label,
 legend {
+  overflow: hidden;
   padding: 0 0 $spacing-8;
   font-size: $small;
   font-weight: 700;
   line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 legend {
@@ -107,8 +117,9 @@ legend {
 }
 
 
-// TEXT-BASED INPUTS
+// TEXT-LIKE INPUTS
 input[type="password"],
+input[type="number"],
 input[type="search"],
 input[type="email"],
 input[type="text"],
@@ -564,5 +575,39 @@ fieldset.column-1 {
 
   fieldset.column-1 {
     width: calc((100% / 12) - $spacing-16);
+  }
+}
+
+
+// STATUS DISABLED
+input:disabled,
+select:disabled {
+  border-color: $color--status-disabled;
+  color: $color--status-disabled;
+}
+
+html.dark {
+
+  input:disabled,
+  select:disabled {
+    border-color: $color--status-disabled;
+    color: $color--status-disabled;
+  }
+}
+
+
+// STATUS READONLY
+input:read-only,
+select:read-only {
+  border-color: $color--status-readonly;
+  color: $color--status-readonly;
+}
+
+html.dark {
+
+  input:read-only,
+  select:read-only {
+    border-color: $color--text-light;
+    color: $color--text-light;
   }
 }

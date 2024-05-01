@@ -4,6 +4,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+
+  &+.row {
+    padding: $spacing-16 0 0;
+  }
 }
 
 .row.center {
@@ -16,4 +20,12 @@
 
 .row.space-between {
   justify-content: space-between;
+}
+
+.row.align-center {
+  align-items: center;
+}
+
+.row.align-end {
+  align-items: flex-end;
 }
