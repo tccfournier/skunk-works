@@ -21,3 +21,11 @@
 .row.space-between {
   justify-content: space-between;
 }
+
+.row.align-center {
+  align-items: center;
+}
+
+.row.align-end {
+  align-items: flex-end;
+}

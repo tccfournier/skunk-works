@@ -71,8 +71,6 @@ html.dark body {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -96,10 +94,6 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: var(--color--action-light);
-  -webkit-transition: color 0.25s ease 0s;
-  -moz-transition: color 0.25s ease 0s;
-  -ms-transition: color 0.25s ease 0s;
-  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 a:hover, a:focus {
@@ -317,10 +311,6 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -418,10 +408,6 @@ input:placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -488,10 +474,6 @@ input[type=checkbox] + label:before {
   border-radius: var(--border-radius-xs);
   background-color: transparent;
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 input[type=checkbox] + label:after {
@@ -504,10 +486,6 @@ input[type=checkbox] + label:after {
   background-image: url(../assets/icons/ui/check.svg);
   background-size: contain;
   content: none;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -559,10 +537,6 @@ fieldset.radio input[type=radio] + label:before {
   border-radius: 100%;
   background-color: transparent;
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.radio input[type=radio] + label:after {
@@ -576,10 +550,6 @@ fieldset.radio input[type=radio] + label:after {
   background-color: var(--color--bg-dark);
   opacity: 0;
   content: "";
-  -webkit-transition: opacity 0.25s ease 0s;
-  -moz-transition: opacity 0.25s ease 0s;
-  -ms-transition: opacity 0.25s ease 0s;
-  -o-transition: opacity 0.25s ease 0s;
   transition: opacity 0.25s ease 0s;
 }
 fieldset.radio input[type=radio]:checked + label:before {
@@ -645,10 +615,6 @@ fieldset.toggle label input[type=checkbox]:after {
   border-radius: 100%;
   background-color: var(--color--border);
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.toggle label input[type=checkbox]:checked {
@@ -704,9 +670,6 @@ fieldset.range input[type=range]::-webkit-slider-thumb {
   -moz-appearance: none;
   appearance: none;
   -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.range input[type=range]::-moz-range-thumb {
@@ -718,10 +681,7 @@ fieldset.range input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.25s ease 0s;
   -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -803,10 +763,20 @@ html.dark select:disabled {
   color: var(--color--status-disabled);
 }
 
+input:-moz-read-only, select:-moz-read-only {
+  border-color: var(--color--status-readonly);
+  color: var(--color--status-readonly);
+}
+
 input:read-only,
 select:read-only {
   border-color: var(--color--status-readonly);
   color: var(--color--status-readonly);
+}
+
+html.dark input:-moz-read-only, html.dark select:-moz-read-only {
+  border-color: var(--color--text-light);
+  color: var(--color--text-light);
 }
 
 html.dark input:read-only,
@@ -901,7 +871,7 @@ article {
   background-image: none;
 }
 article section {
-  padding: var(--spacing--16) 0 0;
+  padding: var(--spacing--32) 0 0;
 }
 article section:first-of-type {
   padding: 0;
@@ -1102,10 +1072,6 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
   max-height: 0;
   opacity: 0;
   stroke-width: 2.5;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 .card ul.options li span.status.invalid {
@@ -1160,6 +1126,59 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
   padding: var(--spacing--8) 0 0;
 }
 
+.card .row + .row {
+  padding: var(--spacing--8) 0 0;
+}
+.card .row .column-11,
+.card .row .column-10,
+.card .row .column-9,
+.card .row .column-8,
+.card .row .column-7,
+.card .row .column-6,
+.card .row .column-5,
+.card .row .column-4,
+.card .row .column-3,
+.card .row .column-2,
+.card .row .column-1 {
+  display: inline-block;
+  width: calc(50% - var(--spacing--8));
+}
+
+@media (min-width: 40rem) {
+  .card .row .column-11 {
+    width: 91.6666666667%;
+  }
+  .card .row .column-10 {
+    width: 83.3333333333%;
+  }
+  .card .row .column-9 {
+    width: 75%;
+  }
+  .card .row .column-8 {
+    width: 66.6666666667%;
+  }
+  .card .row .column-7 {
+    width: 58.3333333333%;
+  }
+  .card .row .column-6 {
+    width: 50%;
+  }
+  .card .row .column-5 {
+    width: 41.6666666667%;
+  }
+  .card .row .column-4 {
+    width: 33.3333333333%;
+  }
+  .card .row .column-3 {
+    width: 25%;
+  }
+  .card .row .column-2 {
+    width: 16.6666666667%;
+  }
+  .card .row .column-1 {
+    width: 8.3333333333%;
+  }
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -1180,6 +1199,14 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 
 .row.space-between {
   justify-content: space-between;
+}
+
+.row.align-center {
+  align-items: center;
+}
+
+.row.align-end {
+  align-items: flex-end;
 }
 
 .column-12,
@@ -1248,27 +1275,15 @@ header {
 }
 
 .headroom {
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -ms-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   will-change: transform;
 }
 
 .headroom--pinned {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   transform: translateY(0);
 }
 
 .headroom--unpinned {
-  -webkit-transform: translateY(-100vh);
-  -moz-transform: translateY(-100vh);
-  -ms-transform: translateY(-100vh);
-  -o-transform: translateY(-100vh);
   transform: translateY(-100vh);
 }
 
@@ -1330,6 +1345,7 @@ button,
 .button {
   display: inline-flex;
   align-items: center;
+  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   overflow: hidden;
@@ -1346,10 +1362,6 @@ button,
   white-space: nowrap;
   color: var(--color--text-light);
   background-color: var(--color--action-light);
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 button:hover, button:focus,
@@ -1382,6 +1394,40 @@ button.tertiary:hover, button.tertiary:focus,
 .button.tertiary:hover,
 .button.tertiary:focus {
   color: var(--color--action-light-hover);
+}
+
+button.primary:disabled,
+.button.primary:disabled {
+  border-color: var(--color--status-disabled);
+  background-color: var(--color--status-disabled);
+}
+button.primary:disabled:hover, button.primary:disabled:focus,
+.button.primary:disabled:hover,
+.button.primary:disabled:focus {
+  border-color: var(--color--status-disabled);
+  background-color: var(--color--status-disabled);
+}
+
+button.secondary:disabled,
+.button.secondary:disabled {
+  border-color: var(--color--status-disabled);
+  color: var(--color--status-disabled);
+}
+button.secondary:disabled:hover, button.secondary:disabled:focus,
+.button.secondary:disabled:hover,
+.button.secondary:disabled:focus {
+  border-color: var(--color--status-disabled);
+  color: var(--color--status-disabled);
+}
+
+button.tertiary:disabled,
+.button.tertiary:disabled {
+  color: var(--color--status-disabled);
+}
+button.tertiary:disabled:hover, button.tertiary:disabled:focus,
+.button.tertiary:disabled:hover,
+.button.tertiary:disabled:focus {
+  color: var(--color--status-disabled);
 }
 
 html.dark button,
@@ -1422,6 +1468,37 @@ html.dark button.tertiary:hover, html.dark button.tertiary:focus,
 html.dark .button.tertiary:hover,
 html.dark .button.tertiary:focus {
   color: var(--color--action-dark-hover);
+}
+html.dark button.primary:disabled,
+html.dark .button.primary:disabled {
+  border-color: var(--color--status-disabled);
+  background-color: var(--color--status-disabled);
+}
+html.dark button.primary:disabled:hover, html.dark button.primary:disabled:focus,
+html.dark .button.primary:disabled:hover,
+html.dark .button.primary:disabled:focus {
+  border-color: var(--color--status-disabled);
+  background-color: var(--color--status-disabled);
+}
+html.dark button.secondary:disabled,
+html.dark .button.secondary:disabled {
+  border-color: var(--color--status-disabled);
+  color: var(--color--status-disabled);
+}
+html.dark button.secondary:disabled:hover, html.dark button.secondary:disabled:focus,
+html.dark .button.secondary:disabled:hover,
+html.dark .button.secondary:disabled:focus {
+  border-color: var(--color--status-disabled);
+  color: var(--color--status-disabled);
+}
+html.dark button.tertiary:disabled,
+html.dark .button.tertiary:disabled {
+  color: var(--color--status-disabled);
+}
+html.dark button.tertiary:disabled:hover, html.dark button.tertiary:disabled:focus,
+html.dark .button.tertiary:disabled:hover,
+html.dark .button.tertiary:disabled:focus {
+  color: var(--color--status-disabled);
 }
 
 button.icon,
