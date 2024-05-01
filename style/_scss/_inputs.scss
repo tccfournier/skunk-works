@@ -373,7 +373,6 @@ fieldset.toggle {
       margin: 0;
     }
 
-    input,
     input[type="checkbox"] {
       display: inline-flex;
       position: absolute;
@@ -417,7 +416,6 @@ fieldset.toggle {
   label.reverse {
     padding: 0 0 0 3rem;
 
-    input,
     input[type="checkbox"] {
       right: auto;
       left: 0;
@@ -490,11 +488,7 @@ fieldset.range {
 
 // RANGE DARK MODE
 html.dark {
-  fieldset.range {
-    input[type="range"] {
-      // accent-color: $color--bg-light;
-    }
-  }
+  fieldset.range {}
 }
 
 
@@ -586,10 +580,71 @@ fieldset.column-1 {
 // STATUS DISABLED
 input:disabled,
 select:disabled {
-  border-color: $color--status-disabled-dark;
-  color: $color--status-disabled-dark;
+  border-color: $color--status-disabled;
+  color: $color--status-disabled;
 }
 
+input[type="checkbox"]:disabled {
+  &+label {
+    &:before {
+      border-color: $color--status-disabled;
+    }
+  }
+}
+
+input[type="checkbox"]:checked:disabled {
+  &+label {
+    &:after {
+      background-color: $color--status-disabled;
+    }
+  }
+}
+
+fieldset.radio input[type="radio"]:disabled+label {
+  &:before {
+    border-color: $color--status-disabled;
+  }
+
+  &:after {
+    background-color: $color--status-disabled;
+  }
+}
+
+fieldset.toggle input[type="checkbox"]:disabled,
+fieldset.toggle input[type="checkbox"]:checked:disabled {
+  border-color: $color--status-disabled;
+
+  &:after {
+    background-color: $color--status-disabled;
+  }
+}
+
+fieldset.range {
+  input[type="range"] {
+    accent-color: $color--status-disabled;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: $color--status-disabled;
+  }
+
+  input[type="range"]::-moz-range-track {
+    background-color: $color--status-disabled;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    border-color: $color--status-disabled;
+    background-color: $color--status-disabled;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    border-color: $color--status-disabled;
+    background-color: $color--status-disabled;
+  }
+}
+
+
+// STATUS DISABLED DARK MODE
 html.dark {
 
   input:disabled,
@@ -597,4 +652,72 @@ html.dark {
     border-color: $color--status-disabled-dark;
     color: $color--status-disabled-dark;
   }
+
+  input[type="checkbox"]:disabled {
+    &+label {
+      &:before {
+        border-color: $color--status-disabled-dark;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked:disabled {
+    &+label {
+      &:after {
+        background-color: $color--status-disabled-dark;
+      }
+    }
+  }
+
+  fieldset.radio input[type="radio"]:disabled+label {
+    &:before {
+      border-color: $color--status-disabled-dark;
+    }
+
+    &:after {
+      background-color: $color--status-disabled-dark;
+    }
+  }
+
+  fieldset.toggle input[type="checkbox"]:disabled,
+  fieldset.toggle input[type="checkbox"]:checked:disabled {
+    border-color: $color--status-disabled-dark;
+
+    &:after {
+      background-color: $color--status-disabled-dark;
+    }
+  }
+
+  fieldset.range {
+    input[type="range"] {
+      accent-color: $color--status-disabled-dark;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      background-color: $color--status-disabled-dark;
+    }
+
+    input[type="range"]::-moz-range-track {
+      background-color: $color--status-disabled-dark;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      border-color: $color--status-disabled-dark;
+      background-color: $color--status-disabled-dark;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      border-color: $color--status-disabled-dark;
+      background-color: $color--status-disabled-dark;
+    }
+  }
+}
+
+
+
+// STATUS INVALID
+input:invalid,
+select:invalid {
+  border-color: $color--status-invalid;
+  color: $color--status-invalid;
 }
