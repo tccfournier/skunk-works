@@ -21,8 +21,9 @@
   --color--bg-dark-content: #404040;
   --color--bg-light: #e6e6e6;
   --color--bg-light-content: #ffffff;
-  --color--border: #c5c5c5;
-  --color--status-disabled: #888b8d;
+  --color--border: #a5a5a5;
+  --color--status-disabled: #dadada;
+  --color--status-disabled-dark: #737373;
   --color--status-invalid: #c63531;
   --color--status-readonly: #000000;
   --color--status-valid: #007a4d;
@@ -580,7 +581,7 @@ fieldset.toggle label {
   padding: 0 3rem 0 0;
   font-size: var(--p);
   font-weight: 400;
-  line-height: 1.125;
+  line-height: 1.25;
 }
 fieldset.toggle label:last-of-type {
   margin: 0;
@@ -695,6 +696,9 @@ fieldset.row input + label,
 fieldset.row input[type=radio] + label {
   margin: 0 var(--spacing--16) var(--spacing--8) 0;
 }
+fieldset.row + .row {
+  padding: 0;
+}
 
 fieldset.column-12,
 fieldset.column-11,
@@ -753,36 +757,14 @@ fieldset.column-1 {
 }
 input:disabled,
 select:disabled {
-  border-color: var(--color--status-disabled);
-  color: var(--color--status-disabled);
+  border-color: var(--color--status-disabled-dark);
+  color: var(--color--status-disabled-dark);
 }
 
 html.dark input:disabled,
 html.dark select:disabled {
-  border-color: var(--color--status-disabled);
-  color: var(--color--status-disabled);
-}
-
-input:-moz-read-only, select:-moz-read-only {
-  border-color: var(--color--status-readonly);
-  color: var(--color--status-readonly);
-}
-
-input:read-only,
-select:read-only {
-  border-color: var(--color--status-readonly);
-  color: var(--color--status-readonly);
-}
-
-html.dark input:-moz-read-only, html.dark select:-moz-read-only {
-  border-color: var(--color--text-light);
-  color: var(--color--text-light);
-}
-
-html.dark input:read-only,
-html.dark select:read-only {
-  border-color: var(--color--text-light);
-  color: var(--color--text-light);
+  border-color: var(--color--status-disabled-dark);
+  color: var(--color--status-disabled-dark);
 }
 
 table {

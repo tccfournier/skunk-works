@@ -367,7 +367,7 @@ fieldset.toggle {
     padding: 0 3rem 0 0;
     font-size: $p;
     font-weight: 400;
-    line-height: 1.125;
+    line-height: 1.25;
 
     &:last-of-type {
       margin: 0;
@@ -509,6 +509,10 @@ fieldset.row {
   input[type=radio]+label {
     margin: 0 $spacing-16 $spacing-8 0;
   }
+
+  &+.row {
+    padding: 0;
+  }
 }
 
 fieldset.column-12,
@@ -582,32 +586,15 @@ fieldset.column-1 {
 // STATUS DISABLED
 input:disabled,
 select:disabled {
-  border-color: $color--status-disabled;
-  color: $color--status-disabled;
+  border-color: $color--status-disabled-dark;
+  color: $color--status-disabled-dark;
 }
 
 html.dark {
 
   input:disabled,
   select:disabled {
-    border-color: $color--status-disabled;
-    color: $color--status-disabled;
-  }
-}
-
-
-// STATUS READONLY
-input:read-only,
-select:read-only {
-  border-color: $color--status-readonly;
-  color: $color--status-readonly;
-}
-
-html.dark {
-
-  input:read-only,
-  select:read-only {
-    border-color: $color--text-light;
-    color: $color--text-light;
+    border-color: $color--status-disabled-dark;
+    color: $color--status-disabled-dark;
   }
 }
