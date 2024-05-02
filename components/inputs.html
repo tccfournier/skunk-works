@@ -67,11 +67,9 @@
           </fieldset>
           <fieldset class="checkbox">
             <legend class="visuallyhidden">Checkbox samples</legend>
-            <input type="checkbox" id="input-sample-checkbox-a" name="input-sample-checkbox-a"
-              value="Checkbox A label">
+            <input type="checkbox" id="input-sample-checkbox-a" name="input-sample-checkbox-a" value="Checkbox A label">
             <label for="input-sample-checkbox-a">Checkbox A label</label>
-            <input type="checkbox" id="input-sample-checkbox-b" name="input-sample-checkbox-b"
-              value="Checkbox B label">
+            <input type="checkbox" id="input-sample-checkbox-b" name="input-sample-checkbox-b" value="Checkbox B label">
             <label for="input-sample-checkbox-b">Checkbox B label</label>
           </fieldset>
           <fieldset class="radio">
@@ -117,12 +115,35 @@
           </fieldset>
           <fieldset class="radio row">
             <legend>Radio row sample</legend>
-            <input type="radio" id="input-sample-radio-row-a" class="radio" name="input-sample-radio-row" value="Radio A">
+            <input type="radio" id="input-sample-radio-row-a" class="radio" name="input-sample-radio-row"
+              value="Radio A">
             <label for="input-sample-radio-row-a">Radio A</label>
-            <input type="radio" id="input-sample-radio-row-b" class="radio" name="input-sample-radio-row" value="Radio B">
+            <input type="radio" id="input-sample-radio-row-b" class="radio" name="input-sample-radio-row"
+              value="Radio B">
             <label for="input-sample-radio-row-b">Radio B</label>
-            <input type="radio" id="input-sample-radio-row-c" class="radio" name="input-sample-radio-row" value="Radio C">
+            <input type="radio" id="input-sample-radio-row-c" class="radio" name="input-sample-radio-row"
+              value="Radio C">
             <label for="input-sample-radio-row-c">Radio C</label>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <h2>States</h2>
+        <form>
+          <fieldset class="radio">
+            <legend>Input states triggers</legend>
+            <input type="radio" id="input-sample-state-default" class="radio" name="input-sample-state"
+              value="Default state">
+            <label for="input-sample-state-default">Default state</label>
+            <input type="radio" id="input-sample-state-invalid" class="radio" name="input-sample-state"
+              value="Invalid state">
+            <label for="input-sample-state-invalid">Invalid state</label>
+            <input type="radio" id="input-sample-state-valid" class="radio" name="input-sample-state"
+              value="Valid state">
+            <label for="input-sample-state-valid">Valid state</label>
+            <input type="radio" id="input-sample-state-disabled" class="radio" name="input-sample-state"
+              value="Disabled state">
+            <label for="input-sample-state-disabled">Disabled state</label>
           </fieldset>
         </form>
       </section>
@@ -168,6 +189,45 @@
     var myElement = document.querySelector("header");
     var headroom = new Headroom(myElement);
     headroom.init();
+    // INPUT STATES
+    $("input#input-sample-state-disabled").click(function () {
+      $("input#input-sample-text").attr("disabled", true);
+      $("select#input-sample-select").attr("disabled", true);
+      $("input#input-sample-checkbox-a").attr("disabled", true);
+      $("input#input-sample-checkbox-b").attr("disabled", true);
+      $("input#input-sample-radio-a").attr("disabled", true);
+      $("input#input-sample-radio-b").attr("disabled", true);
+      $("input#input-sample-toggle-a").attr("disabled", true);
+      $("input#input-sample-toggle-b").attr("disabled", true);
+      $("input#input-sample-range").attr("disabled", true);
+      $("input#input-sample-small-a").attr("disabled", true);
+      $("input#input-sample-small-b").attr("disabled", true);
+      $("input#input-sample-checkbox-row-a").attr("disabled", true);
+      $("input#input-sample-checkbox-row-b").attr("disabled", true);
+      $("input#input-sample-checkbox-row-c").attr("disabled", true);
+      $("input#input-sample-radio-row-a").attr("disabled", true);
+      $("input#input-sample-radio-row-b").attr("disabled", true);
+      $("input#input-sample-radio-row-c").attr("disabled", true);
+    });
+    $("input#input-sample-state-invalid").click(function () {
+      $("input#input-sample-text").attr("invalid", true);
+      $("select#input-sample-select").attr("invalid", true);
+      $("input#input-sample-checkbox-a").attr("invalid", true);
+      $("input#input-sample-checkbox-b").attr("invalid", true);
+      $("input#input-sample-radio-a").attr("invalid", true);
+      $("input#input-sample-radio-b").attr("invalid", true);
+      $("input#input-sample-toggle-a").attr("invalid", true);
+      $("input#input-sample-toggle-b").attr("invalid", true);
+      $("input#input-sample-range").attr("invalid", true);
+      $("input#input-sample-small-a").attr("invalid", true);
+      $("input#input-sample-small-b").attr("invalid", true);
+      $("input#input-sample-checkbox-row-a").attr("invalid", true);
+      $("input#input-sample-checkbox-row-b").attr("invalid", true);
+      $("input#input-sample-checkbox-row-c").attr("invalid", true);
+      $("input#input-sample-radio-row-a").attr("invalid", true);
+      $("input#input-sample-radio-row-b").attr("invalid", true);
+      $("input#input-sample-radio-row-c").attr("invalid", true);
+    });
   </script>
 </body>
 

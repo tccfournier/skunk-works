@@ -21,8 +21,9 @@
   --color--bg-dark-content: #404040;
   --color--bg-light: #e6e6e6;
   --color--bg-light-content: #ffffff;
-  --color--border: #c5c5c5;
-  --color--status-disabled: #888b8d;
+  --color--border: #a5a5a5;
+  --color--status-disabled: #dadada;
+  --color--status-disabled-dark: #737373;
   --color--status-invalid: #c63531;
   --color--status-readonly: #000000;
   --color--status-valid: #007a4d;
@@ -580,12 +581,11 @@ fieldset.toggle label {
   padding: 0 3rem 0 0;
   font-size: var(--p);
   font-weight: 400;
-  line-height: 1.125;
+  line-height: 1.25;
 }
 fieldset.toggle label:last-of-type {
   margin: 0;
 }
-fieldset.toggle label input,
 fieldset.toggle label input[type=checkbox] {
   display: inline-flex;
   position: absolute;
@@ -604,7 +604,6 @@ fieldset.toggle label input[type=checkbox] {
   -moz-appearance: none;
   appearance: none;
 }
-fieldset.toggle label input:after,
 fieldset.toggle label input[type=checkbox]:after {
   display: block;
   position: absolute;
@@ -627,7 +626,6 @@ fieldset.toggle label input[type=checkbox]:checked:after {
 fieldset.toggle label.reverse {
   padding: 0 0 0 3rem;
 }
-fieldset.toggle label.reverse input,
 fieldset.toggle label.reverse input[type=checkbox] {
   right: auto;
   left: 0;
@@ -695,6 +693,9 @@ fieldset.row input + label,
 fieldset.row input[type=radio] + label {
   margin: 0 var(--spacing--16) var(--spacing--8) 0;
 }
+fieldset.row + .row {
+  padding: 0;
+}
 
 fieldset.column-12,
 fieldset.column-11,
@@ -757,32 +758,95 @@ select:disabled {
   color: var(--color--status-disabled);
 }
 
+input[type=checkbox]:disabled + label:before {
+  border-color: var(--color--status-disabled);
+}
+
+input[type=checkbox]:checked:disabled + label:after {
+  background-color: var(--color--status-disabled);
+}
+
+fieldset.radio input[type=radio]:disabled + label:before {
+  border-color: var(--color--status-disabled);
+}
+fieldset.radio input[type=radio]:disabled + label:after {
+  background-color: var(--color--status-disabled);
+}
+
+fieldset.toggle input[type=checkbox]:disabled,
+fieldset.toggle input[type=checkbox]:checked:disabled {
+  border-color: var(--color--status-disabled);
+}
+fieldset.toggle input[type=checkbox]:disabled:after,
+fieldset.toggle input[type=checkbox]:checked:disabled:after {
+  background-color: var(--color--status-disabled);
+}
+
+fieldset.range input[type=range] {
+  accent-color: var(--color--status-disabled);
+}
+fieldset.range input[type=range]::-webkit-slider-runnable-track {
+  background-color: var(--color--status-disabled);
+}
+fieldset.range input[type=range]::-moz-range-track {
+  background-color: var(--color--status-disabled);
+}
+fieldset.range input[type=range]::-webkit-slider-thumb {
+  border-color: var(--color--status-disabled);
+  background-color: var(--color--status-disabled);
+}
+fieldset.range input[type=range]::-moz-range-thumb {
+  border-color: var(--color--status-disabled);
+  background-color: var(--color--status-disabled);
+}
+
 html.dark input:disabled,
 html.dark select:disabled {
-  border-color: var(--color--status-disabled);
-  color: var(--color--status-disabled);
+  border-color: var(--color--status-disabled-dark);
+  color: var(--color--status-disabled-dark);
+}
+html.dark input[type=checkbox]:disabled + label:before {
+  border-color: var(--color--status-disabled-dark);
+}
+html.dark input[type=checkbox]:checked:disabled + label:after {
+  background-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.radio input[type=radio]:disabled + label:before {
+  border-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.radio input[type=radio]:disabled + label:after {
+  background-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.toggle input[type=checkbox]:disabled,
+html.dark fieldset.toggle input[type=checkbox]:checked:disabled {
+  border-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.toggle input[type=checkbox]:disabled:after,
+html.dark fieldset.toggle input[type=checkbox]:checked:disabled:after {
+  background-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.range input[type=range] {
+  accent-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.range input[type=range]::-webkit-slider-runnable-track {
+  background-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.range input[type=range]::-moz-range-track {
+  background-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.range input[type=range]::-webkit-slider-thumb {
+  border-color: var(--color--status-disabled-dark);
+  background-color: var(--color--status-disabled-dark);
+}
+html.dark fieldset.range input[type=range]::-moz-range-thumb {
+  border-color: var(--color--status-disabled-dark);
+  background-color: var(--color--status-disabled-dark);
 }
 
-input:-moz-read-only, select:-moz-read-only {
-  border-color: var(--color--status-readonly);
-  color: var(--color--status-readonly);
-}
-
-input:read-only,
-select:read-only {
-  border-color: var(--color--status-readonly);
-  color: var(--color--status-readonly);
-}
-
-html.dark input:-moz-read-only, html.dark select:-moz-read-only {
-  border-color: var(--color--text-light);
-  color: var(--color--text-light);
-}
-
-html.dark input:read-only,
-html.dark select:read-only {
-  border-color: var(--color--text-light);
-  color: var(--color--text-light);
+input:invalid,
+select:invalid {
+  border-color: var(--color--status-invalid);
+  color: var(--color--status-invalid);
 }
 
 table {
@@ -1195,6 +1259,10 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 
 .row.flex-end {
   justify-content: flex-end;
+}
+
+.row.flex-start {
+  justify-content: flex-start;
 }
 
 .row.space-between {
