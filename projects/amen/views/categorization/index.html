@@ -47,22 +47,169 @@
       <h2>Deployed Agents by Customer</h2>
       <section id="yale-medical-center" style="padding: var(--spacing--16) 0 0;">
         <h3>Yale Medical Center</h3>
-        <div class="row cards">
+        <div class="row cards flex-start">
           <div class="card column-4">
             <h4>ADT Patient Data</h4>
-            <form>
-              <fieldset>
-                <label for="yale-adt-hl7-event-type">Event Type</label>
-                <input type="text" id="yale-adt-hl7-event-type" name="yale-adt-hl7-event-type" value="MHS[1].5.1">
+            <form id="yale-adt-patient-data">
+              <fieldset class="small">
+                <label for="yale-adt-patient-id">Patient ID</label>
+                <select id="yale-adt-patient-id" name="yale-adt-patient-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="yale-adt-hl7-patient-name">Patient Name</label>
-                <input type="text" id="yale-adt-hl7-patient-name" name="yale-adt-hl7-patient-name" value="PID[1].3">
+              <fieldset class="small">
+                <label for="yale-adt-mrn">MRN</label>
+                <select id="yale-adt-mrn" name="yale-adt-mrn">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="yale-adt-hl7-patient-current-location">Patient Current Location</label>
-                <input type="text" id="yale-adt-hl7-patient-current-location"
-                  name="yale-adt-hl7-patient-current-location" value="PV1[1].5">
+              <fieldset class="small">
+                <label for="yale-adt-first-name">First Name</label>
+                <select id="yale-adt-first-name" name="yale-adt-first-name">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-adt-last-name">Last Name</label>
+                <select id="yale-adt-last-name" name="yale-adt-last-name">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-adt-organization">Organization</label>
+                <select id="yale-adt-organization" name="yale-adt-organization">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-adt-dob">Date of Birth</label>
+                <select id="yale-adt-dob" name="yale-adt-dob">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-adt-gender">Gender</label>
+                <select id="yale-adt-gender" name="yale-adt-gender">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-adt-phone-number">Phone Number</label>
+                <select id="yale-adt-phone-number" name="yale-adt-phone-number">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-adt-email">Email</label>
+                <select id="yale-adt-email" name="yale-adt-email">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-adt-status">Status</label>
+                <select id="yale-adt-status" name="yale-adt-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
             </form>
             <div class="button-group">
@@ -72,21 +219,278 @@
           </div>
           <div class="card column-4">
             <h4>Lab Results</h4>
-            <form>
-              <fieldset>
-                <label for="yale-adt-hl7-lab-results-event-type">Event Type</label>
-                <input type="text" id="yale-adt-hl7-lab-results-event-type" name="yale-adt-hl7-lab-results-event-type"
-                  value="MHS[1].5.1">
+            <form id="yale-lab-results">
+              <fieldset class="small">
+                <label for="yale-lab-result-result-id">Result ID</label>
+                <select id="yale-lab-result-result-id" name="yale-lab-result-result-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="yale-adt-hl7-lab-results-patient-name">Patient Name</label>
-                <input type="text" id="yale-adt-hl7-lab-results-patient-name"
-                  name="yale-adt-hl7-lab-results-patient-name" value="PID[1].3">
+              <fieldset class="small">
+                <label for="yale-lab-result-observation-timestamp">Observation Timestamp</label>
+                <select id="yale-lab-result-observation-timestamp" name="yale-lab-result-observation-timestamp">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="yale-adt-hl7-lab-results-patient-current-location">Patient Current Location</label>
-                <input type="text" id="yale-adt-hl7-lab-results-patient-current-location"
-                  name="yale-adt-hl7-lab-results-patient-current-location" value="PV1[1].5">
+              <fieldset class="small">
+                <label for="yale-lab-result-observation-id">Observation ID</label>
+                <select id="yale-lab-result-observation-id" name="yale-lab-result-observation-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-observation-sub-id">Observation Sub ID</label>
+                <select id="yale-lab-result-observation-sub-id" name="yale-lab-result-observation-sub-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-observation-request-id">Observation Request ID</label>
+                <select id="yale-lab-result-observation-request-id" name="yale-lab-result-observation-request-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-specimen-id">Specimen ID</label>
+                <select id="yale-lab-result-specimen-id" name="yale-lab-result-specimen-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-observation-result-status">Observation Result Status</label>
+                <select id="yale-lab-result-observation-result-status" name="yale-lab-result-observation-result-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-observation-value">Observation Value</label>
+                <select id="yale-lab-result-observation-value" name="yale-lab-result-observation-value">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-references-range">References Range</label>
+                <select id="yale-lab-result-references-range" name="yale-lab-result-references-range">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-units">Units</label>
+                <select id="yale-lab-result-units" name="yale-lab-result-units">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-value-type">Value Type</label>
+                <select id="yale-lab-result-value-type" name="yale-lab-result-value-type">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-priority">Priority</label>
+                <select id="yale-lab-result-priority" name="yale-lab-result-priority">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-resulted-test">Resulted Test</label>
+                <select id="yale-lab-result-resulted-test" name="yale-lab-result-resulted-test">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-result">Result</label>
+                <select id="yale-lab-result-result" name="yale-lab-result-result">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-ordering-provider-id">Ordering Provider ID</label>
+                <select id="yale-lab-result-ordering-provider-id" name="yale-lab-result-ordering-provider-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-patient-id">Patient ID</label>
+                <select id="yale-lab-result-patient-id" name="yale-lab-result-patient-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-lab-result-location-id">Location ID</label>
+                <select id="yale-lab-result-location-id" name="yale-lab-result-location-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
             </form>
             <div class="button-group">
@@ -96,21 +500,214 @@
           </div>
           <div class="card column-4">
             <h4>Order Requests</h4>
-            <form>
-              <fieldset>
-                <label for="yale-adt-hl7-order-requests-event-type">Event Type</label>
-                <input type="text" id="yale-adt-hl7-order-requests-event-type"
-                  name="yale-adt-hl7-order-requests-event-type" value="MHS[1].5.1">
+            <form id="yale-order-requests">
+              <fieldset class="small">
+                <label for="yale-order-request-order-id">Order ID</label>
+                <select id="yale-order-request-order-id" name="yale-order-request-order-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="yale-adt-hl7-order-requests-patient-name">Patient Name</label>
-                <input type="text" id="yale-adt-hl7-order-requests-patient-name"
-                  name="yale-adt-hl7-order-requests-patient-name" value="PID[1].3">
+              <fieldset class="small">
+                <label for="yale-order-request-observation-timestamp">Observation Timestamp</label>
+                <select id="yale-order-request-observation-timestamp" name="yale-order-request-observation-timestamp">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="yale-adt-hl7-order-requests-patient-current-location">Patient Current Location</label>
-                <input type="text" id="yale-adt-hl7-order-requests-patient-current-location"
-                  name="yale-adt-hl7-order-requests-patient-current-location" value="PV1[1].5">
+              <fieldset class="small">
+                <label for="yale-order-request-transaction-timestamp">Transaction Timestamp</label>
+                <select id="yale-order-request-transaction-timestamp" name="yale-order-request-transaction-timestamp">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-filler-number">Filler Number</label>
+                <select id="yale-order-request-filler-number" name="yale-order-request-filler-number">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-order-control">Order Control</label>
+                <select id="yale-order-request-order-control" name="yale-order-request-order-control">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-order-status">Order Status</label>
+                <select id="yale-order-request-order-status" name="yale-order-request-order-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-result-status">Result Status</label>
+                <select id="yale-order-request-result-status" name="yale-order-request-result-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-placer-order-number">Placer Order Number</label>
+                <select id="yale-order-request-placer-order-number" name="yale-order-request-placer-order-number">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-clinical-information">Clinical Information</label>
+                <select id="yale-order-request-clinical-information" name="yale-order-request-clinical-information">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-universal-service-id">Universal Service ID</label>
+                <select id="yale-order-request-universal-service-id" name="yale-order-request-universal-service-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-ordering-provider-id">Ordering Provider ID</label>
+                <select id="yale-order-request-ordering-provider-id" name="yale-order-request-ordering-provider-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-patient-id">Patient ID</label>
+                <select id="yale-order-request-patient-id" name="yale-order-request-patient-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="yale-order-request-location-id">Location ID</label>
+                <select id="yale-order-request-location-id" name="yale-order-request-location-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
             </form>
             <div class="button-group">
@@ -122,22 +719,169 @@
       </section>
       <section id="tufts">
         <h3>Tufts</h3>
-        <div class="row cards">
+        <div class="row cards flex-start">
           <div class="card column-4">
             <h4>ADT Patient Data</h4>
-            <form>
-              <fieldset>
-                <label for="tufts-adt-hl7-event-type">Event Type</label>
-                <input type="text" id="tufts-adt-hl7-event-type" name="tufts-adt-hl7-event-type" value="MHS[1].5.1">
+            <form id="tufts-adt-patient-data">
+              <fieldset class="small">
+                <label for="tufts-adt-patient-id">Patient ID</label>
+                <select id="tufts-adt-patient-id" name="tufts-adt-patient-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="tufts-adt-hl7-patient-name">Patient Name</label>
-                <input type="text" id="tufts-adt-hl7-patient-name" name="tufts-adt-hl7-patient-name" value="PID[1].3">
+              <fieldset class="small">
+                <label for="tufts-adt-mrn">MRN</label>
+                <select id="tufts-adt-mrn" name="tufts-adt-mrn">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="tufts-adt-hl7-patient-current-location">Patient Current Location</label>
-                <input type="text" id="tufts-adt-hl7-patient-current-location"
-                  name="tufts-adt-hl7-patient-current-location" value="PV1[1].5">
+              <fieldset class="small">
+                <label for="tufts-adt-first-name">First Name</label>
+                <select id="tufts-adt-first-name" name="tufts-adt-first-name">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-adt-last-name">Last Name</label>
+                <select id="tufts-adt-last-name" name="tufts-adt-last-name">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-adt-organization">Organization</label>
+                <select id="tufts-adt-organization" name="tufts-adt-organization">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-adt-dob">Date of Birth</label>
+                <select id="tufts-adt-dob" name="tufts-adt-dob">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-adt-gender">Gender</label>
+                <select id="tufts-adt-gender" name="tufts-adt-gender">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-adt-phone-number">Phone Number</label>
+                <select id="tufts-adt-phone-number" name="tufts-adt-phone-number">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-adt-email">Email</label>
+                <select id="tufts-adt-email" name="tufts-adt-email">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-adt-status">Status</label>
+                <select id="tufts-adt-status" name="tufts-adt-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
             </form>
             <div class="button-group">
@@ -147,21 +891,279 @@
           </div>
           <div class="card column-4">
             <h4>Lab Results</h4>
-            <form>
-              <fieldset>
-                <label for="tufts-adt-hl7-lab-results-event-type">Event Type</label>
-                <input type="text" id="tufts-adt-hl7-lab-results-event-type" name="tufts-adt-hl7-lab-results-event-type"
-                  value="MHS[1].5.1">
+            <form id="tufts-lab-results">
+              <fieldset class="small">
+                <label for="tufts-lab-result-result-id">Result ID</label>
+                <select id="tufts-lab-result-result-id" name="tufts-lab-result-result-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="tufts-adt-hl7-lab-results-patient-name">Patient Name</label>
-                <input type="text" id="tufts-adt-hl7-lab-results-patient-name"
-                  name="tufts-adt-hl7-lab-results-patient-name" value="PID[1].3">
+              <fieldset class="small">
+                <label for="tufts-lab-result-observation-timestamp">Observation Timestamp</label>
+                <select id="tufts-lab-result-observation-timestamp" name="tufts-lab-result-observation-timestamp">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="tufts-adt-hl7-lab-results-patient-current-location">Patient Current Location</label>
-                <input type="text" id="tufts-adt-hl7-lab-results-patient-current-location"
-                  name="tufts-adt-hl7-lab-results-patient-current-location" value="PV1[1].5">
+              <fieldset class="small">
+                <label for="tufts-lab-result-observation-id">Observation ID</label>
+                <select id="tufts-lab-result-observation-id" name="tufts-lab-result-observation-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-observation-sub-id">Observation Sub ID</label>
+                <select id="tufts-lab-result-observation-sub-id" name="tufts-lab-result-observation-sub-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-observation-request-id">Observation Request ID</label>
+                <select id="tufts-lab-result-observation-request-id" name="tufts-lab-result-observation-request-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-specimen-id">Specimen ID</label>
+                <select id="tufts-lab-result-specimen-id" name="tufts-lab-result-specimen-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-observation-result-status">Observation Result Status</label>
+                <select id="tufts-lab-result-observation-result-status"
+                  name="tufts-lab-result-observation-result-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-observation-value">Observation Value</label>
+                <select id="tufts-lab-result-observation-value" name="tufts-lab-result-observation-value">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-references-range">References Range</label>
+                <select id="tufts-lab-result-references-range" name="tufts-lab-result-references-range">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-units">Units</label>
+                <select id="tufts-lab-result-units" name="tufts-lab-result-units">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-value-type">Value Type</label>
+                <select id="tufts-lab-result-value-type" name="tufts-lab-result-value-type">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-priority">Priority</label>
+                <select id="tufts-lab-result-priority" name="tufts-lab-result-priority">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-resulted-test">Resulted Test</label>
+                <select id="tufts-lab-result-resulted-test" name="tufts-lab-result-resulted-test">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-result">Result</label>
+                <select id="tufts-lab-result-result" name="tufts-lab-result-result">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-ordering-provider-id">Ordering Provider ID</label>
+                <select id="tufts-lab-result-ordering-provider-id" name="tufts-lab-result-ordering-provider-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-patient-id">Patient ID</label>
+                <select id="tufts-lab-result-patient-id" name="tufts-lab-result-patient-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-lab-result-location-id">Location ID</label>
+                <select id="tufts-lab-result-location-id" name="tufts-lab-result-location-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
             </form>
             <div class="button-group">
@@ -171,21 +1173,214 @@
           </div>
           <div class="card column-4">
             <h4>Order Requests</h4>
-            <form>
-              <fieldset>
-                <label for="tufts-adt-hl7-order-requests-event-type">Event Type</label>
-                <input type="text" id="tufts-adt-hl7-order-requests-event-type"
-                  name="tufts-adt-hl7-order-requests-event-type" value="MHS[1].5.1">
+            <form id="tufts-order-requests">
+              <fieldset class="small">
+                <label for="tufts-order-request-order-id">Order ID</label>
+                <select id="tufts-order-request-order-id" name="tufts-order-request-order-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="tufts-adt-hl7-order-requests-patient-name">Patient Name</label>
-                <input type="text" id="tufts-adt-hl7-order-requests-patient-name"
-                  name="tufts-adt-hl7-order-requests-patient-name" value="PID[1].3">
+              <fieldset class="small">
+                <label for="tufts-order-request-observation-timestamp">Observation Timestamp</label>
+                <select id="tufts-order-request-observation-timestamp" name="tufts-order-request-observation-timestamp">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
-              <fieldset>
-                <label for="tufts-adt-hl7-order-requests-patient-current-location">Patient Current Location</label>
-                <input type="text" id="tufts-adt-hl7-order-requests-patient-current-location"
-                  name="tufts-adt-hl7-order-requests-patient-current-location" value="PV1[1].5">
+              <fieldset class="small">
+                <label for="tufts-order-request-transaction-timestamp">Transaction Timestamp</label>
+                <select id="tufts-order-request-transaction-timestamp" name="tufts-order-request-transaction-timestamp">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-filler-number">Filler Number</label>
+                <select id="tufts-order-request-filler-number" name="tufts-order-request-filler-number">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-order-control">Order Control</label>
+                <select id="tufts-order-request-order-control" name="tufts-order-request-order-control">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-order-status">Order Status</label>
+                <select id="tufts-order-request-order-status" name="tufts-order-request-order-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-result-status">Result Status</label>
+                <select id="tufts-order-request-result-status" name="tufts-order-request-result-status">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-placer-order-number">Placer Order Number</label>
+                <select id="tufts-order-request-placer-order-number" name="tufts-order-request-placer-order-number">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-clinical-information">Clinical Information</label>
+                <select id="tufts-order-request-clinical-information" name="tufts-order-request-clinical-information">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-universal-service-id">Universal Service ID</label>
+                <select id="tufts-order-request-universal-service-id" name="tufts-order-request-universal-service-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-ordering-provider-id">Ordering Provider ID</label>
+                <select id="tufts-order-request-ordering-provider-id" name="tufts-order-request-ordering-provider-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-patient-id">Patient ID</label>
+                <select id="tufts-order-request-patient-id" name="tufts-order-request-patient-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+              </fieldset>
+              <fieldset class="small">
+                <label for="tufts-order-request-location-id">Location ID</label>
+                <select id="tufts-order-request-location-id" name="tufts-order-request-location-id">
+                  <option label="PID 1.3.1">PID 1.3.1</option>
+                  <option label="PID 1.5.2">PID 1.5.2</option>
+                  <option label="PID 1.5.1">PID 1.5.1</option>
+                </select>
+                <span class="select-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
               </fieldset>
             </form>
             <div class="button-group">
