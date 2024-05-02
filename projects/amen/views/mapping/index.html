@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
-  <title>AMEN ADT Categorization Skunk Works | TigerConnect</title>
+  <title>AMEN Categorization Skunk Works | TigerConnect</title>
   <base href="../../../../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -35,72 +35,13 @@
     <nav>
       <ul>
         <li><a href="projects/amen/views/dashboard/index.html">Dashboard</a></li>
-        <!-- <li><a href="projects/amen/views/integration/index.html">Integration</a></li> -->
-        <!-- <li><a href="projects/amen/views/configuration/index.html">Configuration</a></li> -->
-        <li><a href="projects/amen/views/categorization/index.html">Categorization</a></li>
+        <li>Mapping</li>
       </ul>
     </nav>
   </header>
   <main>
     <article>
-      <h1>Categorization</h1>
-      <h2>Yale Medical Center</h2>
-      <section>
-        <h3>ADT Patient Data Categorization</h3>
-        <div class="row cards">
-          <div class="card">
-            <h4>HL7 Configuration</h4>
-            <form id="adt-hl7-server-setup">
-              <fieldset>
-                <label for="hl7-local-ip-address">Local IP Address</label>
-                <input type="text" id="hl7-local-ip-address" name="hl7-local-ip-address" value="127.0.0.1" readonly>
-              </fieldset>
-              <fieldset class="small">
-                <label for="hl7-local-port">Local Port</label>
-                <input type="text" id="hl7-local-port" name="hl7-local-port" value="8000" readonly>
-              </fieldset>
-              <fieldset class="small">
-                <label for="hl7-connection-timeout">Connection Timeout (sec)</label>
-                <input type="number" id="hl7-connection-timeout" name="hl7-connection-timeout" value="86400" readonly>
-              </fieldset>
-              <fieldset>
-                <label for="hl7-parsing-algorithm">Parsing Algorithm</label>
-                <input type="text" id="hl7-parsing-algorithm" name="hl7-parsing-algorithm" value="HL7 ADT v2.x"
-                  readonly>
-              </fieldset>
-            </form>
-            <ul class="options">
-              <li>Edit configuration<span class="action"><a href="" class="button tertiary">Edit</a></span></li>
-            </ul>
-          </div>
-          <div class="card">
-            <h4>Categorization</h4>
-            <table>
-              <caption>ADT Patient Data HL7 Entities</caption>
-              <thead>
-                <tr>
-                  <th scope="col">ADT Data Object</th>
-                  <th scope="col">HL7 Field Mapping</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-label="ADT Data Object">Event Type</td>
-                  <td data-label="HL7 Field Mapping">MHS[1].5.1</td>
-                </tr>
-                <tr>
-                  <td scope="row" data-label="ADT Data Object">Patient Name</td>
-                  <td data-label="HL7 Field Mapping">PID[1].3</td>
-                </tr>
-                <tr>
-                  <td scope="row" data-label="ADT Data Object">Patient Current Location</td>
-                  <td data-label="HL7 Field Mapping">PV1[1].5</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+      <h1>Mapping</h1>
     </article>
   </main>
   <footer>

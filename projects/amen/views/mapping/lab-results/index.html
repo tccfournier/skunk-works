@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
-  <title>AMEN UX Skunk Works | TigerConnect</title>
-  <base href="../../">
+  <title>AMEN Lab Results Mapping Skunk Works | TigerConnect</title>
+  <base href="../../../../../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -27,52 +27,21 @@
     body.visible {
       opacity: 1;
     }
-
-    article {
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (min-width: 40rem) {
-      article {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      article section {
-        width: calc(100% / 2);
-      }
-    }
-
-    ul.contents {
-      padding: 0;
-      list-style-type: none;
-    }
-
-    ul.contents li {
-      padding: var(--spacing--8) 0 0;
-    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>AMEN UX Skunk Works</h1>
+    <nav>
+      <ul>
+        <li><a href="projects/amen/views/dashboard/index.html">Dashboard</a></li>
+        <li><a href="projects/amen/views/mapping/index.html">Mapping</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <article>
-      <h2 class="visuallyhidden">Contents</h2>
-      <section>
-        <h2>Views</h2>
-        <ul class="contents">
-          <li><a href="projects/amen/views/categorization/index.html">Categorization</a></li>
-          <!-- <li><a href="projects/amen/views/configuration/index.html">Configuration</a></li> -->
-          <li><a href="projects/amen/views/dashboard/index.html">Dashboard</a></li>
-          <!-- <li><a href="projects/amen/views/ingestion/index.html">Ingestion</a></li> -->
-          <!-- <li><a href="projects/amen/views/integration/index.html">Integration</a></li> -->
-        </ul>
-      </section>
+      <h1>Lab Results Mapping</h1>
     </article>
   </main>
   <footer>
