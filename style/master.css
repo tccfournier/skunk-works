@@ -1261,10 +1261,6 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
   justify-content: flex-end;
 }
 
-.row.flex-start {
-  justify-content: flex-start;
-}
-
 .row.space-between {
   justify-content: space-between;
 }
@@ -1275,6 +1271,10 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 
 .row.align-end {
   align-items: flex-end;
+}
+
+.row.align-start {
+  align-items: flex-start;
 }
 
 .column-12,
