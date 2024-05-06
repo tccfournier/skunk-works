@@ -276,6 +276,10 @@ form {
   flex-wrap: wrap;
   width: calc(100% + var(--spacing--16));
   margin-left: calc(var(--spacing--8) * -1);
+  padding: var(--spacing--16) 0 0;
+}
+form:first-child {
+  padding: 0;
 }
 form .button-group {
   width: calc(100% - var(--spacing--16));
@@ -847,6 +851,12 @@ input:invalid,
 select:invalid {
   border-color: var(--color--status-invalid);
   color: var(--color--status-invalid);
+}
+
+pre {
+  width: 100%;
+  overflow: scroll;
+  font-family: monospace;
 }
 
 table {

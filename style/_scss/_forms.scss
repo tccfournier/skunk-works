@@ -5,6 +5,11 @@ form {
   flex-wrap: wrap;
   width: calc(100% + $spacing-16);
   margin-left: calc($spacing-8 * -1);
+  padding: $spacing-16 0 0;
+
+  &:first-child {
+    padding: 0;
+  }
 
   .button-group {
     width: calc(100% - $spacing-16);
