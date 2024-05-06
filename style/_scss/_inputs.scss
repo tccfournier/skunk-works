@@ -466,10 +466,10 @@ fieldset.range {
   input[type="range"]::-webkit-slider-thumb {
     width: 1rem;
     height: 1rem;
+    margin-top: -0.375rem;
     border: 1px solid $color--border;
     border-radius: 100%;
     background-color: $color--bg-light-content;
-    margin-top: -0.375rem;
     @include appearance(none);
     @include transition(all, 0.25s, ease);
   }
@@ -620,26 +620,24 @@ fieldset.toggle input[type="checkbox"]:checked:disabled {
 }
 
 fieldset.range {
-  input[type="range"] {
+  input[type="range"]:disabled {
     accent-color: $color--status-disabled;
   }
 
-  input[type="range"]::-webkit-slider-runnable-track {
+  input[type="range"]:disabled::-webkit-slider-runnable-track {
     background-color: $color--status-disabled;
   }
 
-  input[type="range"]::-moz-range-track {
+  input[type="range"]:disabled::-moz-range-track {
     background-color: $color--status-disabled;
   }
 
-  input[type="range"]::-webkit-slider-thumb {
+  input[type="range"]:disabled::-webkit-slider-thumb {
     border-color: $color--status-disabled;
-    background-color: $color--status-disabled;
   }
 
-  input[type="range"]::-moz-range-thumb {
+  input[type="range"]:disabled::-moz-range-thumb {
     border-color: $color--status-disabled;
-    background-color: $color--status-disabled;
   }
 }
 
@@ -689,26 +687,24 @@ html.dark {
   }
 
   fieldset.range {
-    input[type="range"] {
+    input[type="range"]:disabled {
       accent-color: $color--status-disabled-dark;
     }
 
-    input[type="range"]::-webkit-slider-runnable-track {
+    input[type="range"]:disabled::-webkit-slider-runnable-track {
       background-color: $color--status-disabled-dark;
     }
 
-    input[type="range"]::-moz-range-track {
+    input[type="range"]:disabled::-moz-range-track {
       background-color: $color--status-disabled-dark;
     }
 
-    input[type="range"]::-webkit-slider-thumb {
+    input[type="range"]:disabled::-webkit-slider-thumb {
       border-color: $color--status-disabled-dark;
-      background-color: $color--status-disabled-dark;
     }
 
-    input[type="range"]::-moz-range-thumb {
+    input[type="range"]:disabled::-moz-range-thumb {
       border-color: $color--status-disabled-dark;
-      background-color: $color--status-disabled-dark;
     }
   }
 }
