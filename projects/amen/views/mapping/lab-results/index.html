@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
   <title>AMEN Lab Results Mapping Skunk Works | TigerConnect</title>
-  <base href="../../../../../">
+  <base href="../../../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/master.min.css">
+  <link rel="stylesheet" href="style/amen.min.css">
   <style>
     body {
       opacity: 0;
@@ -34,8 +34,8 @@
   <header>
     <nav>
       <ul>
-        <li><a href="projects/amen/views/dashboard/index.html">Dashboard</a></li>
-        <li><a href="projects/amen/views/mapping/index.html">Mapping</a></li>
+        <li><a href="views/dashboard/index.html">Dashboard</a></li>
+        <li><a href="views/mapping/index.html">Mapping</a></li>
       </ul>
     </nav>
   </header>
@@ -44,141 +44,76 @@
       <h1>Lab Results</h1>
       <h2>Active Entities</h2>
       <div class="row cards align-start">
-        <div class="card">
+        <div class="card column-12">
           <h3>Mapping and Transformation</h3>
-          <ul class="options">
-            <li class="first">Patient</li>
-            <li>MRN
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PID.2</code></span>
-            </li>
-            <li>Name
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PID-5.2 + PID-5.1</code></span>
-            </li>
-          </ul>
-          <ul class="options">
-            <li class="first">Location</li>
+          <h4>Patient</h4>
+          <ul class="mapping">
             <li>
-              Unit
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PV-3.1</code></span>
+              <span class="field">Field</span>
+              <span class="entity">Entity</span>
+              <span class="preview">Preview</span>
             </li>
-            <li>Room
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>Pv-3.2</code></span>
+            <li>
+              <span class="field">MRN</span>
+              <span class="entity"><code>PID.2</code></span>
+              <span class="preview">E00000329</span>
             </li>
-            <li>Bed
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PV-3.3</code></span>
+            <li>
+              <span class="field">Name</span>
+              <span class="entity"><code>PID-5.2 + PID-5.1</code></span>
+              <span class="preview">TOM BLUEAPPLE</span>
             </li>
           </ul>
-          <ul class="options">
-            <li class="first">Lab Result</li>
-            <li>Value Type
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>OBX[1]-3.2</code></span>
+          <h4>Location</h4>
+          <ul class="mapping">
+            <li>
+              <span class="field">Field</span>
+              <span class="entity">Entity</span>
+              <span class="preview">Preview</span>
             </li>
-            <li>Units
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>OBX[1]-6</code></span>
+            <li>
+              <span class="field">Unit</span>
+              <span class="entity"><code>PV-3.1</code></span>
+              <span class="preview">ICU</span>
             </li>
-            <li>References Range
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>OBX[1]-7</code></span>
+            <li>
+              <span class="field">Room</span>
+              <span class="entity"><code>PV-3.2</code></span>
+              <span class="preview">101</span>
             </li>
-            <li>Observation Value
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>OBX[1]-5</code></span>
+            <li>
+              <span class="field">Bed</span>
+              <span class="entity"><code>PV-3.3</code></span>
+              <span class="preview">A</span>
             </li>
           </ul>
-          <ul class="options">
-            <li>Add Entities <span class="action"><a href="#!" class="button tertiary">Add</a></span></li>
-            <li>Edit Mapping <span class="action"><a href="#!" class="button tertiary">Edit</a></span></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Preview</h3>
-          <ul class="options">
-            <li class="first">Patient</li>
-            <li>MRN <span><code>E00000329</code></span></li>
-            <li>Name <span><code>TOM BLUEAPPLE</code></span></li>
-          </ul>
-          <ul class="options">
-            <li class="first">Location</li>
-            <li>Unit <span><code>ICU</code></span></li>
-            <li>Room <span><code>101</code></span></li>
-            <li>Bed <span><code>A</code></span></li>
-          </ul>
-          <ul class="options">
-            <li class="first">Lab Result</li>
-            <li>Value Type <span><code>HEPARIN</code></span></li>
-            <li>Units <span><code>SECONDS</code></span></li>
-            <li>References Range <span><code>9.6-11.2</code></span></li>
-            <li>Observation Value <span><code>12</code></span></li>
+          <h4>Lab Results</h4>
+          <ul class="mapping">
+            <li>
+              <span class="field">Field</span>
+              <span class="entity">Entity</span>
+              <span class="preview">Preview</span>
+            </li>
+            <li>
+              <span class="field">Type</span>
+              <span class="entity"><code>OBX[1]-3.2</code></span>
+              <span class="preview">HEPARIN</span>
+            </li>
+            <li>
+              <span class="field">Units</span>
+              <span class="entity"><code>OBX[1]-6</code></span>
+              <span class="preview">SECONDS</span>
+            </li>
+            <li>
+              <span class="field">Range</span>
+              <span class="entity"><code>OBX[1]-7</code></span>
+              <span class="preview">9.6-11.2</span>
+            </li>
+            <li>
+              <span class="field">Value</span>
+              <span class="entity"><code>OBX[1]-5</code></span>
+              <span class="preview">12</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -231,8 +166,8 @@ NTE|6||mechanical heart valves.|
   </footer>
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="projects/amen/assets/scripts/site.js"></script>
-  <script src="assets/scripts/headroom.js"></script>
+  <script src="assets/scripts/site.js"></script>
+  <script src="../../assets/scripts/headroom.js"></script>
   <script>
     // CHANGE CSS WHEN PAGE LOADS
     $(document).ready(function () {
