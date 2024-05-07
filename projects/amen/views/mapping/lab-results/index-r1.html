@@ -42,75 +42,79 @@
   <main>
     <article>
       <h1>Lab Results</h1>
-      <h2>Active Entities</h2>
       <div class="row cards align-start">
         <div class="card">
+          <h3>Active Entities</h3>
+          <p>Control which entities are communicated to the system.</p>
+          <form id="yale-lab-results">
+            <fieldset class="toggle checklist">
+              <!-- <legend>
+                  <div class="button-group right">
+                    <button id="entities-none" class="tertiary">None</button>
+                    <button id="entities-all" class="tertiary">All</button>
+                  </div>
+                </legend> -->
+              <label for="yale-lab-result-result-id">Result ID <input type="checkbox" id="yale-lab-result-result-id"
+                  class="toggle" name="yale-lab-result-result-id" title="Result ID" value="Result ID"></label>
+              <label for="yale-lab-result-observation-timestamp">Observation Timestamp <input type="checkbox"
+                  id="yale-lab-result-observation-timestamp" class="toggle" name="yale-lab-result-observation-timestamp"
+                  title="Observation Timestamp" value="Observation Timestamp"></label>
+              <label for="yale-lab-result-observation-id">Observation ID <input type="checkbox"
+                  id="yale-lab-result-observation-id" class="toggle" name="yale-lab-result-observation-id"
+                  title="Observation ID" value="Observation ID"></label>
+              <label for="yale-lab-result-observation-sub-id">Observation Sub ID <input type="checkbox"
+                  id="yale-lab-result-observation-sub-id" class="toggle" name="yale-lab-result-observation-sub-id"
+                  title="Observation Sub ID" value="Observation Sub ID"></label>
+              <label for="yale-lab-result-observation-request-id">Observation Request ID <input type="checkbox"
+                  id="yale-lab-result-observation-request-id" class="toggle"
+                  name="yale-lab-result-observation-request-id" title="Observation Request ID"
+                  value="Observation Request ID"></label>
+              <label for="yale-lab-result-specimen-id">Specimen ID <input type="checkbox"
+                  id="yale-lab-result-specimen-id" class="toggle" name="yale-lab-result-specimen-id" title="Specimen ID"
+                  value="Specimen ID"></label>
+              <label for="yale-lab-result-observation-result-status">Observation Result Status <input type="checkbox"
+                  id="yale-lab-result-observation-result-status" class="toggle"
+                  name="yale-lab-result-observation-result-status" title="Observation Result Status"
+                  value="Observation Result Status"></label>
+              <label for="yale-lab-result-observation-value">Observation Value <input type="checkbox"
+                  id="yale-lab-result-observation-value" class="toggle" name="yale-lab-result-observation-value"
+                  title="Observation Value" value="Observation Value" checked></label>
+              <label for="yale-lab-result-references-range">References Range <input type="checkbox"
+                  id="yale-lab-result-references-range" class="toggle" name="yale-lab-result-references-range"
+                  title="References Range" value="References Range" checked></label>
+              <label for="yale-lab-result-units">Units <input type="checkbox" id="yale-lab-result-units" class="toggle"
+                  name="yale-lab-result-units" title="Units" value="Units" checked></label>
+              <label for="yale-lab-result-value-type">Value Type <input type="checkbox" id="yale-lab-result-value-type"
+                  class="toggle" name="yale-lab-result-value-type" title="Value Type" value="Value Type"
+                  checked></label>
+              <label for="yale-lab-result-priority">Priority <input type="checkbox" id="yale-lab-result-priority"
+                  class="toggle" name="yale-lab-result-priority" title="Priority" value="Priority"></label>
+              <label for="yale-lab-result-resulted-test">Resulted Test <input type="checkbox"
+                  id="yale-lab-result-resulted-test" class="toggle" name="yale-lab-result-resulted-test"
+                  title="Resulted Test" value="Resulted Test"></label>
+              <label for="yale-lab-result-result">Result <input type="checkbox" id="yale-lab-result-result"
+                  class="toggle" name="yale-lab-result-result" title="Result" value="Result"></label>
+              <label for="yale-lab-result-ordering-provider-id">Ordering Provider ID <input type="checkbox"
+                  id="yale-lab-result-ordering-provider-id" class="toggle" name="yale-lab-result-ordering-provider-id"
+                  title="Ordering Provider ID" value="Ordering Provider ID"></label>
+              <label for="yale-lab-result-patient-id">Patient ID <input type="checkbox" id="yale-lab-result-patient-id"
+                  class="toggle" name="yale-lab-result-patient-id" title="Patient ID" value="Patient ID"></label>
+              <label for="yale-lab-result-location-id">Location ID <input type="checkbox"
+                  id="yale-lab-result-location-id" class="toggle" name="yale-lab-result-location-id" title="Location ID"
+                  value="Location ID"></label>
+              <!-- <label for=""> <input type="checkbox" id="" class="toggle" name="" title="" value="" checked></label> -->
+              <!-- <label for=""> <input type="checkbox" id="" class="toggle" name="" title="" value="" checked></label> -->
+              <!-- <label for=""> <input type="checkbox" id="" class="toggle" name="" title="" value="" checked></label> -->
+            </fieldset>
+          </form>
+        </div>
+        <div class="card">
           <h3>Mapping and Transformation</h3>
+          <!-- <div class="button-group right">
+            <button class="primary">Edit</button>
+          </div> -->
           <ul class="options">
-            <li class="first">Patient</li>
-            <li>MRN
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PID.2</code></span>
-            </li>
-            <li>Name
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PID-5.2 + PID-5.1</code></span>
-            </li>
-          </ul>
-          <ul class="options">
-            <li class="first">Location</li>
-            <li>
-              Unit
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PV-3.1</code></span>
-            </li>
-            <li>Room
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>Pv-3.2</code></span>
-            </li>
-            <li>Bed
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 12l14 0" />
-                  <path d="M13 18l6 -6" />
-                  <path d="M13 6l6 6" />
-                </svg></span>
-              <span><code>PV-3.3</code></span>
-            </li>
-          </ul>
-          <ul class="options">
-            <li class="first">Lab Result</li>
-            <li>Value Type
+            <li>Type
               <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                   fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                   class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
@@ -132,7 +136,7 @@
                 </svg></span>
               <span><code>OBX[1]-6</code></span>
             </li>
-            <li>References Range
+            <li>Range
               <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                   fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                   class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
@@ -143,7 +147,7 @@
                 </svg></span>
               <span><code>OBX[1]-7</code></span>
             </li>
-            <li>Observation Value
+            <li>Value
               <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                   fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                   class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
@@ -155,30 +159,24 @@
               <span><code>OBX[1]-5</code></span>
             </li>
           </ul>
-          <ul class="options">
-            <li>Add Entities <span class="action"><a href="#!" class="button tertiary">Add</a></span></li>
-            <li>Edit Mapping <span class="action"><a href="#!" class="button tertiary">Edit</a></span></li>
-          </ul>
+          <!-- <ul class="options">
+            <li><b>Edit Mapping and Transformation</b>
+              <span class="action">
+                <a href="#!" class="button tertiary">Edit</a>
+              </span>
+            </li>
+          </ul> -->
+          <div class="button-group center">
+            <button class="primary">Edit Mapping</button>
+          </div>
         </div>
         <div class="card">
           <h3>Preview</h3>
           <ul class="options">
-            <li class="first">Patient</li>
-            <li>MRN <span><code>E00000329</code></span></li>
-            <li>Name <span><code>TOM BLUEAPPLE</code></span></li>
-          </ul>
-          <ul class="options">
-            <li class="first">Location</li>
-            <li>Unit <span><code>ICU</code></span></li>
-            <li>Room <span><code>101</code></span></li>
-            <li>Bed <span><code>A</code></span></li>
-          </ul>
-          <ul class="options">
-            <li class="first">Lab Result</li>
-            <li>Value Type <span><code>HEPARIN</code></span></li>
+            <li>Type <span><code>HEPARIN</code></span></li>
             <li>Units <span><code>SECONDS</code></span></li>
-            <li>References Range <span><code>9.6-11.2</code></span></li>
-            <li>Observation Value <span><code>12</code></span></li>
+            <li>Range <span><code>9.6-11.2</code></span></li>
+            <li>Value <span><code>12</code></span></li>
           </ul>
         </div>
       </div>
@@ -187,8 +185,8 @@
           <h2>Raw Data</h2>
           <pre>
 MSH|^~\&|LAB|NMC|||20201001091354-0400||ORU^R01|22064.1|D|2.3|
-PID|1|<em>E00000329</em>|M000000350||<em>BLUEAPPLE^TOM</em>||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
-PV1|1519|O|<em>ICU</em>^<em>101</em>^<em>A</em>|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
+PID|1|E00000329|M000000350||LATEST^BLUEAPPLE^K||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
+PV1|1519|O|191^101^A|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
 OBR|1|1789^LAB|1789^LAB|PT^HEPARIN/INR^L|||202010010912|||||||202010010912||ZFINGJU^Zfingergut^Judy^^^^MD||||||||LAB|F||^^^^^R|BARNMI^Barnum^Michael^J.^^^MD|
 OBX|1|ST|PRO^<em>HEPARIN</em>^L|1|<em>12.0</em>|<em>SECONDS</em>|<em>9.6-11.2</em>|H||A^S|F|||202010010913|ML^MAIN LAB^L|
 NTE|1||Is patient on anticoagulant? N|

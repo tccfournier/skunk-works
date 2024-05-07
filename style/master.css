@@ -860,6 +860,7 @@ code {
   border-radius: var(--border-radius-xs);
   font-family: monospace;
   font-size: var(--small);
+  line-height: 1;
   background-color: var(--color--bg-light);
 }
 
@@ -1174,6 +1175,7 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 }
 .card ul.options li span.icon {
   display: flex;
+  left: calc(50% - var(--spacing--16));
   width: 1rem;
   height: 1rem;
   margin: 0 var(--spacing--4);
@@ -1190,7 +1192,22 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
   margin: 0;
   font-size: var(--xsmall);
 }
+.card ul.options li.first {
+  padding: 0;
+  font-weight: 700;
+}
+.card ul.options li.first:after {
+  display: none;
+}
+.card ul.options + ul.options {
+  padding: var(--spacing--32) 0 0;
+}
 
+@media (min-width: 40rem) {
+  .card ul.options li span.icon {
+    position: absolute;
+  }
+}
 .card form fieldset.checklist {
   flex-direction: column;
   align-items: flex-start;

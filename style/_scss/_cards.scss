@@ -209,6 +209,7 @@ html.dark {
 
       span.icon {
         display: flex;
+        left: calc(50% - $spacing-16);
         width: 1rem;
         height: 1rem;
         margin: 0 $spacing-4;
@@ -226,6 +227,30 @@ html.dark {
       .button {
         margin: 0;
         font-size: $xsmall;
+      }
+    }
+
+    li.first {
+      padding: 0;
+      font-weight: 700;
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  ul.options+ul.options {
+    padding: $spacing-32 0 0;
+  }
+}
+
+@media (min-width: 40rem) {
+  .card {
+    ul.options {
+      li {
+        span.icon {
+          position: absolute;
+        }
       }
     }
   }
