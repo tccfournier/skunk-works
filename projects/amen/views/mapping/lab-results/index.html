@@ -41,10 +41,10 @@
   </header>
   <main>
     <article>
-      <h1>Lab Results Mapping</h1>
-      <div class="row cards">
+      <h1>Lab Results</h1>
+      <div class="row cards align-start">
         <div class="card">
-          <h2>Entities</h2>
+          <h3>Active Entities</h3>
           <p>Control which entities are communicated to the system.</p>
           <form id="yale-lab-results">
             <fieldset class="toggle checklist">
@@ -109,11 +109,79 @@
           </form>
         </div>
         <div class="card">
-          <h2>Preview</h2>
+          <h3>Mapping and Transformation</h3>
+          <!-- <div class="button-group right">
+            <button class="primary">Edit</button>
+          </div> -->
+          <ul class="options">
+            <li>Type
+              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg></span>
+              <span><code>OBX[1]-3.2</code></span>
+            </li>
+            <li>Units
+              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg></span>
+              <span><code>OBX[1]-6</code></span>
+            </li>
+            <li>Range
+              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg></span>
+              <span><code>OBX[1]-7</code></span>
+            </li>
+            <li>Value
+              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg></span>
+              <span><code>OBX[1]-5</code></span>
+            </li>
+          </ul>
+          <!-- <ul class="options">
+            <li><b>Edit Mapping and Transformation</b>
+              <span class="action">
+                <a href="#!" class="button tertiary">Edit</a>
+              </span>
+            </li>
+          </ul> -->
+          <div class="button-group center">
+            <button class="primary">Edit Mapping</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Preview</h3>
+          <ul class="options">
+            <li>Type <span>HEPARIN</span></li>
+            <li>Units <span>SECONDS</span></li>
+            <li>Range <span>9.6-11.2</span></li>
+            <li>Value <span>12</span></li>
+          </ul>
         </div>
       </div>
       <div class="row">
-        <div class="column-6">
+        <div class="column-12">
           <h2>Raw Data</h2>
           <pre>
 MSH|^~\&|LAB|NMC|||20201001091354-0400||ORU^R01|22064.1|D|2.3|

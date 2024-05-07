@@ -4,3 +4,19 @@ pre {
   overflow: scroll;
   font-family: monospace;
 }
+
+
+// CODE
+code {
+  padding: $spacing-4;
+  border-radius: $border-radius-xs;
+  font-family: monospace;
+  font-size: $small;
+  background-color: $color--bg-light;
+}
+
+html.dark {
+  code {
+    background-color: $color--border;
+  }
+}
