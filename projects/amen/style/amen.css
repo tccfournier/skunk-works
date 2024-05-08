@@ -72,8 +72,6 @@ html.dark body {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -97,10 +95,6 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: var(--color--action-light);
-  -webkit-transition: color 0.25s ease 0s;
-  -moz-transition: color 0.25s ease 0s;
-  -ms-transition: color 0.25s ease 0s;
-  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 a:hover, a:focus {
@@ -322,10 +316,6 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -423,10 +413,6 @@ input:placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -493,10 +479,6 @@ input[type=checkbox] + label:before {
   border-radius: var(--border-radius-xs);
   background-color: transparent;
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 input[type=checkbox] + label:after {
@@ -509,10 +491,6 @@ input[type=checkbox] + label:after {
   background-image: url(../assets/icons/ui/check.svg);
   background-size: contain;
   content: none;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -564,10 +542,6 @@ fieldset.radio input[type=radio] + label:before {
   border-radius: 100%;
   background-color: transparent;
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.radio input[type=radio] + label:after {
@@ -581,10 +555,6 @@ fieldset.radio input[type=radio] + label:after {
   background-color: var(--color--bg-dark);
   opacity: 0;
   content: "";
-  -webkit-transition: opacity 0.25s ease 0s;
-  -moz-transition: opacity 0.25s ease 0s;
-  -ms-transition: opacity 0.25s ease 0s;
-  -o-transition: opacity 0.25s ease 0s;
   transition: opacity 0.25s ease 0s;
 }
 fieldset.radio input[type=radio]:checked + label:before {
@@ -648,10 +618,6 @@ fieldset.toggle label input[type=checkbox]:after {
   border-radius: 100%;
   background-color: var(--color--border);
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.toggle label input[type=checkbox]:checked {
@@ -706,9 +672,6 @@ fieldset.range input[type=range]::-webkit-slider-thumb {
   -moz-appearance: none;
   appearance: none;
   -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.range input[type=range]::-moz-range-thumb {
@@ -720,10 +683,7 @@ fieldset.range input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.25s ease 0s;
   -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -1195,10 +1155,6 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
   max-height: 0;
   opacity: 0;
   stroke-width: 2.5;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 .card ul.options li span.status.invalid {
@@ -1435,27 +1391,15 @@ header {
 }
 
 .headroom {
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -ms-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   will-change: transform;
 }
 
 .headroom--pinned {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   transform: translateY(0);
 }
 
 .headroom--unpinned {
-  -webkit-transform: translateY(-100vh);
-  -moz-transform: translateY(-100vh);
-  -ms-transform: translateY(-100vh);
-  -o-transform: translateY(-100vh);
   transform: translateY(-100vh);
 }
 
@@ -1517,6 +1461,7 @@ button,
 .button {
   display: inline-flex;
   align-items: center;
+  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   overflow: hidden;
@@ -1533,10 +1478,6 @@ button,
   white-space: nowrap;
   color: var(--color--text-light);
   background-color: var(--color--action-light);
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 button:hover, button:focus,
@@ -1796,6 +1737,10 @@ html.dark .button.icon:focus {
 .card ul.mapping li:first-of-type:after {
   display: none;
 }
+.card ul.mapping li:first-of-type span.field:after,
+.card ul.mapping li:first-of-type span.entity:after {
+  display: none;
+}
 .card ul.mapping li:last-of-type {
   padding-bottom: 0;
 }
@@ -1804,11 +1749,34 @@ html.dark .button.icon:focus {
 }
 .card ul.mapping li span {
   display: flex;
+  position: relative;
   width: calc(33.3333333333% - var(--spacing--8));
   overflow: scroll;
   white-space: nowrap;
 }
+.card ul.mapping li span.field:after,
+.card ul.mapping li span.entity:after {
+  display: inline-flex;
+  position: absolute;
+  top: calc(var(--spacing--4) / 2);
+  right: 0;
+  width: var(--spacing--16);
+  height: var(--spacing--16);
+  background-image: url(../../../assets/icons/ui/arrow-right.svg);
+  background-size: contain;
+  content: none;
+}
 
+@media (min-width: 40rem) {
+  .card ul.mapping li span.field,
+  .card ul.mapping li span.entity {
+    padding: 0 var(--spacing--20) 0 0;
+  }
+  .card ul.mapping li span.field:after,
+  .card ul.mapping li span.entity:after {
+    content: "";
+  }
+}
 code {
   font-size: var(--p);
 }

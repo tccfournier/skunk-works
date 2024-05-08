@@ -1,4 +1,4 @@
-// CARD
+// CARD UL MAPPING
 .card {
   ul.mapping {
     position: relative;
@@ -40,6 +40,11 @@
         &:after {
           display: none;
         }
+
+        span.field:after,
+        span.entity:after {
+          display: none;
+        }
       }
 
       &:last-of-type {
@@ -52,9 +57,43 @@
 
       span {
         display: flex;
+        position: relative;
         width: calc((100% / 3) - $spacing-8);
         overflow: scroll;
         white-space: nowrap;
+      }
+
+      span.field,
+      span.entity {
+        &:after {
+          display: inline-flex;
+          position: absolute;
+          top: calc($spacing-4 / 2);
+          right: 0;
+          width: $spacing-16;
+          height: $spacing-16;
+          background-image: url(../../../assets/icons/ui/arrow-right.svg);
+          background-size: contain;
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  .card {
+    ul.mapping {
+      li {
+
+        span.field,
+        span.entity {
+          padding: 0 $spacing-20 0 0;
+
+          &:after {
+            content: "";
+          }
+        }
       }
     }
   }
