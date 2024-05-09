@@ -627,10 +627,11 @@ fieldset.toggle label input[type=checkbox]:checked:after {
   margin-left: 1.25rem;
   background-color: var(--color--bg-dark);
 }
-fieldset.toggle label.reverse {
+
+fieldset.toggle.reverse label {
   padding: 0 0 0 3rem;
 }
-fieldset.toggle label.reverse input[type=checkbox] {
+fieldset.toggle.reverse label input[type=checkbox] {
   right: auto;
   left: 0;
 }

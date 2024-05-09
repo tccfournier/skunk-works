@@ -412,8 +412,10 @@ fieldset.toggle {
       }
     }
   }
+}
 
-  label.reverse {
+fieldset.toggle.reverse {
+  label {
     padding: 0 0 0 3rem;
 
     input[type="checkbox"] {
