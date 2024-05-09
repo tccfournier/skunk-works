@@ -35,6 +35,7 @@
 
       &:first-of-type {
         padding: 0;
+        font-size: $small;
         font-weight: 700;
 
         &:after {
@@ -42,7 +43,7 @@
         }
 
         span.field:after,
-        span.entity:after {
+        span.element:after {
           display: none;
         }
       }
@@ -64,7 +65,7 @@
       }
 
       span.field,
-      span.entity {
+      span.element {
         &:after {
           display: inline-flex;
           position: absolute;
@@ -87,7 +88,7 @@
       li {
 
         span.field,
-        span.entity {
+        span.element {
           padding: 0 $spacing-20 0 0;
 
           &:after {

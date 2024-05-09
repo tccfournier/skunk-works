@@ -1733,13 +1733,14 @@ html.dark .button.icon:focus {
 }
 .card ul.mapping li:first-of-type {
   padding: 0;
+  font-size: var(--small);
   font-weight: 700;
 }
 .card ul.mapping li:first-of-type:after {
   display: none;
 }
 .card ul.mapping li:first-of-type span.field:after,
-.card ul.mapping li:first-of-type span.entity:after {
+.card ul.mapping li:first-of-type span.element:after {
   display: none;
 }
 .card ul.mapping li:last-of-type {
@@ -1756,7 +1757,7 @@ html.dark .button.icon:focus {
   white-space: nowrap;
 }
 .card ul.mapping li span.field:after,
-.card ul.mapping li span.entity:after {
+.card ul.mapping li span.element:after {
   display: inline-flex;
   position: absolute;
   top: calc(var(--spacing--4) / 2);
@@ -1770,11 +1771,11 @@ html.dark .button.icon:focus {
 
 @media (min-width: 40rem) {
   .card ul.mapping li span.field,
-  .card ul.mapping li span.entity {
+  .card ul.mapping li span.element {
     padding: 0 var(--spacing--20) 0 0;
   }
   .card ul.mapping li span.field:after,
-  .card ul.mapping li span.entity:after {
+  .card ul.mapping li span.element:after {
     content: "";
   }
 }
