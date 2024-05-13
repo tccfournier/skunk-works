@@ -42,7 +42,7 @@
 .card.column-3,
 .card.column-2,
 .card.column-1 {
-  width: 100%;
+  width: calc(100% - $spacing-16);
 }
 
 @media (min-width: 40rem) {

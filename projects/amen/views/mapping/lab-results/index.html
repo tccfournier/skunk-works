@@ -44,7 +44,7 @@
       <h1>Lab Results</h1>
       <h2>Active Entities</h2>
       <div class="row cards align-start">
-        <div class="card column-12">
+        <div class="card column-9">
           <h3>Mapping and Transformation</h3>
           <h4>Patient</h4>
           <ul class="mapping">
@@ -115,6 +115,39 @@
               <span class="preview">12</span>
             </li>
           </ul>
+        </div>
+        <div class="card column-3">
+          <h3>Control Fields</h3>
+          <form id="yale-lab-results">
+            <fieldset class="toggle checklist">
+              <!-- <legend>
+                  <div class="button-group right">
+                    <button id="entities-none" class="tertiary">None</button>
+                    <button id="entities-all" class="tertiary">All</button>
+                  </div>
+                </legend> -->
+              <label for="yale-lab-result-result-id">Result ID <input type="checkbox" id="yale-lab-result-result-id" class="toggle" name="yale-lab-result-result-id" title="Result ID" value="Result ID"></label>
+              <label for="yale-lab-result-observation-timestamp">Observation Timestamp <input type="checkbox" id="yale-lab-result-observation-timestamp" class="toggle" name="yale-lab-result-observation-timestamp" title="Observation Timestamp" value="Observation Timestamp"></label>
+              <label for="yale-lab-result-observation-id">Observation ID <input type="checkbox" id="yale-lab-result-observation-id" class="toggle" name="yale-lab-result-observation-id" title="Observation ID" value="Observation ID"></label>
+              <label for="yale-lab-result-observation-sub-id">Observation Sub ID <input type="checkbox" id="yale-lab-result-observation-sub-id" class="toggle" name="yale-lab-result-observation-sub-id" title="Observation Sub ID" value="Observation Sub ID"></label>
+              <label for="yale-lab-result-observation-request-id">Observation Request ID <input type="checkbox" id="yale-lab-result-observation-request-id" class="toggle" name="yale-lab-result-observation-request-id" title="Observation Request ID" value="Observation Request ID"></label>
+              <label for="yale-lab-result-specimen-id">Specimen ID <input type="checkbox" id="yale-lab-result-specimen-id" class="toggle" name="yale-lab-result-specimen-id" title="Specimen ID" value="Specimen ID"></label>
+              <label for="yale-lab-result-observation-result-status">Observation Result Status <input type="checkbox" id="yale-lab-result-observation-result-status" class="toggle" name="yale-lab-result-observation-result-status" title="Observation Result Status" value="Observation Result Status"></label>
+              <label for="yale-lab-result-observation-value">Observation Value <input type="checkbox" id="yale-lab-result-observation-value" class="toggle" name="yale-lab-result-observation-value" title="Observation Value" value="Observation Value" checked=""></label>
+              <label for="yale-lab-result-references-range">References Range <input type="checkbox" id="yale-lab-result-references-range" class="toggle" name="yale-lab-result-references-range" title="References Range" value="References Range" checked=""></label>
+              <label for="yale-lab-result-units">Units <input type="checkbox" id="yale-lab-result-units" class="toggle" name="yale-lab-result-units" title="Units" value="Units" checked=""></label>
+              <label for="yale-lab-result-value-type">Value Type <input type="checkbox" id="yale-lab-result-value-type" class="toggle" name="yale-lab-result-value-type" title="Value Type" value="Value Type" checked=""></label>
+              <label for="yale-lab-result-priority">Priority <input type="checkbox" id="yale-lab-result-priority" class="toggle" name="yale-lab-result-priority" title="Priority" value="Priority"></label>
+              <label for="yale-lab-result-resulted-test">Resulted Test <input type="checkbox" id="yale-lab-result-resulted-test" class="toggle" name="yale-lab-result-resulted-test" title="Resulted Test" value="Resulted Test"></label>
+              <label for="yale-lab-result-result">Result <input type="checkbox" id="yale-lab-result-result" class="toggle" name="yale-lab-result-result" title="Result" value="Result"></label>
+              <label for="yale-lab-result-ordering-provider-id">Ordering Provider ID <input type="checkbox" id="yale-lab-result-ordering-provider-id" class="toggle" name="yale-lab-result-ordering-provider-id" title="Ordering Provider ID" value="Ordering Provider ID"></label>
+              <label for="yale-lab-result-patient-id">Patient ID <input type="checkbox" id="yale-lab-result-patient-id" class="toggle" name="yale-lab-result-patient-id" title="Patient ID" value="Patient ID"></label>
+              <label for="yale-lab-result-location-id">Location ID <input type="checkbox" id="yale-lab-result-location-id" class="toggle" name="yale-lab-result-location-id" title="Location ID" value="Location ID"></label>
+              <!-- <label for=""> <input type="checkbox" id="" class="toggle" name="" title="" value="" checked></label> -->
+              <!-- <label for=""> <input type="checkbox" id="" class="toggle" name="" title="" value="" checked></label> -->
+              <!-- <label for=""> <input type="checkbox" id="" class="toggle" name="" title="" value="" checked></label> -->
+            </fieldset>
+          </form>
         </div>
       </div>
       <div class="row">

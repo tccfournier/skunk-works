@@ -1053,7 +1053,7 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 .card.column-3,
 .card.column-2,
 .card.column-1 {
-  width: 100%;
+  width: calc(100% - var(--spacing--16));
 }
 
 @media (min-width: 40rem) {
@@ -1332,7 +1332,6 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 .column-9,
 .column-8,
 .column-7 {
-  display: block;
   width: 100%;
 }
 
@@ -1342,7 +1341,6 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 .column-3,
 .column-2,
 .column-1 {
-  display: inline-block;
   width: 50%;
 }
 
