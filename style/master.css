@@ -1453,6 +1453,7 @@ nav ul {
 }
 nav ul li {
   padding: 0 var(--spacing--16) 0 0;
+  font-weight: 500;
 }
 nav ul li:last-of-type {
   padding: 0;
