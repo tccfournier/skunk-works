@@ -1548,7 +1548,7 @@ a.button.secondary:focus {
 button.tertiary,
 .button.tertiary,
 a.button.tertiary {
-  padding: 0 var(--spacing--4);
+  padding: 0;
   border: none;
   color: var(--color--action-light);
   background-color: transparent;
