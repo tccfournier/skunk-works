@@ -1782,9 +1782,9 @@ html.dark a.button.icon:focus {
 .button-group.right {
   justify-content: flex-end;
 }
-.button-group.right button:last-of-type,
-.button-group.right .button:last-of-type,
-.button-group.right a.button:last-of-type {
+.button-group.right button:last-child,
+.button-group.right .button:last-child,
+.button-group.right a.button:last-child {
   margin-right: 0;
 }
 

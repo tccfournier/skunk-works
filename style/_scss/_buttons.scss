@@ -272,9 +272,9 @@ html.dark {
 .button-group.right {
   justify-content: flex-end;
 
-  button:last-of-type,
-  .button:last-of-type,
-  a.button:last-of-type {
+  button:last-child,
+  .button:last-child,
+  a.button:last-child {
     margin-right: 0;
   }
 }
