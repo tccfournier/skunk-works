@@ -23,3 +23,12 @@ form {
     flex-wrap: wrap;
   }
 }
+
+
+// FIRST-FORM SPACING
+h1+form,
+h2+form,
+h3+form,
+h4+form {
+  padding: 0;
+}

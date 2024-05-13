@@ -1,0 +1,38 @@
+// DRAWERS
+.drawers {
+  display: block;
+  position: fixed;
+  top: 3.25rem;
+  right: 0.525rem;
+  left: 0;
+  z-index: 500;
+  margin: 0;
+
+  .drawer {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: auto;
+    padding: $spacing-16;
+    @include transition(all);
+
+    &>.card {
+      width: calc(100% - $spacing-16);
+      background-color: $color--bg-light-content;
+    }
+  }
+
+  .drawer.right {
+    right: 0;
+    @include transform(translateX(100vw));
+  }
+
+  .drawer.left {
+    left: 0;
+    @include transform(translateX(-100vw));
+  }
+
+  .drawer.show {
+    @include transform(translateX(0vw));
+  }
+}
