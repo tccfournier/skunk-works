@@ -593,6 +593,7 @@ fieldset.toggle label {
   font-size: var(--p);
   font-weight: 400;
   line-height: 1.25;
+  white-space: normal;
 }
 fieldset.toggle label:last-of-type {
   margin: 0;

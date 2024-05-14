@@ -41,16 +41,16 @@
   </header>
   <main>
     <article>
-      <h1>Yale Medical Center INT-1 Mapping</h1>
+      <h1>Yale Medical Center Mapping</h1>
       <section>
-        <h2>Active Entities</h2>
+        <h2>INT-1 Active Entities</h2>
         <div class="button-group">
           <button class="primary">Add Entities</button>
         </div>
         <div class="row cards align-start">
           <div class="card column-12">
             <!-- <h3>Mapping and Transformation</h3> -->
-            <h4>Patient<span class="utility"><button class="tertiary" disabled>Add Fields</button></span></h4>
+            <h4>Patient<span class="utility"><a href="views/mapping/patient/index.html" class="button tertiary">Add Fields</a></span></h4>
             <ul class="mapping">
               <li>
                 <span class="field">Field</span>
@@ -63,12 +63,12 @@
                 <span class="preview">E00000329M000000350</span>
               </li>
               <li>
-                <span class="field">Name</span>
-                <span class="element"><code>PID-5.2</code>+<code>PID-5.1</code></span>
-                <span class="preview">TOM BLUEAPPLE</span>
+                <span class="field">First Name</span>
+                <span class="element"><code>PID-5.2</code></span>
+                <span class="preview">TOM</span>
               </li>
             </ul>
-            <h4>Location<span class="utility"><button class="tertiary" disabled>Add Fields</button></span></h4>
+            <h4>Location<span class="utility"><a href="views/mapping/location/index.html" class="button tertiary">Add Fields</a></span></h4>
             <ul class="mapping">
               <li>
                 <span class="field">Field</span>
@@ -76,22 +76,12 @@
                 <span class="preview">Preview</span>
               </li>
               <li>
-                <span class="field">Type</span>
-                <span class="element">Room</span>
-                <span class="preview">Room</span>
-              </li>
-              <li>
-                <span class="field">Logical Grouping</span>
-                <span class="element"><code>PV-3.1</code></span>
-                <span class="preview">ICU</span>
-              </li>
-              <li>
                 <span class="field">Description</span>
-                <span class="element"><code>PV-3.2</code></span>
-                <span class="preview">101</span>
+                <span class="element"><code>PV1[1].3</code></span>
+                <span class="preview">ICU^101^A</span>
               </li>
             </ul>
-            <h4>Lab Results<span class="utility"><a href="views/mapping/lab-results/index.html" class="button tertiary">Add Fields</a></span></h4>
+            <h4>Lab Result<span class="utility"><a href="views/mapping/lab-result/index.html" class="button tertiary">Add Fields</a></span></h4>
             <ul class="mapping">
               <li>
                 <span class="field">Field</span>
@@ -105,23 +95,20 @@
               </li>
               <li>
                 <span class="field">Units</span>
-                <span class="element"><code>OBX[1]6</code></span>
+                <span class="element"><code>OBX[1].6</code></span>
                 <span class="preview">SECONDS</span>
               </li>
               <li>
                 <span class="field">References Range</span>
-                <span class="element"><code>OBX[1]7</code></span>
+                <span class="element"><code>OBX[1].7</code></span>
                 <span class="preview">9.6-11.2</span>
               </li>
               <li>
                 <span class="field">Observation Value</span>
-                <span class="element"><code>OBX[1]5</code></span>
+                <span class="element"><code>OBX[1].5</code></span>
                 <span class="preview">12</span>
               </li>
             </ul>
-            <!-- <div class="button-group">
-              <a href="views/mapping/lab-results/index.html" class="button primary">Add Fields</a>
-            </div> -->
           </div>
         </div>
         <div class="row">
@@ -129,8 +116,8 @@
             <h2>Raw Data</h2>
             <pre>
 MSH|^~\&|LAB|NMC|||20201001091354-0400||ORU^R01|22064.1|D|2.3|
-PID|1|<em>E00000329</em>|<em>M000000350</em>||<em>BLUEAPPLE^TOM</em>||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
-PV1|1519|O|<em>ICU</em>^<em>101</em>^<em>A</em>|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
+PID|1|<em>E00000329</em>|<em>M000000350</em>||BLUEAPPLE^<em>TOM</em>||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
+PV1|1519|O|<em>ICU^101^A</em>|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
 OBR|1|1789^LAB|1789^LAB|PT^HEPARIN/INR^L|||202010010912|||||||202010010912||ZFINGJU^Zfingergut^Judy^^^^MD||||||||LAB|F||^^^^^R|BARNMI^Barnum^Michael^J.^^^MD|
 OBX|1|ST|PRO^<em>HEPARIN</em>^L|1|<em>12.0</em>|<em>SECONDS</em>|<em>9.6-11.2</em>|H||A^S|F|||202010010913|ML^MAIN LAB^L|
 NTE|1||Is patient on anticoagulant? N|
