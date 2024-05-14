@@ -58,13 +58,13 @@
                 <span class="preview">Preview</span>
               </li>
               <li>
-                <span class="field">MRN</span>
-                <span class="element"><code>PID.2</code></span>
-                <span class="preview">E00000329</span>
+                <span class="field">Patient ID</span>
+                <span class="element"><code>PID.2</code>+<code>PID.3</code></span>
+                <span class="preview">E00000329M000000350</span>
               </li>
               <li>
                 <span class="field">Name</span>
-                <span class="element"><code>PID-5.2 + PID-5.1</code></span>
+                <span class="element"><code>PID-5.2</code>+<code>PID-5.1</code></span>
                 <span class="preview">TOM BLUEAPPLE</span>
               </li>
             </ul>
@@ -76,19 +76,19 @@
                 <span class="preview">Preview</span>
               </li>
               <li>
-                <span class="field">Unit</span>
+                <span class="field">Type</span>
+                <span class="element">Room</span>
+                <span class="preview">Room</span>
+              </li>
+              <li>
+                <span class="field">Logical Grouping</span>
                 <span class="element"><code>PV-3.1</code></span>
                 <span class="preview">ICU</span>
               </li>
               <li>
-                <span class="field">Room</span>
+                <span class="field">Description</span>
                 <span class="element"><code>PV-3.2</code></span>
                 <span class="preview">101</span>
-              </li>
-              <li>
-                <span class="field">Bed</span>
-                <span class="element"><code>PV-3.3</code></span>
-                <span class="preview">A</span>
               </li>
             </ul>
             <h4>Lab Results<span class="utility"><a href="views/mapping/lab-results/index.html" class="button tertiary">Add Fields</a></span></h4>
@@ -100,22 +100,22 @@
               </li>
               <li>
                 <span class="field">Value Type</span>
-                <span class="element"><code>OBX[1]-3.2</code></span>
+                <span class="element"><code>OBX[1]3.2</code></span>
                 <span class="preview">HEPARIN</span>
               </li>
               <li>
                 <span class="field">Units</span>
-                <span class="element"><code>OBX[1]-6</code></span>
+                <span class="element"><code>OBX[1]6</code></span>
                 <span class="preview">SECONDS</span>
               </li>
               <li>
                 <span class="field">References Range</span>
-                <span class="element"><code>OBX[1]-7</code></span>
+                <span class="element"><code>OBX[1]7</code></span>
                 <span class="preview">9.6-11.2</span>
               </li>
               <li>
                 <span class="field">Observation Value</span>
-                <span class="element"><code>OBX[1]-5</code></span>
+                <span class="element"><code>OBX[1]5</code></span>
                 <span class="preview">12</span>
               </li>
             </ul>
@@ -129,7 +129,7 @@
             <h2>Raw Data</h2>
             <pre>
 MSH|^~\&|LAB|NMC|||20201001091354-0400||ORU^R01|22064.1|D|2.3|
-PID|1|<em>E00000329</em>|M000000350||<em>BLUEAPPLE^TOM</em>||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
+PID|1|<em>E00000329</em>|<em>M000000350</em>||<em>BLUEAPPLE^TOM</em>||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
 PV1|1519|O|<em>ICU</em>^<em>101</em>^<em>A</em>|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
 OBR|1|1789^LAB|1789^LAB|PT^HEPARIN/INR^L|||202010010912|||||||202010010912||ZFINGJU^Zfingergut^Judy^^^^MD||||||||LAB|F||^^^^^R|BARNMI^Barnum^Michael^J.^^^MD|
 OBX|1|ST|PRO^<em>HEPARIN</em>^L|1|<em>12.0</em>|<em>SECONDS</em>|<em>9.6-11.2</em>|H||A^S|F|||202010010913|ML^MAIN LAB^L|

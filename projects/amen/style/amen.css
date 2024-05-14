@@ -1639,9 +1639,6 @@ html.dark a.button.secondary:focus {
 html.dark button.tertiary,
 html.dark .button.tertiary,
 html.dark a.button.tertiary {
-  padding: 0 var(--spacing--4);
-  border: none;
-  border-radius: 0;
   color: var(--color--action-dark);
   background-color: transparent;
 }
