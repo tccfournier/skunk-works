@@ -45,77 +45,155 @@
       <section>
         <h2>Edit Active Fields</h2>
         <div class="row cards">
-          <div class="card">
-            <h3>Control Fields</h3>
-            <!-- <div class="button-group right">
-              <button class="tertiary">All</button>
-              <button class="tertiary">None</button>
-            </div> -->
+          <div class="card mapping-group row">
+            <h3 class="visuallyhidden">Control Fields</h3>
             <form id="yale-medical-center-patient">
-              <fieldset class="toggle checklist">
-                <!-- <legend>Patient</legend> -->
-                <label for='yale-medical-center-patient-patient-id'>Patient ID<input type='checkbox'
-                    id='yale-medical-center-patient-patient-id' class='toggle'
-                    name='yale-medical-center-patient-patient-id' title='Patient ID' value='Patient ID' checked></label>
-                <label for='yale-medical-center-patient-mrn'>MRN<input type='checkbox'
-                    id='yale-medical-center-patient-mrn' class='toggle' name='yale-medical-center-patient-mrn'
-                    title='MRN' value='MRN'></label>
-                <label for='yale-medical-center-patient-encounter-visit-number'>Encounter/Visit number<input
-                    type='checkbox' id='yale-medical-center-patient-encounter-visit-number' class='toggle'
-                    name='yale-medical-center-patient-encounter-visit-number' title='Encounter/Visit number'
-                    value='Encounter/Visit number'></label>
-                <label for='yale-medical-center-patient-first-name'>First Name<input type='checkbox'
-                    id='yale-medical-center-patient-first-name' class='toggle'
-                    name='yale-medical-center-patient-first-name' title='First Name' value='First Name' checked></label>
-                <label for='yale-medical-center-patient-last-name'>Last Name<input type='checkbox'
-                    id='yale-medical-center-patient-last-name' class='toggle'
-                    name='yale-medical-center-patient-last-name' title='Last Name' value='Last Name'></label>
-                <label for='yale-medical-center-patient-organization'>Organization<input type='checkbox'
-                    id='yale-medical-center-patient-organization' class='toggle'
-                    name='yale-medical-center-patient-organization' title='Organization' value='Organization'></label>
-                <label for='yale-medical-center-patient-date-of-birth'>Date of Birth<input type='checkbox'
-                    id='yale-medical-center-patient-date-of-birth' class='toggle'
-                    name='yale-medical-center-patient-date-of-birth' title='Date of Birth'
-                    value='Date of Birth'></label>
-                <label for='yale-medical-center-patient-gender'>Gender<input type='checkbox'
-                    id='yale-medical-center-patient-gender' class='toggle' name='yale-medical-center-patient-gender'
-                    title='Gender' value='Gender'></label>
-                <label for='yale-medical-center-patient-phone-number'>Phone Number<input type='checkbox'
-                    id='yale-medical-center-patient-phone-number' class='toggle'
-                    name='yale-medical-center-patient-phone-number' title='Phone Number' value='Phone Number'></label>
-                <label for='yale-medical-center-patient-email'>Email<input type='checkbox'
-                    id='yale-medical-center-patient-email' class='toggle' name='yale-medical-center-patient-email'
-                    title='Email' value='Email'></label>
-                <label for='yale-medical-center-patient-status'>Status (admitted, discharged)<input type='checkbox'
-                    id='yale-medical-center-patient-status' class='toggle' name='yale-medical-center-patient-status'
-                    title='Status (admitted, discharged)' value='Status (admitted, discharged)'></label>
-                <label for='yale-medical-center-patient-chief-complaint'>Chief Complaint<input type='checkbox'
-                    id='yale-medical-center-patient-chief-complaint' class='toggle'
-                    name='yale-medical-center-patient-chief-complaint' title='Chief Complaint'
-                    value='Chief Complaint'></label>
-                <label for='yale-medical-center-patient-diagnosis'>Diagnosis<input type='checkbox'
-                    id='yale-medical-center-patient-diagnosis' class='toggle'
-                    name='yale-medical-center-patient-diagnosis' title='Diagnosis' value='Diagnosis'></label>
-                <label for='yale-medical-center-patient-allergies'>Allergies<input type='checkbox'
-                    id='yale-medical-center-patient-allergies' class='toggle'
-                    name='yale-medical-center-patient-allergies' title='Allergies' value='Allergies'></label>
-                <label for='yale-medical-center-patient-patient-class'>Patient Class (IP/OP)<input type='checkbox'
-                    id='yale-medical-center-patient-patient-class' class='toggle'
-                    name='yale-medical-center-patient-patient-class' title='Patient Class (IP/OP)'
-                    value='Patient Class (IP/OP)'></label>
-                <label for='yale-medical-center-patient-attending-physician'>Attending Physician<input type='checkbox'
-                    id='yale-medical-center-patient-attending-physician' class='toggle'
-                    name='yale-medical-center-patient-attending-physician' title='Attending Physician'
-                    value='Attending Physician'></label>
-                <label for='yale-medical-center-patient-primary-care-physician'>Primary Care Physician (PCP)<input
-                    type='checkbox' id='yale-medical-center-patient-primary-care-physician' class='toggle'
-                    name='yale-medical-center-patient-primary-care-physician' title='Primary Care Physician (PCP)'
-                    value='Primary Care Physician (PCP)'></label>
-                <label for='yale-medical-center-patient-referring-physician'>Referring Physician<input type='checkbox'
-                    id='yale-medical-center-patient-referring-physician' class='toggle'
-                    name='yale-medical-center-patient-referring-physician' title='Referring Physician'
-                    value='Referring Physician'></label>
-              </fieldset>
+              <div class="group">
+                <fieldset class="toggle checklist"><label for="yale-medical-center-patient-patient-id">Patient ID<input type="checkbox" id="yale-medical-center-patient-patient-id" class="toggle" name="yale-medical-center-patient-patient-id" title="Patient ID" value="Patient ID" checked></label></fieldset>
+                <fieldset class="small">
+                  <label for="yale-medical-center-patient-patient-id-1-select">Patient ID element 1</label>
+                  <select id="yale-medical-center-patient-patient-id-1-select" name="yale-medical-center-patient-patient-id-1-select">
+                    <option label="Select an element" value="Select an element"></option>
+                    <option label="PID-1-Set ID" value="PID-1-Set ID"></option>
+                    <option label="PID-2-Patient ID" value="PID-2-Patient ID" selected></option>
+                    <option label="PID-3-Patient Identifier List" value="PID-3-Patient Identifier List"></option>
+                    <option label="PID-4-Alternate Patient ID" value="PID-4-Alternate Patient ID"></option>
+                    <option label="PID-5-Patient Name" value="PID-5-Patient Name"></option>
+                    <option label="PID-6-Mother's Maiden Name" value="PID-6-Mother's Maiden Name"></option>
+                    <option label="PID-7-Date of Birth" value="PID-7-Date of Birth"></option>
+                    <option label="PID-8- Sex" value="PID-8- Sex"></option>
+                    <option label="PID-9-Patient Alias" value="PID-9-Patient Alias"></option>
+                    <option label="PID-10-Race" value="PID-10-Race"></option>
+                    <option label="PID-11-Patient Address" value="PID-11-Patient Address"></option>
+                    <option label="PID-12-County Code" value="PID-12-County Code"></option>
+                    <option label="PID-13-Phone Number" value="PID-13-Phone Number"></option>
+                    <option label="PID-14-Marital Status" value="PID-14-Marital Status"></option>
+                    <option label="PID-15-Religion" value="PID-15-Religion"></option>
+                    <option label="PID-16-Patient Account Number" value="PID-16-Patient Account Number"></option>
+                    <option label="PID-17-SSN Number" value="PID-17-SSN Number"></option>
+                    <option label="PID-18-Driver's License Number" value="PID-18-Driver's License Number"></option>
+                    <option label="PID-19-Mother's Identifier" value="PID-19-Mother's Identifier"></option>
+                    <option label="PID-20-Ethnic Group" value="PID-20-Ethnic Group"></option>
+                    <option label="PID-21-Birth Place" value="PID-21-Birth Place"></option>
+                    <option label="PID-22-Multiple Birth Indicator" value="PID-22-Multiple Birth Indicator"></option>
+                    <option label="PID-23-Birth Order" value="PID-23-Birth Order"></option>
+                    <option label="PID-24-Citizenship" value="PID-24-Citizenship"></option>
+                    <option label="PID-25-Veterans Military Status" value="PID-25-Veterans Military Status"></option>
+                    <option label="PID-26-Nationality" value="PID-26-Nationality"></option>
+                    <option label="PID-27-Patient Death Date and Time" value="PID-27-Patient Death Date and Time"></option>
+                  </select>
+                  <span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span>
+                </fieldset>
+                <fieldset class="small">
+                  <label for="yale-medical-center-patient-patient-id-2-select">Patient ID element 2</label>
+                  <select id="yale-medical-center-patient-patient-id-2-select" name="yale-medical-center-patient-patient-id-2-select">
+                    <option label="Select an element" value="Select an element"></option>
+                    <option label="PID-1-Set ID" value="PID-1-Set ID"></option>
+                    <option label="PID-2-Patient ID" value="PID-2-Patient ID"></option>
+                    <option label="PID-3-Patient Identifier List" value="PID-3-Patient Identifier List" selected></option>
+                    <option label="PID-4-Alternate Patient ID" value="PID-4-Alternate Patient ID"></option>
+                    <option label="PID-5-Patient Name" value="PID-5-Patient Name"></option>
+                    <option label="PID-6-Mother's Maiden Name" value="PID-6-Mother's Maiden Name"></option>
+                    <option label="PID-7-Date of Birth" value="PID-7-Date of Birth"></option>
+                    <option label="PID-8- Sex" value="PID-8- Sex"></option>
+                    <option label="PID-9-Patient Alias" value="PID-9-Patient Alias"></option>
+                    <option label="PID-10-Race" value="PID-10-Race"></option>
+                    <option label="PID-11-Patient Address" value="PID-11-Patient Address"></option>
+                    <option label="PID-12-County Code" value="PID-12-County Code"></option>
+                    <option label="PID-13-Phone Number" value="PID-13-Phone Number"></option>
+                    <option label="PID-14-Marital Status" value="PID-14-Marital Status"></option>
+                    <option label="PID-15-Religion" value="PID-15-Religion"></option>
+                    <option label="PID-16-Patient Account Number" value="PID-16-Patient Account Number"></option>
+                    <option label="PID-17-SSN Number" value="PID-17-SSN Number"></option>
+                    <option label="PID-18-Driver's License Number" value="PID-18-Driver's License Number"></option>
+                    <option label="PID-19-Mother's Identifier" value="PID-19-Mother's Identifier"></option>
+                    <option label="PID-20-Ethnic Group" value="PID-20-Ethnic Group"></option>
+                    <option label="PID-21-Birth Place" value="PID-21-Birth Place"></option>
+                    <option label="PID-22-Multiple Birth Indicator" value="PID-22-Multiple Birth Indicator"></option>
+                    <option label="PID-23-Birth Order" value="PID-23-Birth Order"></option>
+                    <option label="PID-24-Citizenship" value="PID-24-Citizenship"></option>
+                    <option label="PID-25-Veterans Military Status" value="PID-25-Veterans Military Status"></option>
+                    <option label="PID-26-Nationality" value="PID-26-Nationality"></option>
+                    <option label="PID-27-Patient Death Date and Time" value="PID-27-Patient Death Date and Time"></option>
+                  </select>
+                  <span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span>
+                </fieldset>
+              </div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-mrn">MRN<input type="checkbox" id="yale-medical-center-patient-mrn" class="toggle" name="yale-medical-center-patient-mrn" title="MRN" value="MRN"></label></fieldset><fieldset><label for="yale-medical-center-patient-mrn-select">MRN element</label><select id="yale-medical-center-patient-mrn-select" name="yale-medical-center-patient-mrn-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-encounter-visit-number">Encounter/Visit number<input type="checkbox" id="yale-medical-center-patient-encounter-visit-number" class="toggle" name="yale-medical-center-patient-encounter-visit-number" title="Encounter/Visit number" value="Encounter/Visit number"></label></fieldset><fieldset><label for="yale-medical-center-patient-encounter-visit-number-select">Encounter/Visit number element</label><select id="yale-medical-center-patient-encounter-visit-number-select" name="yale-medical-center-patient-encounter-visit-number-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group">
+                <fieldset class="toggle checklist"><label for="yale-medical-center-patient-first-name">First Name<input type="checkbox" id="yale-medical-center-patient-first-name" class="toggle" name="yale-medical-center-patient-first-name" title="First Name" value="First Name" checked></label></fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-patient-first-name-select">First Name element</label>
+                  <select id="yale-medical-center-patient-first-name-select" name="yale-medical-center-patient-first-name-select">
+                    <option label="Select an element" value="Select an element"></option>
+                    <option label="PID-1-Set ID" value="PID-1-Set ID"></option>
+                    <option label="PID-2-Patient ID" value="PID-2-Patient ID"></option>
+                    <option label="PID-3-Patient Identifier List" value="PID-3-Patient Identifier List"></option>
+                    <option label="PID-4-Alternate Patient ID" value="PID-4-Alternate Patient ID"></option>
+                    <option label="PID-5-Patient Name" value="PID-5-Patient Name" selected></option>
+                    <option label="PID-6-Mother's Maiden Name" value="PID-6-Mother's Maiden Name"></option>
+                    <option label="PID-7-Date of Birth" value="PID-7-Date of Birth"></option>
+                    <option label="PID-8- Sex" value="PID-8- Sex"></option>
+                    <option label="PID-9-Patient Alias" value="PID-9-Patient Alias"></option>
+                    <option label="PID-10-Race" value="PID-10-Race"></option>
+                    <option label="PID-11-Patient Address" value="PID-11-Patient Address"></option>
+                    <option label="PID-12-County Code" value="PID-12-County Code"></option>
+                    <option label="PID-13-Phone Number" value="PID-13-Phone Number"></option>
+                    <option label="PID-14-Marital Status" value="PID-14-Marital Status"></option>
+                    <option label="PID-15-Religion" value="PID-15-Religion"></option>
+                    <option label="PID-16-Patient Account Number" value="PID-16-Patient Account Number"></option>
+                    <option label="PID-17-SSN Number" value="PID-17-SSN Number"></option>
+                    <option label="PID-18-Driver's License Number" value="PID-18-Driver's License Number"></option>
+                    <option label="PID-19-Mother's Identifier" value="PID-19-Mother's Identifier"></option>
+                    <option label="PID-20-Ethnic Group" value="PID-20-Ethnic Group"></option>
+                    <option label="PID-21-Birth Place" value="PID-21-Birth Place"></option>
+                    <option label="PID-22-Multiple Birth Indicator" value="PID-22-Multiple Birth Indicator"></option>
+                    <option label="PID-23-Birth Order" value="PID-23-Birth Order"></option>
+                    <option label="PID-24-Citizenship" value="PID-24-Citizenship"></option>
+                    <option label="PID-25-Veterans Military Status" value="PID-25-Veterans Military Status"></option>
+                    <option label="PID-26-Nationality" value="PID-26-Nationality"></option>
+                    <option label="PID-27-Patient Death Date and Time" value="PID-27-Patient Death Date and Time"></option>
+                  </select>
+                  <span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span>
+                </fieldset>
+              </div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-last-name">Last Name<input type="checkbox" id="yale-medical-center-patient-last-name" class="toggle" name="yale-medical-center-patient-last-name" title="Last Name" value="Last Name"></label></fieldset><fieldset><label for="yale-medical-center-patient-last-name-select">Last Name element</label><select id="yale-medical-center-patient-last-name-select" name="yale-medical-center-patient-last-name-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-organization">Organization<input type="checkbox" id="yale-medical-center-patient-organization" class="toggle" name="yale-medical-center-patient-organization" title="Organization" value="Organization"></label></fieldset><fieldset><label for="yale-medical-center-patient-organization-select">Organization element</label><select id="yale-medical-center-patient-organization-select" name="yale-medical-center-patient-organization-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-date-of-birth">Date of Birth<input type="checkbox" id="yale-medical-center-patient-date-of-birth" class="toggle" name="yale-medical-center-patient-date-of-birth" title="Date of Birth" value="Date of Birth"></label></fieldset><fieldset><label for="yale-medical-center-patient-date-of-birth-select">Date of Birth element</label><select id="yale-medical-center-patient-date-of-birth-select" name="yale-medical-center-patient-date-of-birth-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-gender">Gender<input type="checkbox" id="yale-medical-center-patient-gender" class="toggle" name="yale-medical-center-patient-gender" title="Gender" value="Gender"></label></fieldset><fieldset><label for="yale-medical-center-patient-gender-select">Gender element</label><select id="yale-medical-center-patient-gender-select" name="yale-medical-center-patient-gender-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-phone-number">Phone Number<input type="checkbox" id="yale-medical-center-patient-phone-number" class="toggle" name="yale-medical-center-patient-phone-number" title="Phone Number" value="Phone Number"></label></fieldset><fieldset><label for="yale-medical-center-patient-phone-number-select">Phone Number element</label><select id="yale-medical-center-patient-phone-number-select" name="yale-medical-center-patient-phone-number-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-email">Email<input type="checkbox" id="yale-medical-center-patient-email" class="toggle" name="yale-medical-center-patient-email" title="Email" value="Email"></label></fieldset><fieldset><label for="yale-medical-center-patient-email-select">Email element</label><select id="yale-medical-center-patient-email-select" name="yale-medical-center-patient-email-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group">
+                <fieldset class="toggle checklist"><label for="yale-medical-center-patient-status">Status<input type="checkbox" id="yale-medical-center-patient-status" class="toggle" name="yale-medical-center-patient-status" title="Status" value="Status"></label></fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-patient-status-select">Status element</label>
+                  <select id="yale-medical-center-patient-status-select" name="yale-medical-center-patient-status-select" disabled>
+                    <option label="Select an element" value="Select an element"></option>
+                    <option label="Admitted" value="Admitted"></option>
+                    <option label="Discharged" value="Discharged"></option>
+                  </select>
+                  <span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span>
+                </fieldset>
+              </div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-chief-complaint">Chief Complaint<input type="checkbox" id="yale-medical-center-patient-chief-complaint" class="toggle" name="yale-medical-center-patient-chief-complaint" title="Chief Complaint" value="Chief Complaint"></label></fieldset><fieldset><label for="yale-medical-center-patient-chief-complaint-select">Chief Complaint element</label><select id="yale-medical-center-patient-chief-complaint-select" name="yale-medical-center-patient-chief-complaint-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-diagnosis">Diagnosis<input type="checkbox" id="yale-medical-center-patient-diagnosis" class="toggle" name="yale-medical-center-patient-diagnosis" title="Diagnosis" value="Diagnosis"></label></fieldset><fieldset><label for="yale-medical-center-patient-diagnosis-select">Diagnosis element</label><select id="yale-medical-center-patient-diagnosis-select" name="yale-medical-center-patient-diagnosis-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-allergies">Allergies<input type="checkbox" id="yale-medical-center-patient-allergies" class="toggle" name="yale-medical-center-patient-allergies" title="Allergies" value="Allergies"></label></fieldset><fieldset><label for="yale-medical-center-patient-allergies-select">Allergies element</label><select id="yale-medical-center-patient-allergies-select" name="yale-medical-center-patient-allergies-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group">
+                <fieldset class="toggle checklist"><label for="yale-medical-center-patient-patient-class">Patient Class<input type="checkbox" id="yale-medical-center-patient-patient-class" class="toggle" name="yale-medical-center-patient-patient-class" title="Patient Class" value="Patient Class"></label></fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-patient-patient-class-select">Patient Class element</label>
+                  <select id="yale-medical-center-patient-patient-class-select" name="yale-medical-center-patient-patient-class-select" disabled>
+                    <option label="Select an element" value="Select an element"></option>
+                    <option label="IP" value="IP"></option>
+                    <option label="OP" value="OP"></option>
+                  </select>
+                  <span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span>
+                </fieldset>
+              </div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-attending-physician">Attending Physician<input type="checkbox" id="yale-medical-center-patient-attending-physician" class="toggle" name="yale-medical-center-patient-attending-physician" title="Attending Physician" value="Attending Physician"></label></fieldset><fieldset><label for="yale-medical-center-patient-attending-physician-select">Attending Physician element</label><select id="yale-medical-center-patient-attending-physician-select" name="yale-medical-center-patient-attending-physician-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-primary-care-physician">Primary Care Physician (PCP)<input type="checkbox" id="yale-medical-center-patient-primary-care-physician" class="toggle" name="yale-medical-center-patient-primary-care-physician" title="Primary Care Physician (PCP)" value="Primary Care Physician (PCP)"></label></fieldset><fieldset><label for="yale-medical-center-patient-primary-care-physician-select">Primary Care Physician (PCP) element</label><select id="yale-medical-center-patient-primary-care-physician-select" name="yale-medical-center-patient-primary-care-physician-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
+              <div class="group"><fieldset class="toggle checklist"><label for="yale-medical-center-patient-referring-physician">Referring Physician<input type="checkbox" id="yale-medical-center-patient-referring-physician" class="toggle" name="yale-medical-center-patient-referring-physician" title="Referring Physician" value="Referring Physician"></label></fieldset><fieldset><label for="yale-medical-center-patient-referring-physician-select">Referring Physician element</label><select id="yale-medical-center-patient-referring-physician-select" name="yale-medical-center-patient-referring-physician-select" disabled><option label="Select an element" value="Select an element"></option></select><span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span></fieldset></div>
             </form>
             <div class="button-group right">
               <a href="views/mapping/index.html" class="button tertiary">Back to Mapping</a>

@@ -429,7 +429,7 @@ select {
   width: 100%;
   min-height: 3rem;
   margin: 0;
-  padding: var(--spacing--8);
+  padding: var(--spacing--8) 2.5rem var(--spacing--8) var(--spacing--8);
   border: 1px solid var(--color--border);
   border-radius: var(--border-radius-sm);
 }
@@ -1796,6 +1796,7 @@ html.dark a.button.icon:focus {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
   padding: var(--spacing--16) 0 0;
 }
 .button-group button,

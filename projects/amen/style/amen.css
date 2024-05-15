@@ -429,7 +429,7 @@ select {
   width: 100%;
   min-height: 3rem;
   margin: 0;
-  padding: var(--spacing--8);
+  padding: var(--spacing--8) 2.5rem var(--spacing--8) var(--spacing--8);
   border: 1px solid var(--color--border);
   border-radius: var(--border-radius-sm);
 }
@@ -1796,6 +1796,7 @@ html.dark a.button.icon:focus {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
   padding: var(--spacing--16) 0 0;
 }
 .button-group button,
@@ -1906,56 +1907,133 @@ h4 span.utility .button.tertiary {
     content: "";
   }
 }
-.card.mapping-group {
-  width: auto;
+.card.mapping-group.row form {
+  flex-direction: row;
 }
-.card.mapping-group form {
-  margin-left: calc(var(--spacing--16) * -1);
-}
-.card.mapping-group form .group {
+.card.mapping-group.row form .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position: relative;
-  width: calc(100% - var(--spacing--16));
+  width: 100%;
   margin: 0 var(--spacing--8);
-  padding: 0 0 var(--spacing--16);
+  padding: 0 0 var(--spacing--32);
 }
-.card.mapping-group form .group:after {
+.card.mapping-group.row form .group:after {
   display: block;
   position: absolute;
   bottom: 0;
-  left: var(--spacing--8);
+  left: 0;
   width: 100%;
   height: 1px;
-  margin-bottom: var(--spacing--8);
+  margin-bottom: var(--spacing--16);
   background-color: var(--color--border);
   content: "";
 }
-.card.mapping-group form .group fieldset {
+.card.mapping-group.row form .group:last-of-type {
+  padding: 0;
+}
+.card.mapping-group.row form .group:last-of-type:after {
+  display: none;
+}
+.card.mapping-group.row form .group fieldset {
   width: 100%;
+  margin: var(--spacing--8) 0;
 }
-.card.mapping-group form .group fieldset.small {
-  width: 50%;
+.card.mapping-group.row form .group fieldset.small {
+  width: calc(50% - var(--spacing--16));
 }
-.card.mapping-group form .group fieldset + fieldset {
+.card.mapping-group.row form .group fieldset + fieldset {
   margin-top: 0;
+}
+.card.mapping-group.row form .group fieldset.small + fieldset.small:before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: calc(var(--spacing--24) * -1);
+  width: var(--spacing--16);
+  height: var(--spacing--16);
+  background-image: url(../assets/icons/ui/plus-mapping.svg);
+  background-size: contain;
+  content: "";
 }
 
 @media (min-width: 40rem) {
-  .card.card.mapping-group form .group {
+  .card.mapping-group.row form .group {
     width: calc(50% - var(--spacing--16));
+  }
+  .card.mapping-group.row form .group:last-of-type {
+    padding: 0 0 var(--spacing--32);
+  }
+  .card.mapping-group.row form .group:last-of-type:after {
+    display: block;
   }
 }
 @media (min-width: 80rem) {
-  .card.card.mapping-group form .group {
+  .card.mapping-group.row form .group {
     width: calc(33.3333333333% - var(--spacing--16));
   }
 }
 @media (min-width: 90rem) {
-  .card.card.mapping-group form .group {
+  .card.mapping-group.row form .group {
     width: calc(25% - var(--spacing--16));
   }
 }
+.card.mapping-group.column form {
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+.card.mapping-group.column form .group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 var(--spacing--32);
+}
+.card.mapping-group.column form .group:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  margin-bottom: var(--spacing--16);
+  background-color: var(--color--border);
+  content: "";
+}
+.card.mapping-group.column form .group:last-of-type {
+  padding: 0;
+}
+.card.mapping-group.column form .group:last-of-type:after {
+  display: none;
+}
+.card.mapping-group.column form .group fieldset {
+  width: 100%;
+  margin: var(--spacing--8) 0;
+}
+.card.mapping-group.column form .group fieldset.small {
+  width: calc(50% - var(--spacing--16));
+}
+.card.mapping-group.column form .group fieldset + fieldset {
+  margin-top: 0;
+}
+.card.mapping-group.column form .group fieldset.small + fieldset.small:before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: calc(var(--spacing--24) * -1);
+  width: var(--spacing--16);
+  height: var(--spacing--16);
+  background-image: url(../assets/icons/ui/plus-mapping.svg);
+  background-size: contain;
+  content: "";
+}
+
 code {
   font-size: var(--p);
 }

@@ -41,16 +41,26 @@
   </header>
   <main>
     <article>
-      <h1>Yale Medical Center INT-1 </h1>
+      <h1>Yale Medical Center INT-1 Location</h1>
       <section>
         <h2>Edit Active Fields</h2>
         <div class="row cards">
-          <div class="card mapping-group">
-            <h3 class="visuallyhidden">Control Fields</h3>
-            <form id="yale-medical-center-fields">
-              <div class="group">
-                
-              </div>
+          <div class="card">
+            <h3>Control Fields</h3>
+            <!-- <div class="button-group right">
+              <button class="tertiary">All</button>
+              <button class="tertiary">None</button>
+            </div> -->
+            <form id="yale-medical-center-location">
+              <fieldset class="toggle checklist">
+                <!-- <legend>Location</legend> -->
+                <label for='yale-medical-center-location-location-id'>Location ID<input type='checkbox' id='yale-medical-center-location-location-id' class='toggle' name='yale-medical-center-location-location-id' title='Location ID' value='Location ID'></label>
+                <label for='yale-medical-center-location-type'>Type<input type='checkbox' id='yale-medical-center-location-type' class='toggle' name='yale-medical-center-location-type'
+                    title='Type' value='Type'></label>
+                <label for='yale-medical-center-location-logical-grouping'>Logical Grouping<input type='checkbox' id='yale-medical-center-location-logical-grouping' class='toggle' name='yale-medical-center-location-logical-grouping' title='Logical Grouping' value='Logical Grouping'></label>
+                <label for='yale-medical-center-location-parent-location'>Parent Location<input type='checkbox' id='yale-medical-center-location-parent-location' class='toggle' name='yale-medical-center-location-parent-location' title='Parent Location' value='Parent Location'></label>
+                <label for='yale-medical-center-location-description'>Description<input type='checkbox' id='yale-medical-center-location-description' class='toggle' name='yale-medical-center-location-description' title='Description' value='Description' checked></label>
+              </fieldset>
             </form>
             <div class="button-group right">
               <a href="views/mapping/index.html" class="button tertiary">Back to Mapping</a>

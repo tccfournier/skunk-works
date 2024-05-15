@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
+  <title>AMEN Lab Results Mapping Skunk Works | TigerConnect</title>
+  <base href="../../../">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/amen.min.css">
+  <style>
+    body {
+      opacity: 0;
+      -webkit-transition: opacity 1s ease-in;
+      -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+      -o-transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in;
+    }
+
+    body.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="views/dashboard/index.html">Dashboard</a></li>
+        <li><a href="views/mapping/index.html">Mapping</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Yale Medical Center INT-1 Patient</h1>
+      <section>
+        <h2>Edit Active Fields</h2>
+        <div class="row cards">
+          <div class="card">
+            <h3>Control Fields</h3>
+            <!-- <div class="button-group right">
+              <button class="tertiary">All</button>
+              <button class="tertiary">None</button>
+            </div> -->
+            <form id="yale-medical-center-patient">
+              <fieldset class="toggle checklist">
+                <!-- <legend>Patient</legend> -->
+                <label for='yale-medical-center-patient-patient-id'>Patient ID<input type='checkbox'
+                    id='yale-medical-center-patient-patient-id' class='toggle'
+                    name='yale-medical-center-patient-patient-id' title='Patient ID' value='Patient ID' checked></label>
+                <label for='yale-medical-center-patient-mrn'>MRN<input type='checkbox'
+                    id='yale-medical-center-patient-mrn' class='toggle' name='yale-medical-center-patient-mrn'
+                    title='MRN' value='MRN'></label>
+                <label for='yale-medical-center-patient-encounter-visit-number'>Encounter/Visit number<input
+                    type='checkbox' id='yale-medical-center-patient-encounter-visit-number' class='toggle'
+                    name='yale-medical-center-patient-encounter-visit-number' title='Encounter/Visit number'
+                    value='Encounter/Visit number'></label>
+                <label for='yale-medical-center-patient-first-name'>First Name<input type='checkbox'
+                    id='yale-medical-center-patient-first-name' class='toggle'
+                    name='yale-medical-center-patient-first-name' title='First Name' value='First Name' checked></label>
+                <label for='yale-medical-center-patient-last-name'>Last Name<input type='checkbox'
+                    id='yale-medical-center-patient-last-name' class='toggle'
+                    name='yale-medical-center-patient-last-name' title='Last Name' value='Last Name'></label>
+                <label for='yale-medical-center-patient-organization'>Organization<input type='checkbox'
+                    id='yale-medical-center-patient-organization' class='toggle'
+                    name='yale-medical-center-patient-organization' title='Organization' value='Organization'></label>
+                <label for='yale-medical-center-patient-date-of-birth'>Date of Birth<input type='checkbox'
+                    id='yale-medical-center-patient-date-of-birth' class='toggle'
+                    name='yale-medical-center-patient-date-of-birth' title='Date of Birth'
+                    value='Date of Birth'></label>
+                <label for='yale-medical-center-patient-gender'>Gender<input type='checkbox'
+                    id='yale-medical-center-patient-gender' class='toggle' name='yale-medical-center-patient-gender'
+                    title='Gender' value='Gender'></label>
+                <label for='yale-medical-center-patient-phone-number'>Phone Number<input type='checkbox'
+                    id='yale-medical-center-patient-phone-number' class='toggle'
+                    name='yale-medical-center-patient-phone-number' title='Phone Number' value='Phone Number'></label>
+                <label for='yale-medical-center-patient-email'>Email<input type='checkbox'
+                    id='yale-medical-center-patient-email' class='toggle' name='yale-medical-center-patient-email'
+                    title='Email' value='Email'></label>
+                <label for='yale-medical-center-patient-status'>Status (admitted, discharged)<input type='checkbox'
+                    id='yale-medical-center-patient-status' class='toggle' name='yale-medical-center-patient-status'
+                    title='Status (admitted, discharged)' value='Status (admitted, discharged)'></label>
+                <label for='yale-medical-center-patient-chief-complaint'>Chief Complaint<input type='checkbox'
+                    id='yale-medical-center-patient-chief-complaint' class='toggle'
+                    name='yale-medical-center-patient-chief-complaint' title='Chief Complaint'
+                    value='Chief Complaint'></label>
+                <label for='yale-medical-center-patient-diagnosis'>Diagnosis<input type='checkbox'
+                    id='yale-medical-center-patient-diagnosis' class='toggle'
+                    name='yale-medical-center-patient-diagnosis' title='Diagnosis' value='Diagnosis'></label>
+                <label for='yale-medical-center-patient-allergies'>Allergies<input type='checkbox'
+                    id='yale-medical-center-patient-allergies' class='toggle'
+                    name='yale-medical-center-patient-allergies' title='Allergies' value='Allergies'></label>
+                <label for='yale-medical-center-patient-patient-class'>Patient Class (IP/OP)<input type='checkbox'
+                    id='yale-medical-center-patient-patient-class' class='toggle'
+                    name='yale-medical-center-patient-patient-class' title='Patient Class (IP/OP)'
+                    value='Patient Class (IP/OP)'></label>
+                <label for='yale-medical-center-patient-attending-physician'>Attending Physician<input type='checkbox'
+                    id='yale-medical-center-patient-attending-physician' class='toggle'
+                    name='yale-medical-center-patient-attending-physician' title='Attending Physician'
+                    value='Attending Physician'></label>
+                <label for='yale-medical-center-patient-primary-care-physician'>Primary Care Physician (PCP)<input
+                    type='checkbox' id='yale-medical-center-patient-primary-care-physician' class='toggle'
+                    name='yale-medical-center-patient-primary-care-physician' title='Primary Care Physician (PCP)'
+                    value='Primary Care Physician (PCP)'></label>
+                <label for='yale-medical-center-patient-referring-physician'>Referring Physician<input type='checkbox'
+                    id='yale-medical-center-patient-referring-physician' class='toggle'
+                    name='yale-medical-center-patient-referring-physician' title='Referring Physician'
+                    value='Referring Physician'></label>
+              </fieldset>
+            </form>
+            <div class="button-group right">
+              <a href="views/mapping/index.html" class="button tertiary">Back to Mapping</a>
+              <button class="secondary">Cancel</button>
+              <button class="primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <form class="color-mode">
+      <fieldset class="toggle">
+        <label for="switch-theme">
+          <span class="light-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-sun">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+          </span>
+          <input type="checkbox" id="switch-theme" class="toggle" name="switch-theme" title="switch-theme">
+          <span class="dark-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+            </svg>
+          </span>
+        </label>
+      </fieldset>
+    </form>
+  </footer>
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="assets/scripts/site.js"></script>
+  <script src="../../assets/scripts/headroom.js"></script>
+  <script>
+    // CHANGE CSS WHEN PAGE LOADS
+    $(document).ready(function () {
+      $("body").addClass("visible");
+      $("body").removeClass("hidden");
+    });
+    // HEADROOM
+    var myElement = document.querySelector("header");
+    var headroom = new Headroom(myElement);
+    headroom.init();
+  </script>
+</body>
+
+</html>
