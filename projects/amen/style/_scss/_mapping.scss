@@ -105,6 +105,7 @@
 .card.mapping-group.row {
   form {
     flex-direction: row;
+    align-items: flex-start;
 
     .group {
       display: flex;
