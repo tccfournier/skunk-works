@@ -1110,6 +1110,36 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 .card form fieldset.small {
   width: calc(50% - var(--spacing--16));
 }
+.card form .row fieldset {
+  width: calc(100% - var(--spacing--16));
+}
+.card form .row fieldset.small {
+  width: calc(50% - var(--spacing--16));
+}
+@media (min-width: 40rem) {
+  .card form .row fieldset {
+    width: calc(50% - var(--spacing--16));
+  }
+  .card form .row fieldset.small {
+    width: calc(25% - var(--spacing--16));
+  }
+}
+@media (min-width: 80rem) {
+  .card form .row fieldset {
+    width: calc(33.3333333333% - var(--spacing--16));
+  }
+  .card form .row fieldset.small {
+    width: calc(16.6666666667% - var(--spacing--16));
+  }
+}
+@media (min-width: 90rem) {
+  .card form .row fieldset {
+    width: calc(25% - var(--spacing--16));
+  }
+  .card form .row fieldset.small {
+    width: calc(12.5% - var(--spacing--16));
+  }
+}
 
 .card ul.options {
   padding: var(--spacing--16) 0 0;

@@ -1110,6 +1110,36 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
 .card form fieldset.small {
   width: calc(50% - var(--spacing--16));
 }
+.card form .row fieldset {
+  width: calc(100% - var(--spacing--16));
+}
+.card form .row fieldset.small {
+  width: calc(50% - var(--spacing--16));
+}
+@media (min-width: 40rem) {
+  .card form .row fieldset {
+    width: calc(50% - var(--spacing--16));
+  }
+  .card form .row fieldset.small {
+    width: calc(25% - var(--spacing--16));
+  }
+}
+@media (min-width: 80rem) {
+  .card form .row fieldset {
+    width: calc(33.3333333333% - var(--spacing--16));
+  }
+  .card form .row fieldset.small {
+    width: calc(16.6666666667% - var(--spacing--16));
+  }
+}
+@media (min-width: 90rem) {
+  .card form .row fieldset {
+    width: calc(25% - var(--spacing--16));
+  }
+  .card form .row fieldset.small {
+    width: calc(12.5% - var(--spacing--16));
+  }
+}
 
 .card ul.options {
   padding: var(--spacing--16) 0 0;
@@ -1874,6 +1904,56 @@ h4 span.utility .button.tertiary {
   .card ul.mapping li span.field:after,
   .card ul.mapping li span.element:after {
     content: "";
+  }
+}
+.card.mapping-group {
+  width: auto;
+}
+.card.mapping-group form {
+  margin-left: calc(var(--spacing--16) * -1);
+}
+.card.mapping-group form .group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: calc(100% - var(--spacing--16));
+  margin: 0 var(--spacing--8);
+  padding: 0 0 var(--spacing--16);
+}
+.card.mapping-group form .group:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing--8);
+  width: 100%;
+  height: 1px;
+  margin-bottom: var(--spacing--8);
+  background-color: var(--color--border);
+  content: "";
+}
+.card.mapping-group form .group fieldset {
+  width: 100%;
+}
+.card.mapping-group form .group fieldset.small {
+  width: 50%;
+}
+.card.mapping-group form .group fieldset + fieldset {
+  margin-top: 0;
+}
+
+@media (min-width: 40rem) {
+  .card.card.mapping-group form .group {
+    width: calc(50% - var(--spacing--16));
+  }
+}
+@media (min-width: 80rem) {
+  .card.card.mapping-group form .group {
+    width: calc(33.3333333333% - var(--spacing--16));
+  }
+}
+@media (min-width: 90rem) {
+  .card.card.mapping-group form .group {
+    width: calc(25% - var(--spacing--16));
   }
 }
 code {

@@ -93,14 +93,6 @@
 }
 
 
-// CARDS DARK MODE
-html.dark {
-  .card {
-    // border-color: $color--bg-light;
-  }
-}
-
-
 // CARD ROWS
 .row.cards {
   width: calc(100% + $spacing-16);
@@ -118,6 +110,46 @@ html.dark {
 
     fieldset.small {
       width: calc((100% / 2) - $spacing-16);
+    }
+  }
+
+  form .row {
+    fieldset {
+      width: calc(100% - $spacing-16);
+    }
+
+    fieldset.small {
+      width: calc((100% / 2) - $spacing-16);
+    }
+
+    @media (min-width: 40rem) {
+      fieldset {
+        width: calc((100% / 2) - $spacing-16);
+
+        &.small {
+          width: calc((100% / 4) - $spacing-16);
+        }
+      }
+    }
+
+    @media (min-width: 80rem) {
+      fieldset {
+        width: calc((100% / 3) - $spacing-16);
+
+        &.small {
+          width: calc((100% / 6) - $spacing-16);
+        }
+      }
+    }
+
+    @media (min-width: 90rem) {
+      fieldset {
+        width: calc((100% / 4) - $spacing-16);
+
+        &.small {
+          width: calc((100% / 8) - $spacing-16);
+        }
+      }
     }
   }
 }
@@ -233,6 +265,7 @@ html.dark {
     li.first {
       padding: 0;
       font-weight: 700;
+
       &:after {
         display: none;
       }

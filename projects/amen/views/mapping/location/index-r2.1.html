@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
+  <title>AMEN Lab Results Mapping Skunk Works | TigerConnect</title>
+  <base href="../../../">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/amen.min.css">
+  <style>
+    body {
+      opacity: 0;
+      -webkit-transition: opacity 1s ease-in;
+      -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+      -o-transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in;
+    }
+
+    body.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="views/dashboard/index.html">Dashboard</a></li>
+        <li><a href="views/mapping/index.html">Mapping</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Yale Medical Center INT-1 Location</h1>
+      <section>
+        <h2>Edit Active Fields</h2>
+        <div class="row cards">
+          <div class="card column-12">
+            <h3 class="visuallyhidden">Control Fields</h3>
+            <form id="yale-medical-center-location">
+              <div class="row">
+                <fieldset class="toggle checklist">
+                  <label for='yale-medical-center-location-location-id'>Location ID<input type='checkbox' id='yale-medical-center-location-location-id' class='toggle' name='yale-medical-center-location-location-id' title='Location ID' value='Location ID'></label>
+                </fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-location-location-id-select">Location ID Element</label>
+                  <select id="yale-medical-center-location-location-id-select" name="yale-medical-center-location-location-id-select">
+                    <option label='PV-1-Set ID' value='PV-1-Set ID' selected></option>
+                    <option label='PV-2-Patient Class' value='PV-2-Patient Class'></option>
+                    <option label='PV-3-Assigned Patient Location' value='PV-3-Assigned Patient Location'></option>
+                    <option label='PV-4-Admission Type' value='PV-4-Admission Type'></option>
+                    <option label='PV-5-Preadmit Number' value='PV-5-Preadmit Number'></option>
+                    <option label='PV-6-Prior Patient Location' value='PV-6-Prior Patient Location'></option>
+                    <option label='PV-7-Attending Doctor' value='PV-7-Attending Doctor'></option>
+                    <option label='PV-8-Referring Doctor' value='PV-8-Referring Doctor'></option>
+                    <option label='PV-9-Consulting Doctor' value='PV-9-Consulting Doctor'></option>
+                    <option label='PV-10-Hospital Service' value='PV-10-Hospital Service'></option>
+                    <option label='PV-11-Temporary Location' value='PV-11-Temporary Location'></option>
+                    <option label='PV-12-Preadmit Test Indicator' value='PV-12-Preadmit Test Indicator'></option>
+                    <option label='PV-13-Re-admission Indicator' value='PV-13-Re-admission Indicator'></option>
+                    <option label='PV-14-Admit Source' value='PV-14-Admit Source'></option>
+                    <option label='PV-15-Ambulatory Status' value='PV-15-Ambulatory Status'></option>
+                    <option label='PV-16-VIP Indicator' value='PV-16-VIP Indicator'></option>
+                    <option label='PV-17- Admitting Doctor' value='PV-17- Admitting Doctor'></option>
+                    <option label='PV-18-Patient Type' value='PV-18-Patient Type'></option>
+                    <option label='PV-19-Visit Number' value='PV-19-Visit Number'></option>
+                  </select>
+                  <span class="select-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                  </span>
+                </fieldset>
+              </div>
+              <div class="row">
+                <fieldset class="toggle checklist">
+                  <label for='yale-medical-center-location-type'>Type<input type='checkbox' id='yale-medical-center-location-type' class='toggle' name='yale-medical-center-location-type'title='Type' value='Type'></label>
+                </fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-location-type-select">Location Type Element</label>
+                  <select id="yale-medical-center-location-type-select" name="yale-medical-center-location-type-select">
+                    <option label="Facility" value="Facility"></option>
+                    <option label="Building" value="Building"></option>
+                    <option label="Floor" value="Floor"></option>
+                    <option label="Room" value="Room"></option>
+                    <option label="Bed" value="Bed"></option>
+                  </select>
+                  <span class="select-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                  </span>
+                </fieldset>
+              </div>
+              <div class="row">
+                <fieldset class="toggle checklist">
+                  <label for='yale-medical-center-location-logical-grouping'>Logical Grouping<input type='checkbox' id='yale-medical-center-location-logical-grouping' class='toggle'
+                      name='yale-medical-center-location-logical-grouping' title='Logical grouping (department, unit, POD)' value='Logical grouping (department, unit, POD)'></label>
+                </fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-location-logical-grouping-select">Logical Grouping Element</label>
+                  <select id="yale-medical-center-location-logical-grouping-select" name="yale-medical-center-location-logical-grouping-select">
+                    <option label="Department" value="Department"></option>
+                    <option label="Unit" value="Unit"></option>
+                    <option label="POD" value="POD"></option>
+                  </select>
+                  <span class="select-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                  </span>
+                </fieldset>
+              </div>
+              <div class="row">
+                <fieldset class="toggle checklist">
+                  <label for='yale-medical-center-location-parent-location'>Parent Location<input type='checkbox' id='yale-medical-center-location-parent-location' class='toggle' name='yale-medical-center-location-parent-location' title='Parent Location' value='Parent Location'></label>
+                </fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-location-parent-location-select">Parent Location Element</label>
+                  <select id="yale-medical-center-location-parent-location-select" name="yale-medical-center-location-parent-location-select">
+                    <option label='Select en element' value='Select en element'></option>
+                    <option label='PV-1-Set ID' value='PV-1-Set ID'></option>
+                    <option label='PV-2-Patient Class' value='PV-2-Patient Class'></option>
+                    <option label='PV-3-Assigned Patient Location' value='PV-3-Assigned Patient Location'></option>
+                    <option label='PV-4-Admission Type' value='PV-4-Admission Type'></option>
+                    <option label='PV-5-Preadmit Number' value='PV-5-Preadmit Number'></option>
+                    <option label='PV-6-Prior Patient Location' value='PV-6-Prior Patient Location'></option>
+                    <option label='PV-7-Attending Doctor' value='PV-7-Attending Doctor'></option>
+                    <option label='PV-8-Referring Doctor' value='PV-8-Referring Doctor'></option>
+                    <option label='PV-9-Consulting Doctor' value='PV-9-Consulting Doctor'></option>
+                    <option label='PV-10-Hospital Service' value='PV-10-Hospital Service'></option>
+                    <option label='PV-11-Temporary Location' value='PV-11-Temporary Location'></option>
+                    <option label='PV-12-Preadmit Test Indicator' value='PV-12-Preadmit Test Indicator'></option>
+                    <option label='PV-13-Re-admission Indicator' value='PV-13-Re-admission Indicator'></option>
+                    <option label='PV-14-Admit Source' value='PV-14-Admit Source'></option>
+                    <option label='PV-15-Ambulatory Status' value='PV-15-Ambulatory Status'></option>
+                    <option label='PV-16-VIP Indicator' value='PV-16-VIP Indicator'></option>
+                    <option label='PV-17- Admitting Doctor' value='PV-17- Admitting Doctor'></option>
+                    <option label='PV-18-Patient Type' value='PV-18-Patient Type'></option>
+                    <option label='PV-19-Visit Number' value='PV-19-Visit Number'></option>
+                  </select>
+                  <span class="select-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                  </span>
+                </fieldset>
+              </div>
+              <div class="row">
+                <fieldset class="toggle checklist">
+                  <label for='yale-medical-center-location-description'>Description<input type='checkbox' id='yale-medical-center-location-description' class='toggle' name='yale-medical-center-location-description' title='Description' value='Description' checked></label>
+                </fieldset>
+                <fieldset>
+                  <label for="yale-medical-center-location-description-select">Description Element</label>
+                  <select id="yale-medical-center-location-description-select" name="yale-medical-center-location-description-select">
+                    <option label='PV-1-Set ID' value='PV-1-Set ID'></option>
+                    <option label='PV-2-Patient Class' value='PV-2-Patient Class'></option>
+                    <option label='PV-3-Assigned Patient Location' value='PV-3-Assigned Patient Location' selected></option>
+                    <option label='PV-4-Admission Type' value='PV-4-Admission Type'></option>
+                    <option label='PV-5-Preadmit Number' value='PV-5-Preadmit Number'></option>
+                    <option label='PV-6-Prior Patient Location' value='PV-6-Prior Patient Location'></option>
+                    <option label='PV-7-Attending Doctor' value='PV-7-Attending Doctor'></option>
+                    <option label='PV-8-Referring Doctor' value='PV-8-Referring Doctor'></option>
+                    <option label='PV-9-Consulting Doctor' value='PV-9-Consulting Doctor'></option>
+                    <option label='PV-10-Hospital Service' value='PV-10-Hospital Service'></option>
+                    <option label='PV-11-Temporary Location' value='PV-11-Temporary Location'></option>
+                    <option label='PV-12-Preadmit Test Indicator' value='PV-12-Preadmit Test Indicator'></option>
+                    <option label='PV-13-Re-admission Indicator' value='PV-13-Re-admission Indicator'></option>
+                    <option label='PV-14-Admit Source' value='PV-14-Admit Source'></option>
+                    <option label='PV-15-Ambulatory Status' value='PV-15-Ambulatory Status'></option>
+                    <option label='PV-16-VIP Indicator' value='PV-16-VIP Indicator'></option>
+                    <option label='PV-17- Admitting Doctor' value='PV-17- Admitting Doctor'></option>
+                    <option label='PV-18-Patient Type' value='PV-18-Patient Type'></option>
+                    <option label='PV-19-Visit Number' value='PV-19-Visit Number'></option>
+                  </select>
+                  <span class="select-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                  </span>
+                </fieldset>
+              </div>
+            </form>
+            <div class="button-group">
+              <button class="primary">Save</button>
+              <button class="secondary">Cancel</button>
+              <a href="views/mapping/index.html" class="button tertiary">Back to Mapping</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <form class="color-mode">
+      <fieldset class="toggle">
+        <label for="switch-theme">
+          <span class="light-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-sun">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+          </span>
+          <input type="checkbox" id="switch-theme" class="toggle" name="switch-theme" title="switch-theme">
+          <span class="dark-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+            </svg>
+          </span>
+        </label>
+      </fieldset>
+    </form>
+  </footer>
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="assets/scripts/site.js"></script>
+  <script src="../../assets/scripts/headroom.js"></script>
+  <script>
+    // CHANGE CSS WHEN PAGE LOADS
+    $(document).ready(function () {
+      $("body").addClass("visible");
+      $("body").removeClass("hidden");
+    });
+    // HEADROOM
+    var myElement = document.querySelector("header");
+    var headroom = new Headroom(myElement);
+    headroom.init();
+  </script>
+</body>
+
+</html>
