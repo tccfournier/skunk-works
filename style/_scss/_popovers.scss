@@ -1,0 +1,29 @@
+// POPOVER TEXT STYLE BUTTONS
+button[popovertarget].text {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    background-color: transparent;
+  }
+}
+
+
+// POPOVER
+[popover] {
+  padding: $spacing-16;
+  border: 0;
+  border-radius: $border-radius-xs;
+  opacity: 0;
+  @include transition(opacity);
+}
+
+[popover]:popover-open {
+  opacity: 1;
+}

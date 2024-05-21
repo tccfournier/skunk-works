@@ -1528,6 +1528,31 @@ nav ul li:last-of-type {
   transform: translateX(0vw);
 }
 
+button[popovertarget].text {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+button[popovertarget].text:hover, button[popovertarget].text:focus {
+  color: inherit;
+  background-color: transparent;
+}
+
+[popover] {
+  padding: var(--spacing--16);
+  border: 0;
+  border-radius: var(--border-radius-xs);
+  opacity: 0;
+  transition: opacity 0.25s ease 0s;
+}
+
+[popover]:popover-open {
+  opacity: 1;
+}
+
 button,
 .button,
 a.button {

@@ -117,7 +117,7 @@
             <h2>Raw Data</h2>
             <pre>
 MSH|^~\&|LAB|NMC|||20201001091354-0400||ORU^R01|22064.1|D|2.3|
-PID|1|<em>E00000329</em>|<em>M000000350</em>||BLUEAPPLE^<em>TOM</em>||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
+PID|1|<em>E00000329</em>|<em>M000000350</em>||BLUEAPPLE^<em><button class="text" popovertarget="popover-first-name">TOM</button></em>||19711221|F||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
 PV1|1519|O|<em>ICU^101^A</em>|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
 OBR|1|1789^LAB|1789^LAB|PT^HEPARIN/INR^L|||202010010912|||||||202010010912||ZFINGJU^Zfingergut^Judy^^^^MD||||||||LAB|F||^^^^^R|BARNMI^Barnum^Michael^J.^^^MD|
 OBX|1|ST|PRO^<em>HEPARIN</em>^L|1|<em>12.0</em>|<em>SECONDS</em>|<em>9.6-11.2</em>|H||A^S|F|||202010010913|ML^MAIN LAB^L|
@@ -130,6 +130,45 @@ NTE|5||2.0-3.0.  An INR of 2.5-3.5 is recommended for patients with|
 NTE|6||mechanical heart valves.|
           </pre>
           </div>
+        </div>
+      </section>
+      <section class="popovers">
+        <div id="popover-first-name" popover>
+          <!-- <code>PID-5.2</code> -->
+          <fieldset>
+            <label for="yale-medical-center-patient-first-name-select">First Name element</label>
+            <select id="yale-medical-center-patient-first-name-select" name="yale-medical-center-patient-first-name-select">
+              <option label="Select an element" value="Select an element"></option>
+              <option label="PID-1-Set ID" value="PID-1-Set ID"></option>
+              <option label="PID-2-Patient ID" value="PID-2-Patient ID"></option>
+              <option label="PID-3-Patient Identifier List" value="PID-3-Patient Identifier List"></option>
+              <option label="PID-4-Alternate Patient ID" value="PID-4-Alternate Patient ID"></option>
+              <option label="PID-5-Patient Name" value="PID-5-Patient Name" selected=""></option>
+              <option label="PID-6-Mother's Maiden Name" value="PID-6-Mother's Maiden Name"></option>
+              <option label="PID-7-Date of Birth" value="PID-7-Date of Birth"></option>
+              <option label="PID-8- Sex" value="PID-8- Sex"></option>
+              <option label="PID-9-Patient Alias" value="PID-9-Patient Alias"></option>
+              <option label="PID-10-Race" value="PID-10-Race"></option>
+              <option label="PID-11-Patient Address" value="PID-11-Patient Address"></option>
+              <option label="PID-12-County Code" value="PID-12-County Code"></option>
+              <option label="PID-13-Phone Number" value="PID-13-Phone Number"></option>
+              <option label="PID-14-Marital Status" value="PID-14-Marital Status"></option>
+              <option label="PID-15-Religion" value="PID-15-Religion"></option>
+              <option label="PID-16-Patient Account Number" value="PID-16-Patient Account Number"></option>
+              <option label="PID-17-SSN Number" value="PID-17-SSN Number"></option>
+              <option label="PID-18-Driver's License Number" value="PID-18-Driver's License Number"></option>
+              <option label="PID-19-Mother's Identifier" value="PID-19-Mother's Identifier"></option>
+              <option label="PID-20-Ethnic Group" value="PID-20-Ethnic Group"></option>
+              <option label="PID-21-Birth Place" value="PID-21-Birth Place"></option>
+              <option label="PID-22-Multiple Birth Indicator" value="PID-22-Multiple Birth Indicator"></option>
+              <option label="PID-23-Birth Order" value="PID-23-Birth Order"></option>
+              <option label="PID-24-Citizenship" value="PID-24-Citizenship"></option>
+              <option label="PID-25-Veterans Military Status" value="PID-25-Veterans Military Status"></option>
+              <option label="PID-26-Nationality" value="PID-26-Nationality"></option>
+              <option label="PID-27-Patient Death Date and Time" value="PID-27-Patient Death Date and Time"></option>
+            </select>
+            <span class="select-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg></span>
+          </fieldset>
         </div>
       </section>
     </article>
