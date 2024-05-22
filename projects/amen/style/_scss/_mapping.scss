@@ -101,6 +101,21 @@
 }
 
 
+// DASHBOARD ENTITIES
+.card ul.options li {
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  @include transition(all);
+
+  &.show {
+    display: flex;
+    max-height: 100vh;
+    opacity: 1;
+  }
+}
+
+
 // ENTITY CARDS
 .card.entity {
   display: none;
