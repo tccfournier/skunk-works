@@ -1932,6 +1932,18 @@ h4 span.utility .button.tertiary {
     content: "";
   }
 }
+.card.entity {
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.25s ease 0s;
+}
+.card.entity.show {
+  display: inherit;
+  max-height: 100vh;
+  opacity: 1;
+}
+
 .card.mapping-group.row form {
   flex-direction: row;
   align-items: flex-start;

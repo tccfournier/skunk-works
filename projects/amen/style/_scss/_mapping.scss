@@ -101,6 +101,21 @@
 }
 
 
+// ENTITY CARDS
+.card.entity {
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  @include transition(all);
+
+  &.show {
+    display: inherit;
+    max-height: 100vh;
+    opacity: 1;
+  }
+}
+
+
 // CARD MAPPING GROUP - ROWS
 .card.mapping-group.row {
   form {
