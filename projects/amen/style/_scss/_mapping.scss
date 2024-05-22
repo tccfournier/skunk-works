@@ -131,6 +131,21 @@
 }
 
 
+// ENTITY FIELD MAPPING
+.card ul.mapping li {
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  @include transition(all);
+
+  &.show {
+    display: flex;
+    max-height: 100vh;
+    opacity: 1;
+  }
+}
+
+
 // CARD MAPPING GROUP - ROWS
 .card.mapping-group.row {
   form {
