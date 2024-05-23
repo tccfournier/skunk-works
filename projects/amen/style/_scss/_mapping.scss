@@ -163,11 +163,17 @@ form.mapping-groups {
       flex-direction: column;
       width: calc((100% / 2) - $spacing-16);
       margin: $spacing-8;
+      opacity: 1;
+      @include transition(opacity);
 
       p {
         padding: 0;
         line-height: 3rem;
       }
+    }
+
+    .preview.dim {
+      opacity: 0.5;
     }
   }
 }

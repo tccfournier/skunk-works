@@ -1983,10 +1983,15 @@ form.mapping-groups .mapping-group .preview {
   flex-direction: column;
   width: calc(50% - var(--spacing--16));
   margin: var(--spacing--8);
+  opacity: 1;
+  transition: opacity 0.25s ease 0s;
 }
 form.mapping-groups .mapping-group .preview p {
   padding: 0;
   line-height: 3rem;
+}
+form.mapping-groups .mapping-group .preview.dim {
+  opacity: 0.5;
 }
 
 @media (min-width: 40rem) {
