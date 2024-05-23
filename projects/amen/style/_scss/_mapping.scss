@@ -152,7 +152,21 @@ form.mapping-groups {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
     width: 100%;
+    padding: 0 0 $spacing-32;
+
+    &:after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: $spacing-8;
+      width: calc(100% - $spacing-16);
+      height: 1px;
+      margin-bottom: $spacing-16;
+      background-color: $color--border;
+      content: "";
+    }
 
     fieldset.toggle {
       margin-bottom: 0;
@@ -173,7 +187,7 @@ form.mapping-groups {
     }
 
     .preview.dim {
-      opacity: 0.5;
+      opacity: 0.15;
     }
   }
 }

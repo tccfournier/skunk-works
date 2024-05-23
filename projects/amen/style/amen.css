@@ -1973,7 +1973,20 @@ form.mapping-groups .mapping-group {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
   width: 100%;
+  padding: 0 0 var(--spacing--32);
+}
+form.mapping-groups .mapping-group:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing--8);
+  width: calc(100% - var(--spacing--16));
+  height: 1px;
+  margin-bottom: var(--spacing--16);
+  background-color: var(--color--border);
+  content: "";
 }
 form.mapping-groups .mapping-group fieldset.toggle {
   margin-bottom: 0;
@@ -1991,7 +2004,7 @@ form.mapping-groups .mapping-group .preview p {
   line-height: 3rem;
 }
 form.mapping-groups .mapping-group .preview.dim {
-  opacity: 0.5;
+  opacity: 0.15;
 }
 
 @media (min-width: 40rem) {
