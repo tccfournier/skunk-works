@@ -387,7 +387,8 @@ fieldset.checkbox {
   }
 }
 label,
-legend {
+legend,
+.label {
   overflow: hidden;
   padding: 0 0 var(--spacing--8);
   font-size: var(--small);
