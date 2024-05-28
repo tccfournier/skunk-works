@@ -2000,8 +2000,11 @@ form.mapping-groups .mapping-group .preview {
   transition: opacity 0.25s ease 0s;
 }
 form.mapping-groups .mapping-group .preview p {
+  overflow: hidden;
   padding: 0;
   line-height: 3rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 form.mapping-groups .mapping-group .preview.dim {
   opacity: 0.15;

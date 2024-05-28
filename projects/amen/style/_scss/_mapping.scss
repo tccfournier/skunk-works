@@ -181,8 +181,11 @@ form.mapping-groups {
       @include transition(opacity);
 
       p {
+        overflow: hidden;
         padding: 0;
         line-height: 3rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
 

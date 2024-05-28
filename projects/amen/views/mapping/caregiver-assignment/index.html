@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
-  <title>AMEN Lab Results Mapping Skunk Works | TigerConnect</title>
+  <title>AMEN Caregiver Assignment Mapping Skunk Works | TigerConnect</title>
   <base href="../../../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -41,69 +41,19 @@
   </header>
   <main>
     <article>
-      <h1>Yale Medical Center INT-1 Caregiver Assignment</h1>
+      <h1>Yale Medical Center INT-1 Patient</h1>
       <section>
         <h2>Edit Active Fields</h2>
         <div class="row cards">
-          <div class="card">
-            <h3>Control Fields</h3>
-            <!-- <div class="button-group right">
-              <button class="tertiary">All</button>
-              <button class="tertiary">None</button>
-            </div> -->
-            <form id="yale-medical-center-caregiver-assignment">
-              <fieldset class="toggle checklist">
-                <!-- <legend>Caregiver Assignment</legend> -->
-                <label for='yale-medical-center-caregiver-assignment-assignment-id'>Assignment ID<input type='checkbox'
-                    id='yale-medical-center-caregiver-assignment-assignment-id' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-assignment-id' title='Assignment ID'
-                    value='Assignment ID'></label>
-                <label for='yale-medical-center-caregiver-assignment-timestamp'>Timestamp<input type='checkbox'
-                    id='yale-medical-center-caregiver-assignment-timestamp' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-timestamp' title='Timestamp'
-                    value='Timestamp'></label>
-                <label for='yale-medical-center-caregiver-assignment-patient-id'>Patient ID - reference to Patient
-                  entity <input type='checkbox' id='yale-medical-center-caregiver-assignment-patient-id' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-patient-id'
-                    title='Patient ID - reference to Patient entity '
-                    value='Patient ID - reference to Patient entity '></label>
-                <label for='yale-medical-center-caregiver-assignment-location-id'>Location ID - reference to Location
-                  entity<input type='checkbox' id='yale-medical-center-caregiver-assignment-location-id' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-location-id'
-                    title='Location ID - reference to Location entity'
-                    value='Location ID - reference to Location entity'></label>
-                <label for='yale-medical-center-caregiver-assignment-caregiver-id'>Caregiver ID - reference to Caregiver
-                  entity<input type='checkbox' id='yale-medical-center-caregiver-assignment-caregiver-id' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-caregiver-id'
-                    title='Caregiver ID - reference to Caregiver entity'
-                    value='Caregiver ID - reference to Caregiver entity'></label>
-                <label for='yale-medical-center-caregiver-assignment-assignment-level'>Assignment Level - primary,
-                  secondary, etc.<input type='checkbox' id='yale-medical-center-caregiver-assignment-assignment-level'
-                    class='toggle' name='yale-medical-center-caregiver-assignment-assignment-level'
-                    title='Assignment Level - primary, secondary, etc.'
-                    value='Assignment Level - primary, secondary, etc.'></label>
-                <label for='yale-medical-center-caregiver-assignment-assigned-role'>Assigned Role - can be different
-                  than Caregiver Role<input type='checkbox' id='yale-medical-center-caregiver-assignment-assigned-role'
-                    class='toggle' name='yale-medical-center-caregiver-assignment-assigned-role'
-                    title='Assigned Role - can be different than Caregiver Role'
-                    value='Assigned Role - can be different than Caregiver Role'></label>
-                <label for='yale-medical-center-caregiver-assignment-start-date'>Start Date<input type='checkbox'
-                    id='yale-medical-center-caregiver-assignment-start-date' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-start-date' title='Start Date'
-                    value='Start Date'></label>
-                <label for='yale-medical-center-caregiver-assignment-end-date'>End Date<input type='checkbox'
-                    id='yale-medical-center-caregiver-assignment-end-date' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-end-date' title='End Date' value='End Date'></label>
-                <label for='yale-medical-center-caregiver-assignment-status'>Status - active, inactive<input
-                    type='checkbox' id='yale-medical-center-caregiver-assignment-status' class='toggle'
-                    name='yale-medical-center-caregiver-assignment-status' title='Status - active, inactive'
-                    value='Status - active, inactive'></label>
-              </fieldset>
+          <div class="card" style="width: 100%;">
+            <form class="mapping-groups">
+              <div class="mapping-group"><fieldset class="toggle"><label for="yale-medical-center-caregiver-assignment-timestamp-field">Timestamp<input type="checkbox" id="yale-medical-center-caregiver-assignment-timestamp-field" class="toggle" name="yale-medical-center-caregiver-assignment-timestamp-field" title="Timestamp" value="Timestamp"></label></fieldset><fieldset class="small"><label for="yale-medical-center-caregiver-assignment-timestamp-field">Timestamp element</label><input type="text" id="yale-medical-center-caregiver-assignment-timestamp-field-element" name="yale-medical-center-caregiver-assignment-timestamp-field" value="MSH.7"></fieldset><div id="yale-medical-center-caregiver-assignment-timestamp-field-preview" class="preview"><span class="label">Preview</span><p>20201001091354-0400</p></div></div>
+              <div class="mapping-group"><fieldset class="toggle"><label for="yale-medical-center-caregiver-assignment-patient-id-field">Patient ID<input type="checkbox" id="yale-medical-center-caregiver-assignment-patient-id-field" class="toggle" name="yale-medical-center-caregiver-assignment-patient-id-field" title="Patient ID" value="Patient ID"></label></fieldset><fieldset class="small"><label for="yale-medical-center-caregiver-assignment-patient-id-field">Patient ID element</label><input type="text" id="yale-medical-center-caregiver-assignment-patient-id-field-element" name="yale-medical-center-caregiver-assignment-patient-id-field" value="PID.2"></fieldset><div id="yale-medical-center-caregiver-assignment-patient-id-field-preview" class="preview"><span class="label">Preview</span><p>E00000329</p></div></div>
             </form>
             <div class="button-group right">
               <a href="views/mapping/index.html" class="button tertiary">Back to Mapping</a>
               <button class="secondary">Cancel</button>
-              <button class="primary">Save</button>
+              <a href="javascript:window.history.back();" class="button primary">Save</a>
             </div>
           </div>
         </div>
