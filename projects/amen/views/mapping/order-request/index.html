@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
-  <title>AMEN Lab Results Mapping Skunk Works | TigerConnect</title>
+  <title>AMEN Order Request Mapping Skunk Works | TigerConnect</title>
   <base href="../../../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -41,90 +41,20 @@
   </header>
   <main>
     <article>
-      <h1>Yale Medical Center INT-1 Order Request</h1>
+      <h1>Yale Medical Center INT-1 Patient</h1>
       <section>
         <h2>Edit Active Fields</h2>
         <div class="row cards">
-          <div class="card">
-            <h3>Control Fields</h3>
-            <!-- <div class="button-group right">
-              <button class="tertiary">All</button>
-              <button class="tertiary">None</button>
-            </div> -->
-            <form id="yale-medical-center-order-request">
-              <fieldset class="toggle checklist">
-                <!-- <legend>Order Request</legend> -->
-                <label for='yale-medical-center-order-request-order-id'>Order ID<input type='checkbox'
-                    id='yale-medical-center-order-request-order-id' class='toggle'
-                    name='yale-medical-center-order-request-order-id' title='Order ID' value='Order ID'></label>
-                <label for='yale-medical-center-order-request-observation-timestamp'>Observation Timestamp<input
-                    type='checkbox' id='yale-medical-center-order-request-observation-timestamp' class='toggle'
-                    name='yale-medical-center-order-request-observation-timestamp' title='Observation Timestamp'
-                    value='Observation Timestamp'></label>
-                <label for='yale-medical-center-order-request-transaction-timestamp'>Transaction Timestamp<input
-                    type='checkbox' id='yale-medical-center-order-request-transaction-timestamp' class='toggle'
-                    name='yale-medical-center-order-request-transaction-timestamp' title='Transaction Timestamp'
-                    value='Transaction Timestamp'></label>
-                <label for='yale-medical-center-order-request-filler-number'>Filler Number<input type='checkbox'
-                    id='yale-medical-center-order-request-filler-number' class='toggle'
-                    name='yale-medical-center-order-request-filler-number' title='Filler Number'
-                    value='Filler Number'></label>
-                <label for='yale-medical-center-order-request-order-control'>Order Control<input type='checkbox'
-                    id='yale-medical-center-order-request-order-control' class='toggle'
-                    name='yale-medical-center-order-request-order-control' title='Order Control'
-                    value='Order Control'></label>
-                <label for='yale-medical-center-order-request-order-status'>Order Status<input type='checkbox'
-                    id='yale-medical-center-order-request-order-status' class='toggle'
-                    name='yale-medical-center-order-request-order-status' title='Order Status'
-                    value='Order Status'></label>
-                <label for='yale-medical-center-order-request-result-status'>Result Status<input type='checkbox'
-                    id='yale-medical-center-order-request-result-status' class='toggle'
-                    name='yale-medical-center-order-request-result-status' title='Result Status'
-                    value='Result Status'></label>
-                <label for='yale-medical-center-order-request-priority'>Priority<input type='checkbox'
-                    id='yale-medical-center-order-request-priority' class='toggle'
-                    name='yale-medical-center-order-request-priority' title='Priority' value='Priority'></label>
-                <label for='yale-medical-center-order-request-placer-order-number'>Placer Order Number<input
-                    type='checkbox' id='yale-medical-center-order-request-placer-order-number' class='toggle'
-                    name='yale-medical-center-order-request-placer-order-number' title='Placer Order Number'
-                    value='Placer Order Number'></label>
-                <label for='yale-medical-center-order-request-clinical-information'>Clinical Information<input
-                    type='checkbox' id='yale-medical-center-order-request-clinical-information' class='toggle'
-                    name='yale-medical-center-order-request-clinical-information' title='Clinical Information'
-                    value='Clinical Information'></label>
-                <label for='yale-medical-center-order-request-universal-service-id'>Universal Service ID<input
-                    type='checkbox' id='yale-medical-center-order-request-universal-service-id' class='toggle'
-                    name='yale-medical-center-order-request-universal-service-id' title='Universal Service ID'
-                    value='Universal Service ID'></label>
-                <label for='yale-medical-center-order-request-notes'>Notes<input type='checkbox'
-                    id='yale-medical-center-order-request-notes' class='toggle'
-                    name='yale-medical-center-order-request-notes' title='Notes' value='Notes'></label>
-                <label for='yale-medical-center-order-request-ordering-provider-id'>Ordering Provider ID - reference to
-                  Provider entity<input type='checkbox' id='yale-medical-center-order-request-ordering-provider-id'
-                    class='toggle' name='yale-medical-center-order-request-ordering-provider-id'
-                    title='Ordering Provider ID - reference to Provider entity'
-                    value='Ordering Provider ID - reference to Provider entity'></label>
-                <label for='yale-medical-center-order-request-responsible-provider-id'>Responsible Provider ID -
-                  reference to Provider entity<input type='checkbox'
-                    id='yale-medical-center-order-request-responsible-provider-id' class='toggle'
-                    name='yale-medical-center-order-request-responsible-provider-id'
-                    title='Responsible Provider ID - reference to Provider entity'
-                    value='Responsible Provider ID - reference to Provider entity'></label>
-                <label for='yale-medical-center-order-request-patient-id'>Patient ID - reference to Patient entity<input
-                    type='checkbox' id='yale-medical-center-order-request-patient-id' class='toggle'
-                    name='yale-medical-center-order-request-patient-id' title='Patient ID - reference to Patient entity'
-                    value='Patient ID - reference to Patient entity'></label>
-                <label for='yale-medical-center-order-request-location-id'>Location ID - reference to Location
-                  entity<input type='checkbox' id='yale-medical-center-order-request-location-id' class='toggle'
-                    name='yale-medical-center-order-request-location-id'
-                    title='Location ID - reference to Location entity'
-                    value='Location ID - reference to Location entity'></label>
-              </fieldset>
+          <div class="card" style="width: 100%;">
+            <form class="mapping-groups">
+              <div class="mapping-group"><fieldset class="toggle"><label for="yale-medical-center-order-request-result-status-field">Result Status<input type="checkbox" id="yale-medical-center-order-request-result-status-field" class="toggle" name="yale-medical-center-order-request-result-status-field" title="Result Status" value="Result Status"></label></fieldset><fieldset class="small"><label for="yale-medical-center-order-request-result-status-field">Result Status element</label><input type="text" id="yale-medical-center-order-request-result-status-field-element" name="yale-medical-center-order-request-result-status-field" value="OBR.25"></fieldset><div id="yale-medical-center-order-request-result-status-field-preview" class="preview"><span class="label">Preview</span><p></p></div></div>
+              <div class="mapping-group"><fieldset class="toggle"><label for="yale-medical-center-order-request-priority-field">Priority<input type="checkbox" id="yale-medical-center-order-request-priority-field" class="toggle" name="yale-medical-center-order-request-priority-field" title="Priority" value="Priority"></label></fieldset><fieldset class="small"><label for="yale-medical-center-order-request-priority-field">Priority element</label><input type="text" id="yale-medical-center-order-request-priority-field-element" name="yale-medical-center-order-request-priority-field" value="OBR.5"></fieldset><div id="yale-medical-center-order-request-priority-field-preview" class="preview"><span class="label">Preview</span><p></p></div></div>
+              <div class="mapping-group"><fieldset class="toggle"><label for="yale-medical-center-order-request-patient-id-field">Patient ID<input type="checkbox" id="yale-medical-center-order-request-patient-id-field" class="toggle" name="yale-medical-center-order-request-patient-id-field" title="Patient ID" value="Patient ID"></label></fieldset><fieldset class="small"><label for="yale-medical-center-order-request-patient-id-field">Patient ID element</label><input type="text" id="yale-medical-center-order-request-patient-id-field-element" name="yale-medical-center-order-request-patient-id-field" value="PID.2"></fieldset><div id="yale-medical-center-order-request-patient-id-field-preview" class="preview"><span class="label">Preview</span><p>E00000329</p></div></div>
             </form>
             <div class="button-group right">
               <a href="views/mapping/index.html" class="button tertiary">Back to Mapping</a>
               <button class="secondary">Cancel</button>
-              <button class="primary">Save</button>
+              <a href="javascript:window.history.back();" class="button primary">Save</a>
             </div>
           </div>
         </div>
