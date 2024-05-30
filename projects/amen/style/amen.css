@@ -1605,6 +1605,7 @@ a.button.secondary:focus {
 button.tertiary,
 .button.tertiary,
 a.button.tertiary {
+  margin-right: var(--spacing--16);
   padding: 0;
   border: none;
   color: var(--color--action-light);
