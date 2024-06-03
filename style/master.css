@@ -1496,6 +1496,73 @@ nav ul li:last-of-type {
     line-height: 1;
   }
 }
+.toasts {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 1rem;
+  width: calc(100% - var(--spacing--32));
+  margin: 0;
+}
+
+.toast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: auto;
+  max-width: 100%;
+  min-width: 15rem;
+  margin: 0;
+  padding: var(--spacing--8);
+  border-radius: var(--border-radius-sm);
+  color: var(--color--text-light);
+  background-color: var(--color--bg-dark);
+  transform: translateY(100rem);
+  transition: transform 0.75s ease 0s;
+}
+.toast p {
+  font-size: var(--small);
+}
+.toast button.close-toast {
+  margin: 0 0 0 var(--spacing--8);
+  color: var(--color--text-light);
+}
+.toast button.close-toast:hover, .toast button.close-toast:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.toast.show {
+  transform: translateY(-4rem);
+}
+
+.toast.negative {
+  background-color: var(--color--status-invalid);
+}
+
+.toast.positive {
+  background-color: var(--color--status-valid);
+}
+
+html.dark .toast {
+  color: var(--color--text-dark);
+  background-color: var(--color--bg-light-content);
+}
+html.dark .toast button.close-toast {
+  color: inherit;
+}
+html.dark .toast button.close-toast:hover, html.dark .toast button.close-toast:focus {
+  background-color: rgba(43, 43, 43, 0.25);
+}
+html.dark .toast.negative {
+  color: var(--color--text-light);
+  background-color: var(--color--status-invalid);
+}
+html.dark .toast.positive {
+  color: var(--color--text-light);
+  background-color: var(--color--status-valid);
+}
+
 .drawers {
   display: block;
   position: fixed;

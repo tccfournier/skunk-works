@@ -1,0 +1,83 @@
+// TOAST HOLDER
+.toasts {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 1rem;
+  width: calc(100% - $spacing-32);
+  margin: 0;
+}
+
+
+// TOASTS
+.toast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: auto;
+  max-width: 100%;
+  min-width: 15rem;
+  margin: 0;
+  padding: $spacing-8;
+  border-radius: $border-radius-sm;
+  color: $color--text-light;
+  background-color: $color--bg-dark;
+  @include transform(translateY(100rem));
+  @include transition(transform, 0.75s, ease);
+
+  p {
+    font-size: $small;
+  }
+
+  button.close-toast {
+    margin: 0 0 0 $spacing-8;
+    color: $color--text-light;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  &.show {
+    @include transform(translateY(-4rem));
+  }
+}
+
+.toast.negative {
+  background-color: $color--status-invalid;
+}
+
+.toast.positive {
+  background-color: $color--status-valid;
+}
+
+// TOAST DARK MODE
+html.dark {
+  .toast {
+    color: $color--text-dark;
+    background-color: $color--bg-light-content;
+
+    button.close-toast {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(43, 43, 43, 0.25);
+      }
+    }
+  }
+
+  .toast.negative {
+    color: $color--text-light;
+    background-color: $color--status-invalid;
+  }
+
+  .toast.positive {
+    color: $color--text-light;
+    background-color: $color--status-valid;
+  }
+
+}
