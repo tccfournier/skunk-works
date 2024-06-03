@@ -1501,7 +1501,7 @@ nav ul li:last-of-type {
   justify-content: center;
   position: fixed;
   bottom: 1rem;
-  width: calc(100% - var(--spacing--32));
+  width: calc(100% - 4rem);
   margin: 0;
 }
 
@@ -1523,7 +1523,12 @@ nav ul li:last-of-type {
   transition: transform 0.75s ease 0s;
 }
 .toast p {
+  padding: 0;
   font-size: var(--small);
+}
+.toast button.tertiary {
+  overflow: visible;
+  margin: 0 var(--spacing--8);
 }
 .toast button.close-toast {
   margin: 0 0 0 var(--spacing--8);
@@ -1536,12 +1541,39 @@ nav ul li:last-of-type {
   transform: translateY(-4rem);
 }
 
+.toast.negative button.tertiary,
+.toast.positive button.tertiary {
+  color: var(--color--text-light);
+}
+
 .toast.negative {
   background-color: var(--color--status-invalid);
 }
 
 .toast.positive {
   background-color: var(--color--status-valid);
+}
+
+.toast.action button.tertiary:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: calc(-1 * var(--spacing--8));
+  width: 1px;
+  height: 100%;
+  background-color: var(--color--border);
+  content: "";
+}
+
+.toast.icon span.icon {
+  display: grid;
+  width: var(--spacing--20);
+  height: var(--spacing--20);
+  margin: 0 var(--spacing--4) 0 0;
+}
+.toast.icon span.icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 html.dark .toast {
@@ -1626,6 +1658,7 @@ button,
 a.button {
   display: inline-flex;
   align-items: center;
+  position: relative;
   width: -moz-max-content;
   width: max-content;
   max-width: 100%;

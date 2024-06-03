@@ -4,6 +4,7 @@ button,
 a.button {
   display: inline-flex;
   align-items: center;
+  position: relative;
   width: max-content;
   max-width: 100%;
   overflow: hidden;
