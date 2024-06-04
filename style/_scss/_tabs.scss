@@ -1,0 +1,75 @@
+// TABS
+.tabs {}
+
+
+// TAB LIST
+.tabs .tablist ul {
+  position: relative;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    button {
+      border-radius: 0;
+      border-width: 0 0 1px;
+      text-transform: none;
+      color: $color--action-light;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        border-width: 0 0 4px;
+        color: $color--action-light-hover;
+      }
+
+      &.is-active {
+        border-width: 0 0 4px;
+      }
+    }
+  }
+}
+
+
+// TAB PANELS
+.tabs .panels {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: $spacing-8 0 0;
+
+  .panel {
+    max-width: 0;
+    opacity: 0;
+    @include transform(translateX(100vw));
+    @include transition(all, 0.5s, ease);
+
+    &.is-current {
+      max-width: 100%;
+      opacity: 1;
+      @include transform(translateX(0));
+    }
+  }
+}
+
+
+// TAB DARK MODE
+.tabs .tablist ul {
+  li {
+    button {
+      color: $color--action-dark;
+
+      &:hover,
+      &:focus {
+        color: $color--action-dark-hover;
+      }
+    }
+  }
+}
