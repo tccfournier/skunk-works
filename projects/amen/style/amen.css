@@ -1599,6 +1599,11 @@ nav ul li:last-of-type {
 .toast.positive button.tertiary {
   color: var(--color--text-light);
 }
+.toast.negative button.tertiary:hover, .toast.negative button.tertiary:focus,
+.toast.positive button.tertiary:hover,
+.toast.positive button.tertiary:focus {
+  color: var(--color--action-light-hover);
+}
 
 .toast.negative {
   background-color: var(--color--status-invalid);

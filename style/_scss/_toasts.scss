@@ -56,6 +56,11 @@
 .toast.positive {
   button.tertiary {
     color: $color--text-light;
+
+    &:hover,
+    &:focus {
+      color: $color--action-light-hover;
+    }
   }
 }
 
