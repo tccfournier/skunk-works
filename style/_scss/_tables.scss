@@ -41,7 +41,7 @@ table {
     display: inline-block;
     overflow: hidden;
     padding: 0 $spacing-8 0 0;
-    font-weight: 900;
+    font-weight: 700;
     text-overflow: ellipsis;
     white-space: nowrap;
     content: attr(data-label);
@@ -78,5 +78,8 @@ table {
 
 // TABLE CAPTION
 table caption {
-  display: none;
+  padding: 0 0 $spacing-8;
+  font-size: $h3;
+  font-weight: 700;
+  text-align: left;
 }
