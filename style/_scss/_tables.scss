@@ -16,9 +16,6 @@ table {
   th,
   td {
     display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   tr {
@@ -35,11 +32,15 @@ table {
     align-items: center;
   }
 
+  td {
+    justify-content: space-between;
+    padding: 0 0 $spacing-4;
+  }
+
   td:before {
     display: inline-block;
     overflow: hidden;
     padding: 0 $spacing-8 0 0;
-    font-size: $small;
     font-weight: 900;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -51,11 +52,16 @@ table {
   table {
     thead {
       display: table-header-group;
+
+      th {
+        padding: 0 0 $spacing-4;
+      }
     }
 
     tr {
       display: table-row;
       padding: 0;
+      line-height: 1.5;
     }
 
     th,
