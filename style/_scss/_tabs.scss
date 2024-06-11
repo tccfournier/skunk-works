@@ -13,6 +13,7 @@
     padding: 0;
 
     button {
+      border-color: $color--action-light;
       border-radius: 0;
       border-width: 0 0 1px;
       text-transform: none;
@@ -21,6 +22,7 @@
 
       &:hover,
       &:focus {
+        border-color: $color--action-light-hover;
         border-width: 0 0 4px;
         color: $color--action-light-hover;
       }
@@ -65,10 +67,12 @@
 .tabs .tablist ul {
   li {
     button {
+      border-color: $color--action-dark;
       color: $color--action-dark;
 
       &:hover,
       &:focus {
+        border-color: $color--action-dark-hover;
         color: $color--action-dark-hover;
       }
     }

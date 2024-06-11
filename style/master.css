@@ -1514,6 +1514,7 @@ nav ul li:last-of-type {
   padding: 0;
 }
 .tabs .tablist ul li button {
+  border-color: var(--color--action-light);
   border-radius: 0;
   border-width: 0 0 1px;
   text-transform: none;
@@ -1521,6 +1522,7 @@ nav ul li:last-of-type {
   background-color: transparent;
 }
 .tabs .tablist ul li button:hover, .tabs .tablist ul li button:focus {
+  border-color: var(--color--action-light-hover);
   border-width: 0 0 4px;
   color: var(--color--action-light-hover);
 }
@@ -1553,9 +1555,11 @@ nav ul li:last-of-type {
 }
 
 .tabs .tablist ul li button {
+  border-color: var(--color--action-dark);
   color: var(--color--action-dark);
 }
 .tabs .tablist ul li button:hover, .tabs .tablist ul li button:focus {
+  border-color: var(--color--action-dark-hover);
   color: var(--color--action-dark-hover);
 }
 

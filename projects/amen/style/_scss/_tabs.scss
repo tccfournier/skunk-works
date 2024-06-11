@@ -1,0 +1,18 @@
+// TABLIST
+.tabs .tablist ul li {
+  position: relative;
+
+  button {
+    margin: 0 $spacing-8 $spacing-8 0;
+    padding: $spacing-8;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 40rem) {
+  .tabs .tablist ul li {
+    button {
+      font-size: $p;
+    }
+  }
+}
