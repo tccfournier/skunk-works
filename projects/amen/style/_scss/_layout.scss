@@ -1,0 +1,70 @@
+// LAYOUT - MAIN + NAVIGATION-INTEGRATIONS
+@media (min-width: 40rem) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+
+    nav.integrations {
+      width: 15%;
+    }
+  }
+}
+
+
+// LAYOUT - ARTICLE
+@media (min-width: 40rem) {
+  main article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 85%;
+    padding: 0 0 0 $spacing-16;
+  }
+}
+
+
+// LAYOUT - ARTICLE - SECTION-CONTENT
+main article .content {
+  ul.integration-details {
+    padding: 0 0 $spacing-16;
+    list-style-type: none;
+
+    li {
+      padding: $spacing-16 0 0;
+
+      span {
+        padding: 0 $spacing-8 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main article .content {
+    width: 75%;
+    padding: 0 $spacing-16 0 0;
+  }
+}
+
+
+// LAYOUT - ARTICLE - SECTION-ENTITIES
+main article .entities {
+  padding: $spacing-16 0 0;
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      padding: $spacing-16 0 0;
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main article .entities {
+    width: 25%;
+    padding: 0;
+  }
+}

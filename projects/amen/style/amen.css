@@ -2032,181 +2032,79 @@ h4 span.utility .button.tertiary {
   padding: 0;
 }
 
-.card ul.mapping {
-  position: relative;
-  padding: var(--spacing--4) 0 var(--spacing--20);
+@media (min-width: 40rem) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main nav.integrations {
+    width: 15%;
+  }
+}
+@media (min-width: 40rem) {
+  main article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 85%;
+    padding: 0 0 0 var(--spacing--16);
+  }
+}
+main article .content ul.integration-details {
+  padding: 0 0 var(--spacing--16);
   list-style-type: none;
 }
-.card ul.mapping:after {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--color--border);
-  content: "";
+main article .content ul.integration-details li {
+  padding: var(--spacing--16) 0 0;
 }
-.card ul.mapping:last-of-type {
-  padding-bottom: 0;
-}
-.card ul.mapping:last-of-type:after {
-  display: none;
-}
-.card ul.mapping li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-  padding: var(--spacing--4) 0;
-}
-.card ul.mapping li:first-of-type {
-  padding: 0;
-  font-size: var(--small);
-  font-weight: 700;
-}
-.card ul.mapping li:first-of-type:after {
-  display: none;
-}
-.card ul.mapping li:first-of-type span.field:after,
-.card ul.mapping li:first-of-type span.element:after {
-  display: none;
-}
-.card ul.mapping li:last-of-type {
-  padding-bottom: 0;
-}
-.card ul.mapping li:last-of-type:after {
-  display: none;
-}
-.card ul.mapping li span {
-  display: flex;
-  position: relative;
-  width: calc(33.3333333333% - var(--spacing--8));
-  overflow: scroll;
-  white-space: nowrap;
-}
-.card ul.mapping li span.field:after,
-.card ul.mapping li span.element:after {
-  display: inline-flex;
-  position: absolute;
-  top: calc(var(--spacing--4) / 2);
-  right: 0;
-  width: var(--spacing--16);
-  height: var(--spacing--16);
-  background-image: url(../../../assets/icons/ui/arrow-right.svg);
-  background-size: contain;
-  content: none;
+main article .content ul.integration-details li span {
+  padding: 0 var(--spacing--8) 0 0;
 }
 
 @media (min-width: 40rem) {
-  .card ul.mapping li span.field,
-  .card ul.mapping li span.element {
-    padding: 0 var(--spacing--20) 0 0;
-  }
-  .card ul.mapping li span.field:after,
-  .card ul.mapping li span.element:after {
-    content: "";
+  main article .content {
+    width: 75%;
+    padding: 0 var(--spacing--16) 0 0;
   }
 }
-.card ul.options li {
-  display: none;
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.25s ease 0s;
+main article .entities {
+  padding: var(--spacing--16) 0 0;
 }
-.card ul.options li.show {
-  display: flex;
-  max-height: 100vh;
-  opacity: 1;
-}
-
-.card.entity {
-  display: none;
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.25s ease 0s;
-}
-.card.entity.show {
-  display: inherit;
-  max-height: 100vh;
-  opacity: 1;
-}
-
-.card ul.mapping li {
-  display: none;
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.25s ease 0s;
-}
-.card ul.mapping li.show {
-  display: flex;
-  max-height: 100vh;
-  opacity: 1;
-}
-
-form.mapping-groups .mapping-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  width: 100%;
-  padding: 0 0 var(--spacing--32);
-}
-form.mapping-groups .mapping-group:after {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: var(--spacing--8);
-  width: calc(100% - var(--spacing--16));
-  height: 1px;
-  margin-bottom: var(--spacing--16);
-  background-color: var(--color--border);
-  content: "";
-}
-form.mapping-groups .mapping-group fieldset.toggle {
-  margin-bottom: 0;
-}
-form.mapping-groups .mapping-group .preview {
-  display: flex;
-  flex-direction: column;
-  width: calc(50% - var(--spacing--16));
-  margin: var(--spacing--8);
-  opacity: 1;
-  transition: opacity 0.25s ease 0s;
-}
-form.mapping-groups .mapping-group .preview p {
-  overflow: hidden;
+main article .entities ul {
   padding: 0;
-  line-height: 3rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  list-style-type: none;
 }
-form.mapping-groups .mapping-group .preview.dim {
-  opacity: 0.15;
+main article .entities ul li {
+  padding: var(--spacing--16) 0 0;
 }
 
 @media (min-width: 40rem) {
-  form.mapping-groups .mapping-group {
-    width: 50%;
-  }
-}
-@media (min-width: 64rem) {
-  form.mapping-groups .mapping-group {
-    width: 33.3333333333%;
-  }
-}
-@media (min-width: 80rem) {
-  form.mapping-groups .mapping-group {
+  main article .entities {
     width: 25%;
+    padding: 0;
   }
 }
-@media (min-width: 96rem) {
-  form.mapping-groups .mapping-group {
-    width: 20%;
+nav.integrations {
+  padding: 0 0 var(--spacing--8);
+}
+
+@media (min-width: 40rem) {
+  nav.integrations {
+    padding: 0;
+  }
+  nav.integrations ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav.integrations ul li {
+    padding: 0 0 var(--spacing--16);
+  }
+  nav.integrations button {
+    margin: 0;
   }
 }
+pre,
 code {
   font-size: var(--p);
 }
