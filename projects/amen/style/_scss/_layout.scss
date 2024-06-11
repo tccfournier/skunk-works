@@ -3,9 +3,11 @@
   main {
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
 
     nav.integrations {
       width: 15%;
+      padding: $spacing-16 0 0;
     }
   }
 }
@@ -16,10 +18,8 @@
   main article {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    overflow: hidden;
     width: 85%;
-    padding: 0 0 0 $spacing-16;
+    padding: $spacing-16 0 0 $spacing-16;
   }
 }
 
@@ -52,7 +52,7 @@ main article .content {
 main article .entities {
   padding: $spacing-16 0 0;
 
-  ul {
+  ul.entity-options {
     padding: 0;
     list-style-type: none;
 

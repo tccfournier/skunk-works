@@ -2036,19 +2036,19 @@ h4 span.utility .button.tertiary {
   main {
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
   }
   main nav.integrations {
     width: 15%;
+    padding: var(--spacing--16) 0 0;
   }
 }
 @media (min-width: 40rem) {
   main article {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    overflow: hidden;
     width: 85%;
-    padding: 0 0 0 var(--spacing--16);
+    padding: var(--spacing--16) 0 0 var(--spacing--16);
   }
 }
 main article .content ul.integration-details {
@@ -2071,11 +2071,11 @@ main article .content ul.integration-details li span {
 main article .entities {
   padding: var(--spacing--16) 0 0;
 }
-main article .entities ul {
+main article .entities ul.entity-options {
   padding: 0;
   list-style-type: none;
 }
-main article .entities ul li {
+main article .entities ul.entity-options li {
   padding: var(--spacing--16) 0 0;
 }
 
@@ -2086,7 +2086,7 @@ main article .entities ul li {
   }
 }
 nav.integrations {
-  padding: 0 0 var(--spacing--8);
+  padding: var(--spacing--8) 0;
 }
 
 @media (min-width: 40rem) {
@@ -2104,7 +2104,12 @@ nav.integrations {
     margin: 0;
   }
 }
+nav.views {
+  padding: 0 0 var(--spacing--16);
+}
+
 pre,
 code {
+  margin: 0;
   font-size: var(--p);
 }

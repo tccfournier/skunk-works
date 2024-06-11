@@ -1,6 +1,6 @@
 // INTEGRATIONS NAVIGATION
 nav.integrations {
-  padding: 0 0 $spacing-8;
+  padding: $spacing-8 0;
 }
 
 @media (min-width: 40rem) {
@@ -25,4 +25,5 @@ nav.integrations {
 
 // INTEGRATION VIEWS NAVIGATION
 nav.views {
+  padding: 0 0 $spacing-16;
 }
