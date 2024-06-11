@@ -2081,6 +2081,12 @@ main article .content ul.integration-details:after {
     width: 75%;
     padding: 0 var(--spacing--16) 0 0;
   }
+  main article .content ul.integration-details {
+    padding: 0 0 var(--spacing--16);
+  }
+  main article .content ul.integration-details:after {
+    display: none;
+  }
 }
 main article .entities {
   padding: var(--spacing--16) 0 0;
@@ -2137,4 +2143,7 @@ code {
   .tabs .tablist ul li button {
     font-size: var(--p);
   }
+}
+table {
+  margin: 0;
 }

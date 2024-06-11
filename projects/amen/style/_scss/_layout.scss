@@ -55,6 +55,14 @@ main article .content {
   main article .content {
     width: 75%;
     padding: 0 $spacing-16 0 0;
+
+    ul.integration-details {
+      padding: 0 0 $spacing-16;
+
+      &:after {
+        display: none;
+      }
+    }
   }
 }
 
