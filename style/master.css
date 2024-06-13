@@ -1667,6 +1667,54 @@ html.dark .toast.positive {
   background-color: var(--color--status-valid);
 }
 
+details {
+  position: relative;
+  width: 100%;
+  min-height: 3rem;
+  margin: var(--spacing--16) 0 0;
+  padding: var(--spacing--8);
+  border: 1px solid var(--color--border);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+details:after {
+  display: grid;
+  position: absolute;
+  top: var(--spacing--12);
+  right: var(--spacing--8);
+  z-index: 0;
+  width: var(--spacing--24);
+  height: var(--spacing--24);
+  background-image: url(../assets/icons/ui/chevron-right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  transform: rotate(0);
+  transition: transform 0.325s ease 0s;
+}
+details summary {
+  overflow: hidden;
+  font-weight: 700;
+  line-height: var(--spacing--32);
+  list-style: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+details p {
+  padding: 0;
+}
+details p:last-of-type {
+  padding: 0;
+}
+
+details[open]:after {
+  transform: rotate(450deg);
+}
+
 .drawers {
   display: block;
   position: fixed;

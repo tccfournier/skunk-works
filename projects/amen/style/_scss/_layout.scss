@@ -32,7 +32,11 @@ main article .content {
     list-style-type: none;
 
     li {
-      padding: $spacing-16 0 0;
+      padding: $spacing-8 0 0;
+
+      &:first-of-type {
+        padding-top: $spacing-16;
+      }
 
       span {
         padding: 0 $spacing-8 0 0;
@@ -69,7 +73,7 @@ main article .content {
 
 // LAYOUT - ARTICLE - SECTION-ENTITIES
 main article .entities {
-  padding: $spacing-16 0 0;
+  padding: $spacing-32 0 0;
 
   ul.entity-options {
     padding: 0;

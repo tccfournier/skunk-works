@@ -1,0 +1,11 @@
+// INPUTS
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+select {
+  min-height: auto;
+}

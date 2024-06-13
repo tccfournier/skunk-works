@@ -1,18 +1,28 @@
 // INTEGRATIONS NAVIGATION
 nav.integrations {
   padding: $spacing-8 0;
+
+  ul {
+    padding: 0 0 $spacing-16;
+  }
 }
 
 @media (min-width: 40rem) {
   nav.integrations {
     padding: 0;
-    
+
     ul {
       flex-direction: column;
       align-items: flex-start;
+      font-size: $p;
+      text-transform: capitalize;
 
       li {
-        padding: 0 0 $spacing-16;
+        padding: $spacing-16 0;
+
+        &:first-of-type {
+          padding-top: 0;
+        }
       }
     }
 

@@ -1667,6 +1667,54 @@ html.dark .toast.positive {
   background-color: var(--color--status-valid);
 }
 
+details {
+  position: relative;
+  width: 100%;
+  min-height: 3rem;
+  margin: var(--spacing--16) 0 0;
+  padding: var(--spacing--8);
+  border: 1px solid var(--color--border);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+details:after {
+  display: grid;
+  position: absolute;
+  top: var(--spacing--12);
+  right: var(--spacing--8);
+  z-index: 0;
+  width: var(--spacing--24);
+  height: var(--spacing--24);
+  background-image: url(../assets/icons/ui/chevron-right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  transform: rotate(0);
+  transition: transform 0.325s ease 0s;
+}
+details summary {
+  overflow: hidden;
+  font-weight: 700;
+  line-height: var(--spacing--32);
+  list-style: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+details p {
+  padding: 0;
+}
+details p:last-of-type {
+  padding: 0;
+}
+
+details[open]:after {
+  transform: rotate(450deg);
+}
+
 .drawers {
   display: block;
   position: fixed;
@@ -2061,7 +2109,10 @@ main article .content ul.integration-details {
   list-style-type: none;
 }
 main article .content ul.integration-details li {
-  padding: var(--spacing--16) 0 0;
+  padding: var(--spacing--8) 0 0;
+}
+main article .content ul.integration-details li:first-of-type {
+  padding-top: var(--spacing--16);
 }
 main article .content ul.integration-details li span {
   padding: 0 var(--spacing--8) 0 0;
@@ -2089,7 +2140,7 @@ main article .content ul.integration-details:after {
   }
 }
 main article .entities {
-  padding: var(--spacing--16) 0 0;
+  padding: var(--spacing--32) 0 0;
 }
 main article .entities ul.entity-options {
   padding: 0;
@@ -2105,8 +2156,22 @@ main article .entities ul.entity-options li {
     padding: 0;
   }
 }
+input[type=password],
+input[type=number],
+input[type=search],
+input[type=email],
+input[type=text],
+input[type=tel],
+input[type=url],
+select {
+  min-height: auto;
+}
+
 nav.integrations {
   padding: var(--spacing--8) 0;
+}
+nav.integrations ul {
+  padding: 0 0 var(--spacing--16);
 }
 
 @media (min-width: 40rem) {
@@ -2116,9 +2181,14 @@ nav.integrations {
   nav.integrations ul {
     flex-direction: column;
     align-items: flex-start;
+    font-size: var(--p);
+    text-transform: capitalize;
   }
   nav.integrations ul li {
-    padding: 0 0 var(--spacing--16);
+    padding: var(--spacing--16) 0;
+  }
+  nav.integrations ul li:first-of-type {
+    padding-top: 0;
   }
   nav.integrations button {
     margin: 0;
@@ -2139,11 +2209,6 @@ code {
   text-transform: uppercase;
 }
 
-@media (min-width: 40rem) {
-  .tabs .tablist ul li button {
-    font-size: var(--p);
-  }
-}
 table {
   margin: 0;
 }
