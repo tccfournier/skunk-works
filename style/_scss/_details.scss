@@ -24,7 +24,7 @@ details {
     background-size: contain;
     content: "";
     @include transform(rotate(0));
-    @include transition(transform, 0.325s, ease);
+    @include transition(transform, 0.25s, ease);
   }
 
   summary {

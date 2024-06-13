@@ -1694,7 +1694,7 @@ details:after {
   background-size: contain;
   content: "";
   transform: rotate(0);
-  transition: transform 0.325s ease 0s;
+  transition: transform 0.25s ease 0s;
 }
 details summary {
   overflow: hidden;

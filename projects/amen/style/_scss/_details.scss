@@ -1,0 +1,46 @@
+// DETAILS
+details {
+  min-height: auto;
+  margin: $spacing-8 0 0;
+  padding: 0;
+  border: none;
+
+  &:after {
+    top: 0;
+    right: 0;
+  }
+
+  summary {
+    line-height: $spacing-24;
+    color: $color--action-light;
+    cursor: pointer;
+    @include transition(color, 0.25s, ease);
+
+    &:hover,
+    &:focus {
+      color: $color--action-light-hover;
+    }
+  }
+
+  ul {
+    li {
+      padding: $spacing-8 0 0;
+    }
+  }
+
+}
+
+
+// DETAILS DARK
+html.dark {
+  details {
+    summary {
+      color: $color--action-dark;
+
+      &:hover,
+      &:focus {
+        color: $color--action-dark-hover;
+      }
+    }
+  }
+}
