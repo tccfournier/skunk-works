@@ -2222,9 +2222,12 @@ details {
 details:after {
   top: 0;
   right: 0;
+  width: var(--spacing--16);
+  height: var(--spacing--16);
 }
 details summary {
-  line-height: var(--spacing--24);
+  padding: 0 var(--spacing--24) 0 0;
+  line-height: var(--spacing--16);
   color: var(--color--action-light);
   cursor: pointer;
   transition: color 0.25s ease 0s;
@@ -2232,8 +2235,16 @@ details summary {
 details summary:hover, details summary:focus {
   color: var(--color--action-light-hover);
 }
+details ul {
+  max-height: 0;
+  transition: max-height 0.5s ease 0s;
+}
 details ul li {
   padding: var(--spacing--8) 0 0;
+}
+
+details[open] ul {
+  max-height: 100vh;
 }
 
 html.dark details summary {
