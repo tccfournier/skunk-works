@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
-  <title>AMEN Skunk Works | TigerConnect</title>
+  <title>AMEN Skunk Works Protocols & Ports | TigerConnect</title>
   <base href="../../../../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -26,6 +26,12 @@
     body.visible {
       opacity: 1;
     }
+
+    @media (min-width: 40rem) {
+      h1+ol {
+        column-count: 2;
+      }
+    }
   </style>
 </head>
 
@@ -43,7 +49,29 @@
   </header>
   <main>
     <article>
-      <h1></h1>
+      <h1>Protocols &amp; Ports</h1>
+      <ol>
+        <li>Set Client ID</li>
+        <li>Set Description</li>
+        <li>Set Interface</li>
+        <li>Enable Connection to Server</li>
+        <ol>
+          <li>Set Server IP Address</li>
+          <li>Set Server Port (Auto Reconnect Y/N)</li>
+          <li>Set Local IP Address</li>
+          <li>Set Local Port (Auto Assign Y/N)</li>
+        </ol>
+        <li>Enable Communication</li>
+        <ol>
+          <li>Set Local IP Address</li>
+          <li>Set Local Port</li>
+          <li>Set Connection Timeout</li>
+          <li>Set Parsing Algorithm</li>
+        </ol>
+      </ol>
+      <h2>Setup Complete</h2>
+      <p><a href="demos/orchestration/integrations/discovery/index.html">Go to Discovery Mode</a></p>
+      <img style="display: none; padding-top: 1rem;" src="assets/images/demo-ports.png">
     </article>
   </main>
   <footer>

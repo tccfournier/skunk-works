@@ -88,7 +88,6 @@ ol,
 dl {
   width: 100%;
   margin: 0;
-  padding: 0;
   font-size: $p;
   line-height: 1.25;
 
@@ -99,6 +98,10 @@ dl {
 }
 
 ul {
+  padding-left: $spacing-24;
+}
+
+ol {
   padding-left: $spacing-24;
 }
 
