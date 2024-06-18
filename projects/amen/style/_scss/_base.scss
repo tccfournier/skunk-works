@@ -1,0 +1,8 @@
+// LISTS
+ul,
+ol {
+  break-inside: avoid-column;
+  li {
+    padding: $p 0 0;
+  }
+}
