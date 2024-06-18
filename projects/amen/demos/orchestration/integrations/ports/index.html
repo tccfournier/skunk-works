@@ -50,7 +50,98 @@
   <main>
     <article>
       <h1>Protocols &amp; Ports</h1>
-      <ol>
+      <section>
+        <h2>General Setup</h2>
+        <form>
+          <fieldset class="small">
+            <label for="integration-client-id">Client ID</label>
+            <input type="number" id="integration-client-id" name="integration-client-id" value="0">
+          </fieldset>
+          <fieldset>
+            <label for="integration-description">Description</label>
+            <input type="text" id="integration-description" name="integration-description" placeholder="Description">
+          </fieldset>
+          <fieldset class="small">
+            <label for="integration-interface">Interface</label>
+            <select id="integration-interface" name="integration-interface">
+              <option label="First option sample">First option sample</option>
+              <option label="Second option sample">Section option sample</option>
+              <option label="Third option sample">Third option sample</option>
+              <option label="Fourth option sample">Fourth option sample</option>
+            </select>
+            <span class="select-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg>
+            </span>
+          </fieldset>
+        </form>  
+      </section>
+      <section>
+        <h2>Server Setup</h2>
+        <form>
+          <div class="row">
+            <fieldset class="small">
+              <label for="integration-server-ip-address">Server IP Address</label>
+              <input type="text" id="integration-server-ip-address" name="integration-server-ip-address" value="127.0.1">
+            </fieldset>
+            <fieldset class="small">
+              <label for="integration-server-port">Server Port</label>
+              <input type="number" id="integration-server-port" name="integration-server-port" value="7000">
+            </fieldset>
+            <fieldset class="checkbox">
+              <input type="checkbox" id="integration-auto-reconnect" name="integration-auto-reconnect" value="Auto Reconnect" checked>
+              <label for="integration-auto-reconnect">Auto Reconnect</label>
+            </fieldset>
+          </div>
+          <div class="row">
+            <fieldset class="small">
+              <label for="integration-local-ip-address">Local IP Address</label>
+              <input type="text" id="integration-local-ip-address" name="integration-local-ip-address" value="127.0.1" disabled>
+            </fieldset>
+            <fieldset class="small">
+              <label for="integration-local-port">Local Port</label>
+              <input type="number" id="integration-local-port" name="integration-local-port" value="8000" disabled>
+            </fieldset>
+            <fieldset class="checkbox">
+              <input type="checkbox" id="integration-auto-assign" name="integration-auto-assign" value="Auto Assign" checked>
+              <label for="integration-auto-assign">Auto Assign</label>
+            </fieldset>
+          </div>
+        </form>
+      </section>
+      <section>
+        <h2>Communication Setup</h2>
+        <form>
+          <fieldset class="small">
+            <label for="integration-communcation-ip-address">Local IP Address</label>
+            <input type="text" id="integration-communcation-ip-address" name="integration-communcation-ip-address" value="127.0.1">
+          </fieldset>
+          <fieldset class="small">
+            <label for="integration-local-port">Local Port</label>
+            <input type="number" id="integration-local-port" name="integration-local-port" value="7000">
+          </fieldset>
+          <fieldset class="small">
+            <label for="integration-local-timeout">Timeout (secs)</label>
+            <input type="number" id="integration-local-timeout" name="integration-local-timeout" value="86400">
+          </fieldset>
+          <fieldset class="small">
+            <label for="integration-parsing-algorithm">Parsing algorithm</label>
+            <select id="integration-parsing-algorithm" name="integration-parsing-algorithm">
+              <option label="HL7 ADT v2.x"></option>
+              <option label="First option sample">First option sample</option>
+              <option label="Second option sample">Section option sample</option>
+              <option label="Third option sample">Third option sample</option>
+              <option label="Fourth option sample">Fourth option sample</option>
+            </select>
+            <span class="select-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 9l6 6l6 -6"></path></svg>
+            </span>
+          </fieldset>
+        </form>
+        <div class="button-group">
+          <a href="demos/orchestration/integrations/discovery/index.html" class="button primary">Save Configuration</a>
+        </div>
+      </section>
+      <ol class="visuallyhidden">
         <li>Set Client ID</li>
         <li>Set Description</li>
         <li>Set Interface</li>
@@ -70,8 +161,8 @@
         </ol>
       </ol>
       <img style="display: none; padding-top: 1rem;" src="assets/images/demo-ports.png">
-      <h2>Setup Complete</h2>
-      <p><a href="demos/orchestration/integrations/discovery/index.html">Go to Discovery Mode</a></p>
+      <!-- <h2>Setup Complete</h2> -->
+      <!-- <p><a href="demos/orchestration/integrations/discovery/index.html">Go to Discovery Mode</a></p> -->
     </article>
   </main>
   <footer>
