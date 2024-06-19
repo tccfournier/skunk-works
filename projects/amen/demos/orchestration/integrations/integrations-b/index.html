@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1">
-  <title>AMEN Skunk Works Messages | TigerConnect</title>
+  <title>AMEN Skunk Works Integrations | TigerConnect</title>
   <base href="../../../../">
   <!-- css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -34,7 +34,7 @@
     <nav>
       <ul>
         <li><a href="demos/orchestration/dashboard/index.html">Dashboard</a></li>
-        <li><a href="demos/orchestration/integrations/index.html">Integrations</a></li>
+        <li>Integrations</li>
         <li><a href="demos/orchestration/entities/index.html">Entities</a></li>
         <li><a href="demos/orchestration/workflows/index.html">Workflows</a></li>
         <li><a href="demos/orchestration/insights/index.html">Insights</a></li>
@@ -43,49 +43,29 @@
   </header>
   <main>
     <article>
-      <h1>Messages</h1>
-      <section>
-        <h2>Raw Message</h2>
-        <pre>MSH|^~\&amp;|LAB|NMC|||20201001091354-0400||ORU^R01|22064.1|D|2.3|
-PID|1|E00000329|M000000350||BLUEAPPLE^TOM||19711221|M||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
-PV1|1519|O|ICU^101^A|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
-OBR|1|1789^LAB|1789^LAB|PT^HEPARIN/INR^L|||202010010912|||||||202010010912||ZFINGJU^Zfingergut^Judy^^^^MD||||||||LAB|F||^^^^^R|BARNMI^Barnum^Michael^J.^^^MD|
-OBX|1|ST|PRO^HEPARIN^L|1|12.0|SECONDS|9.6-11.2|H||A^S|F|||202010010913|ML^MAIN LAB^L|
-NTE|1||Is patient on anticoagulant? N|
-OBX|2|ST|INR^INR^L|1|1.2||2.0-3.0|L||A^S|F|||202010010913|ML^MAIN LAB^L|
-NTE|2||INR value valid only on patients on stabilized warfarin|
-NTE|3||therapy.  The recommended therapeutic range for warfarin|
-NTE|4||(Coumadin) for most clinical indications is an INR of|
-NTE|5||2.0-3.0.  An INR of 2.5-3.5 is recommended for patients with|
-NTE|6||mechanical heart valves.|</pre>
-      </section>
-      <section>
-        <h2>Message Structure</h2>
-        <pre>MSH|^~\&amp;|LAB|NMC|||20201001091354-0400||ORU^R01|22064.1|D|2.3|
-PID|1|E00000329|M000000350||BLUEAPPLE^TOM||19711221|M||W|123 MAIN STREET^^SAINT ALBANS^VT^05478|||||S||V00000019513|
-PV1|1519|O|ICU^101^A|EL|||ZFINGJU^Fingergut^Judy^^^^MD|||||||PHY||||CLI|||||||||||||||||||||NMC||REG|||202010010910|
-OBR|1|1789^LAB|1789^LAB|PT^HEPARIN/INR^L|||202010010912|||||||202010010912||ZFINGJU^Zfingergut^Judy^^^^MD||||||||LAB|F||^^^^^R|BARNMI^Barnum^Michael^J.^^^MD|
-OBX|1|ST|PRO^HEPARIN^L|1|12.0|SECONDS|9.6-11.2|H||A^S|F|||202010010913|ML^MAIN LAB^L|
-NTE|1||Is patient on anticoagulant? N|
-OBX|2|ST|INR^INR^L|1|1.2||2.0-3.0|L||A^S|F|||202010010913|ML^MAIN LAB^L|
-NTE|2||INR value valid only on patients on stabilized warfarin|
-NTE|3||therapy.  The recommended therapeutic range for warfarin|
-NTE|4||(Coumadin) for most clinical indications is an INR of|
-NTE|5||2.0-3.0.  An INR of 2.5-3.5 is recommended for patients with|
-NTE|6||mechanical heart valves.|</pre>
-      </section>
-      <div class="button-group">
-        <a href="demos/orchestration/integrations/mapping-publish/index.html" class="button primary">Publish</a>
-        <a href="demos/orchestration/integrations/mapping-edit/index.html" class="button tertiary">Edit Mapping</a>
+      <h1>Integrations</h1>
+      <h2>Active Integrations</h2>
+      <div class="row cards">
+        <div class="card">
+          <h3>Yale Medical Center INT-1</h3>
+          <ul class="options">
+            <li id="yale-medical-center-patient-entity" class="show">Integration
+              <span class="action">
+                <span class="status valid">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check valid"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l5 5l10 -10"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-mark invalid"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 19v.01"></path>
+                    <path d="M12 15v-10"></path></svg>
+                </span>
+              </span>
+            </li>
+          </ul>
+          <div class="button-group">
+            <a href="demos/orchestration/integrations/deploy-to-agent/index.html" class="button primary">Deploy to Agent</a>
+            <a href="demos/orchestration/integrations/mapping-edit/index.html" class="button tertiary">Edit Mapping</a>
+          </div>
+        </div>
       </div>
-      <ol class="visuallyhidden">
-        <li>Transmitting HL7 messages</li>
-        <li>Parsing HL7 messages</li>
-        <li>Display HL7 messages</li>
-      </ol>
-      <img style="display: none; padding-top: 1rem;" src="assets/images/demo-parse-messages.png">
       <img style="display: none; padding-top: 1rem;" src="assets/images/demo-discovery.png">
-      <!-- <p><a href="demos/orchestration/integrations/messages-search/index.html">Go to Messages Search</a></p> -->
     </article>
   </main>
   <footer>

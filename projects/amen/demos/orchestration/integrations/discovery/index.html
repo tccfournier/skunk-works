@@ -148,23 +148,29 @@
       <h1>Discovery</h1>
       <section>
         <h2>Progress</h2>
-        <label class="progress" for="indeterminate">Transmitting HL7 messages
-          <progress id="transmitting" max="100" value="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></progress>
-          <span class="indicator"></span>
-        </label>
-        <label class="progress" for="indeterminate" style="margin-top: 1rem;">Parsing HL7 messages
-          <progress id="parsing" max="100" value="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></progress>
-          <span class="indicator"></span>
-        </label>
+        <div class="row">
+          <div class="column-3" style="padding-right: 0.5rem;">
+            <label class="progress" for="indeterminate" style="margin-top: 1rem;">Transmitting HL7 messages
+              <progress id="transmitting" max="100" value="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></progress>
+              <span class="indicator"></span>
+            </label>
+          </div>
+          <div class="column-3" style="padding-left: 0.5rem;">
+            <label class="progress" for="indeterminate" style="margin-top: 1rem;">Parsing HL7 messages
+              <progress id="parsing" max="100" value="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></progress>
+              <span class="indicator"></span>
+            </label>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Incoming Messages</h2>
-        <ol class="messages visuallyhidden">
-          <li><a href="demos/orchestration/integrations/mapping-display/index.html">04 - Message</a></li>
-          <li><a href="demos/orchestration/integrations/mapping-display/index.html">03 - Message</a></li>
-          <li><a href="demos/orchestration/integrations/mapping-display/index.html">02 - Message</a></li>
-          <li><a href="demos/orchestration/integrations/mapping-display/index.html">01 - Message</a></li>
-        </ol>
+        <ul class="messages visuallyhidden">
+          <li><a href="demos/orchestration/integrations/messages-display/index.html">04 - Message</a></li>
+          <li><a href="demos/orchestration/integrations/messages-display/index.html">03 - Message</a></li>
+          <li><a href="demos/orchestration/integrations/messages-display/index.html">02 - Message</a></li>
+          <li><a href="demos/orchestration/integrations/messages-display/index.html">01 - Message</a></li>
+        </ul>
       </section>
       <img style="display: none; padding-top: 1rem;" src="assets/images/demo-discovery.png">
     </article>
