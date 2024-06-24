@@ -73,6 +73,18 @@
 }
 
 
+// VERTIAL TABS
+.tabs.vertical {
+  display: flex;
+
+  .tablist ul {
+    display: flex;
+    flex-direction: column;
+    padding-right: $spacing-8;
+  }
+}
+
+
 // TAB DARK MODE
 html.dark {
   .tabs .tablist ul {

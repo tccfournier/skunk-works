@@ -41,32 +41,38 @@
   <main>
     <article>
       <h1>Tabs</h1>
-      <section>
-        <h2>Horizontal Tabs</h2>
-        <div class="tabs">
-          <div class="tablist" role="tablist" aria-multiselectable="false">
-            <ul>
-              <li class="tab-item" role="presentation"><button class="tab-trigger is-active" id="tab-label-1" role="tab" aria-controls="tab-panel-1" aria-selected="true">Tab 1</button></li>
-              <li class="tab-item" role="presentation"><button class="tab-trigger" id="tab-label-2" role="tab" aria-controls="tab-panel-2" aria-selected="false">Tab 2</button></li>
-              <li class="tab-item" role="presentation"><button class="tab-trigger" id="tab-label-3" role="tab" aria-controls="tab-panel-3" aria-selected="false">Tab 3</button></li>
-            </ul>
+      <form>
+        <fieldset class="radio">
+          <legend>Tab Orientation</legend>
+          <input type="radio" id="tab-orientation-horizontal" class="radio" name="tab-orientation" value="Horizontal" checked>
+          <label for="tab-orientation-horizontal">Horizontal</label>
+          <input type="radio" id="tab-orientation-vertical" class="radio" name="tab-orientation" value="Vertical">
+          <label for="tab-orientation-vertical">Vertical</label>
+        </fieldset>
+      </form>
+      <div class="tabs">
+        <div class="tablist" role="tablist" aria-multiselectable="false">
+          <ul>
+            <li class="tab-item" role="presentation"><button class="tab-trigger is-active" id="tab-label-1" role="tab" aria-controls="tab-panel-1" aria-selected="true">Tab 1</button></li>
+            <li class="tab-item" role="presentation"><button class="tab-trigger" id="tab-label-2" role="tab" aria-controls="tab-panel-2" aria-selected="false">Tab 2</button></li>
+            <li class="tab-item" role="presentation"><button class="tab-trigger" id="tab-label-3" role="tab" aria-controls="tab-panel-3" aria-selected="false">Tab 3</button></li>
+          </ul>
+        </div>
+        <div class="panels">
+          <div class="panel is-current" id="tab-panel-1" role="tabpanel" aria-labelledby="tab-label-1" aria-hidden="false">
+            <h3>Tab 1</h3>
+            <p>This is the content area of the first tab.</p>
           </div>
-          <div class="panels">
-            <div class="panel is-current" id="tab-panel-1" role="tabpanel" aria-labelledby="tab-label-1" aria-hidden="false">
-              <h3>Tab 1</h3>
-              <p>This is the content area of the first tab.</p>
-            </div>
-            <div class="panel" id="tab-panel-2" role="tabpanel" aria-labelledby="tab-label-2" aria-hidden="true">
-              <h3>Tab 2</h3>
-              <p>This is the content area of the second tab.</p>
-            </div>
-            <div class="panel" id="tab-panel-3" role="tabpanel" aria-labelledby="tab-label-3" aria-hidden="true">
-              <h3>Tab 3</h3>
-              <p>This is the content area of the third tab.</p>
-            </div>
+          <div class="panel" id="tab-panel-2" role="tabpanel" aria-labelledby="tab-label-2" aria-hidden="true">
+            <h3>Tab 2</h3>
+            <p>This is the content area of the second tab.</p>
+          </div>
+          <div class="panel" id="tab-panel-3" role="tabpanel" aria-labelledby="tab-label-3" aria-hidden="true">
+            <h3>Tab 3</h3>
+            <p>This is the content area of the third tab.</p>
           </div>
         </div>
-      </section>
+      </div>
     </article>
   </main>
   <footer>
@@ -113,6 +119,16 @@
     $("li.tab-item button#tab-label-1").click(function() { $("li.tab-item button.is-active").removeClass("is-active").attr("aria-selected", false); $("li.tab-item button#tab-label-1").addClass("is-active").attr("aria-selected", true); $(".panels .panel.is-current").removeClass("is-current").attr("aria-hidden", true); $(".panels .panel#tab-panel-1").addClass("is-current").attr("aria-hidden", false); });
     $("li.tab-item button#tab-label-2").click(function() { $("li.tab-item button.is-active").removeClass("is-active").attr("aria-selected", false); $("li.tab-item button#tab-label-2").addClass("is-active").attr("aria-selected", true); $(".panels .panel.is-current").removeClass("is-current").attr("aria-hidden", true); $(".panels .panel#tab-panel-2").addClass("is-current").attr("aria-hidden", false); });
     $("li.tab-item button#tab-label-3").click(function() { $("li.tab-item button.is-active").removeClass("is-active").attr("aria-selected", false); $("li.tab-item button#tab-label-3").addClass("is-active").attr("aria-selected", true); $(".panels .panel.is-current").removeClass("is-current").attr("aria-hidden", true); $(".panels .panel#tab-panel-3").addClass("is-current").attr("aria-hidden", false); });
+    // TAB ORIENTATION
+    $("#tab-orientation-vertical").click(function() {
+      $(".tabs").addClass("vertical");
+    });
+    $("#tab-orientation-horizontal").click(function() {
+      $(".tabs").removeClass("vertical");
+    });
+    // $("#tab-orientation").click(function() { 
+    //   $(".tabs").toggleClass("vertical");
+    // });
   </script>
 </body>
 

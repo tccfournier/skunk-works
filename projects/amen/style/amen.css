@@ -1565,6 +1565,15 @@ nav ul li:last-of-type {
   transform: translateX(0);
 }
 
+.tabs.vertical {
+  display: flex;
+}
+.tabs.vertical .tablist ul {
+  display: flex;
+  flex-direction: column;
+  padding-right: var(--spacing--8);
+}
+
 html.dark .tabs .tablist ul li button {
   color: var(--color--action-dark);
 }
