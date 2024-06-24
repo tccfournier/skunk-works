@@ -72,8 +72,6 @@ html.dark body {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -97,10 +95,6 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: var(--color--action-light);
-  -webkit-transition: color 0.25s ease 0s;
-  -moz-transition: color 0.25s ease 0s;
-  -ms-transition: color 0.25s ease 0s;
-  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 a:hover, a:focus {
@@ -332,10 +326,6 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -434,10 +424,6 @@ input:placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -504,10 +490,6 @@ input[type=checkbox] + label:before {
   border-radius: var(--border-radius-xs);
   background-color: transparent;
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 input[type=checkbox] + label:after {
@@ -520,10 +502,6 @@ input[type=checkbox] + label:after {
   background-image: url(../assets/icons/ui/check.svg);
   background-size: contain;
   content: none;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -575,10 +553,6 @@ fieldset.radio input[type=radio] + label:before {
   border-radius: 100%;
   background-color: transparent;
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.radio input[type=radio] + label:after {
@@ -592,10 +566,6 @@ fieldset.radio input[type=radio] + label:after {
   background-color: var(--color--bg-dark);
   opacity: 0;
   content: "";
-  -webkit-transition: opacity 0.25s ease 0s;
-  -moz-transition: opacity 0.25s ease 0s;
-  -ms-transition: opacity 0.25s ease 0s;
-  -o-transition: opacity 0.25s ease 0s;
   transition: opacity 0.25s ease 0s;
 }
 fieldset.radio input[type=radio]:checked + label:before {
@@ -660,10 +630,6 @@ fieldset.toggle label input[type=checkbox]:after {
   border-radius: 100%;
   background-color: var(--color--border);
   content: "";
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.toggle label input[type=checkbox]:checked {
@@ -719,9 +685,6 @@ fieldset.range input[type=range]::-webkit-slider-thumb {
   -moz-appearance: none;
   appearance: none;
   -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 fieldset.range input[type=range]::-moz-range-thumb {
@@ -733,10 +696,7 @@ fieldset.range input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.25s ease 0s;
   -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 
@@ -1245,10 +1205,6 @@ html.dark form.color-mode fieldset label input[type=checkbox]:checked:after {
   max-height: 0;
   opacity: 0;
   stroke-width: 2.5;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 .card ul.options li span.status.invalid {
@@ -1483,27 +1439,15 @@ header {
 }
 
 .headroom {
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -ms-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   will-change: transform;
 }
 
 .headroom--pinned {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   transform: translateY(0);
 }
 
 .headroom--unpinned {
-  -webkit-transform: translateY(-100vh);
-  -moz-transform: translateY(-100vh);
-  -ms-transform: translateY(-100vh);
-  -o-transform: translateY(-100vh);
   transform: translateY(-100vh);
 }
 
@@ -1573,20 +1517,28 @@ nav ul li:last-of-type {
   padding: 0;
 }
 .tabs .tablist ul li button {
-  border-color: var(--color--action-light);
+  border: 0;
   border-radius: 0;
-  border-width: 0 0 1px;
   text-transform: none;
   color: var(--color--action-light);
   background-color: transparent;
 }
-.tabs .tablist ul li button:hover, .tabs .tablist ul li button:focus {
-  border-color: var(--color--action-light-hover);
-  border-width: 0 0 4px;
-  color: var(--color--action-light-hover);
+.tabs .tablist ul li button:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color--action-light);
+  content: "";
+  transition: height 0.25s ease 0s;
 }
-.tabs .tablist ul li button.is-active {
-  border-width: 0 0 4px;
+.tabs .tablist ul li button:hover:after, .tabs .tablist ul li button:focus:after {
+  height: 4px;
+}
+.tabs .tablist ul li button.is-active:after {
+  height: 4px;
 }
 
 .tabs .panels {
@@ -1603,35 +1555,21 @@ nav ul li:last-of-type {
   max-width: 0;
   max-height: 0;
   opacity: 0;
-  -webkit-transform: translateX(100vw);
-  -moz-transform: translateX(100vw);
-  -ms-transform: translateX(100vw);
-  -o-transform: translateX(100vw);
   transform: translateX(100vw);
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -ms-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 .tabs .panels .panel.is-current {
   max-width: 100%;
   max-height: 100%;
   opacity: 1;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
   transform: translateX(0);
 }
 
-.tabs .tablist ul li button {
-  border-color: var(--color--action-dark);
+html.dark .tabs .tablist ul li button {
   color: var(--color--action-dark);
 }
-.tabs .tablist ul li button:hover, .tabs .tablist ul li button:focus {
-  border-color: var(--color--action-dark-hover);
-  color: var(--color--action-dark-hover);
+html.dark .tabs .tablist ul li button:after {
+  background-color: var(--color--action-dark);
 }
 
 .toasts {
@@ -1657,15 +1595,7 @@ nav ul li:last-of-type {
   border-radius: var(--border-radius-sm);
   color: var(--color--text-light);
   background-color: var(--color--bg-dark);
-  -webkit-transform: translateY(100rem);
-  -moz-transform: translateY(100rem);
-  -ms-transform: translateY(100rem);
-  -o-transform: translateY(100rem);
   transform: translateY(100rem);
-  -webkit-transition: transform 0.75s ease 0s;
-  -moz-transition: transform 0.75s ease 0s;
-  -ms-transition: transform 0.75s ease 0s;
-  -o-transition: transform 0.75s ease 0s;
   transition: transform 0.75s ease 0s;
 }
 .toast p {
@@ -1684,10 +1614,6 @@ nav ul li:last-of-type {
   background-color: rgba(255, 255, 255, 0.25);
 }
 .toast.show {
-  -webkit-transform: translateY(-4rem);
-  -moz-transform: translateY(-4rem);
-  -ms-transform: translateY(-4rem);
-  -o-transform: translateY(-4rem);
   transform: translateY(-4rem);
 }
 
@@ -1776,15 +1702,7 @@ details:after {
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
-  -webkit-transform: rotate(0);
-  -moz-transform: rotate(0);
-  -ms-transform: rotate(0);
-  -o-transform: rotate(0);
   transform: rotate(0);
-  -webkit-transition: transform 0.25s ease 0s;
-  -moz-transition: transform 0.25s ease 0s;
-  -ms-transition: transform 0.25s ease 0s;
-  -o-transition: transform 0.25s ease 0s;
   transition: transform 0.25s ease 0s;
 }
 details summary {
@@ -1803,10 +1721,6 @@ details p:last-of-type {
 }
 
 details[open]:after {
-  -webkit-transform: rotate(450deg);
-  -moz-transform: rotate(450deg);
-  -ms-transform: rotate(450deg);
-  -o-transform: rotate(450deg);
   transform: rotate(450deg);
 }
 
@@ -1825,10 +1739,6 @@ details[open]:after {
   top: 0;
   width: auto;
   padding: var(--spacing--16);
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 .drawers .drawer > .card {
@@ -1837,25 +1747,13 @@ details[open]:after {
 }
 .drawers .drawer.right {
   right: 0;
-  -webkit-transform: translateX(100vw);
-  -moz-transform: translateX(100vw);
-  -ms-transform: translateX(100vw);
-  -o-transform: translateX(100vw);
   transform: translateX(100vw);
 }
 .drawers .drawer.left {
   left: 0;
-  -webkit-transform: translateX(-100vw);
-  -moz-transform: translateX(-100vw);
-  -ms-transform: translateX(-100vw);
-  -o-transform: translateX(-100vw);
   transform: translateX(-100vw);
 }
 .drawers .drawer.show {
-  -webkit-transform: translateX(0vw);
-  -moz-transform: translateX(0vw);
-  -ms-transform: translateX(0vw);
-  -o-transform: translateX(0vw);
   transform: translateX(0vw);
 }
 
@@ -1877,10 +1775,6 @@ button[popovertarget].text:hover, button[popovertarget].text:focus {
   border: 0;
   border-radius: var(--border-radius-xs);
   opacity: 0;
-  -webkit-transition: opacity 0.25s ease 0s;
-  -moz-transition: opacity 0.25s ease 0s;
-  -ms-transition: opacity 0.25s ease 0s;
-  -o-transition: opacity 0.25s ease 0s;
   transition: opacity 0.25s ease 0s;
 }
 
@@ -1894,6 +1788,7 @@ a.button {
   display: inline-flex;
   align-items: center;
   position: relative;
+  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   overflow: hidden;
@@ -1910,10 +1805,6 @@ a.button {
   white-space: nowrap;
   color: var(--color--text-light);
   background-color: var(--color--action-light);
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 button:hover, button:focus,
@@ -2204,7 +2095,8 @@ h4 span.utility .button.tertiary {
 
 ul,
 ol {
-  break-inside: avoid-column;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
 }
 ul li,
 ol li {
@@ -2289,10 +2181,6 @@ details summary {
   line-height: var(--spacing--16);
   color: var(--color--action-light);
   cursor: pointer;
-  -webkit-transition: color 0.25s ease 0s;
-  -moz-transition: color 0.25s ease 0s;
-  -ms-transition: color 0.25s ease 0s;
-  -o-transition: color 0.25s ease 0s;
   transition: color 0.25s ease 0s;
 }
 details summary:hover, details summary:focus {
@@ -2300,10 +2188,6 @@ details summary:hover, details summary:focus {
 }
 details ul {
   max-height: 0;
-  -webkit-transition: max-height 0.5s ease 0s;
-  -moz-transition: max-height 0.5s ease 0s;
-  -ms-transition: max-height 0.5s ease 0s;
-  -o-transition: max-height 0.5s ease 0s;
   transition: max-height 0.5s ease 0s;
 }
 details ul li {
@@ -2403,10 +2287,6 @@ html.dark details summary:hover, html.dark details summary:focus {
   display: none;
   max-height: 0;
   opacity: 0;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 .card ul.options li.show {
@@ -2419,10 +2299,6 @@ html.dark details summary:hover, html.dark details summary:focus {
   display: none;
   max-height: 0;
   opacity: 0;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 .card.entity.show {
@@ -2435,10 +2311,6 @@ html.dark details summary:hover, html.dark details summary:focus {
   display: none;
   max-height: 0;
   opacity: 0;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
 .card ul.mapping li.show {
@@ -2475,10 +2347,6 @@ form.mapping-groups .mapping-group .preview {
   width: calc(50% - var(--spacing--16));
   margin: var(--spacing--8);
   opacity: 1;
-  -webkit-transition: opacity 0.25s ease 0s;
-  -moz-transition: opacity 0.25s ease 0s;
-  -ms-transition: opacity 0.25s ease 0s;
-  -o-transition: opacity 0.25s ease 0s;
   transition: opacity 0.25s ease 0s;
 }
 form.mapping-groups .mapping-group .preview p {
