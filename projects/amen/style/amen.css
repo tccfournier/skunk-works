@@ -1573,6 +1573,20 @@ nav ul li:last-of-type {
   flex-direction: column;
   padding-right: var(--spacing--8);
 }
+.tabs.vertical .tablist ul li button:after {
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 1px;
+  height: 100%;
+  transition: width 0.25s ease 0s;
+}
+.tabs.vertical .tablist ul li button:hover:after, .tabs.vertical .tablist ul li button:focus:after {
+  width: 4px;
+}
+.tabs.vertical .tablist ul li button.is-active:after {
+  width: 4px;
+}
 
 html.dark .tabs .tablist ul li button {
   color: var(--color--action-dark);
