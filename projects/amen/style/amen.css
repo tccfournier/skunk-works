@@ -460,7 +460,6 @@ select option {
 
 .select-icon {
   display: grid;
-  display: none;
   position: absolute;
   top: 1.75rem;
   right: var(--spacing--8);
