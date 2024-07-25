@@ -3,6 +3,7 @@
   padding: $spacing-16 0 0;
 
   .tablist ul {
+    display: flex;
     position: relative;
     border-bottom: 1px solid $color--action-light;
     list-style-type: none;
