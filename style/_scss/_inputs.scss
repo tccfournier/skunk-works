@@ -153,6 +153,19 @@ select {
   border: 1px solid $color--border;
   border-radius: $border-radius-sm;
 
+  &:after {
+    display: grid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    padding: $spacing-8;
+    background-image: url(../assets/icons/ui/chevron-down-border.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   option {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -163,6 +176,7 @@ select {
 
 .select-icon {
   display: grid;
+  display: none;
   position: absolute;
   top: 1.75rem;
   right: $spacing-8;
